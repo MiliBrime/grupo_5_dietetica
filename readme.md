@@ -3,13 +3,17 @@ S P R I N T - 1
 Bienvenidos al equipo de trabajo de "The Vitamin Shop".
 
 COLABORADORES: 
-- Jeremías Bondarczuk
-- Milagros Brime
-- Tomás Montaña
-- Miguel Andrés Valenzuela Maldonado
-- Jeremías Ezequiel Vellido
-////hacer un breve descripcion de cada integrante del equipo
+- Jeremías Bondarczuk: Tengo 23 años, trabajo en el emprendimiento familiar (una dietética) y actualmente estoy adentrándome en el mundo de la programación. Apasionado por la música y el fútbol.
 
+- Milagros Brime:
+
+- Tomás Montaña: Tengo 19 años, resido actualmente en Buenos Aires. Soy estudiante y Tengo muchisimas ganas de progresar en este mundo. siempre me gusto expandir mi conocimiento y espero algun dia poder certificarme en ciberseguridad. Es una de mis metas que voy a cumplir.
+
+- Miguel Andrés Valenzuela Maldonado: Soy Miguel Andrés Valenzuela Maldonado, un apasionado de la programación y el diseño UX, con 27 años y residente de Bogotá. Mi experiencia combina la lógica de la programación con la creatividad del diseño UX para crear interfaces digitales intuitivas y atractivas. Poseo certificaciones de Google en Diseño UX, respaldando mi conocimiento y habilidades en este campo. Mi enfoque se basa en la colaboración y la comunicación efectiva en el trabajo en equipo. Estoy comprometido con la excelencia en cada proyecto, manteniéndome al tanto de las últimas tendencias y tecnologías. Mi dedicación y entusiasmo me han llevado a participar en proyectos innovadores, y estoy emocionado por las futuras oportunidades que me permitan seguir creciendo y contribuyendo al mundo digital.
+
+- Jeremías Ezequiel Vellido:
+
+- Maximo Palombo:
 
 
 
