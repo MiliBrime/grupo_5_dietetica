@@ -11,12 +11,14 @@ COLABORADORES:
 ////hacer un breve descripcion de cada integrante del equipo
 
 
+
+
 WIREFRAMES: 
 Crear un wireframe y un boceto del sitio
 Para entregar es necesario un wireframe con:  
 ● Home
 ● Detalle de producto
-● Carittoo de compras
+● Carrito de compras
 ● Formulario de registro
 ● Formulario login
 ● Logo (Opcional)
