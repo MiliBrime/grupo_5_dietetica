@@ -49,3 +49,5 @@ Tenemos que entregar un README.md con 5 sitios de referencia, y indicando porque
 - https://narodidietetica.com/
 - https://www.enasport.com/
 - https://www.natufarma.com/
+- https://bio-salud.com.ar/
+- https://naturaldieteticaonline.com.ar/
