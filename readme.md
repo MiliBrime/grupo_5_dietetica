@@ -5,7 +5,7 @@ Bienvenidos al equipo de trabajo de "The Vitamin Shop".
 COLABORADORES: 
 - Jeremías Bondarczuk: Tengo 23 años, trabajo en el emprendimiento familiar (una dietética) y actualmente estoy adentrándome en el mundo de la programación. Apasionado por la música y el fútbol.
 
-- Milagros Brime:
+- Milagros Brime: tengo 25 años. Soy de La Plata, y actualmente estoy en mi primer año de la facultad de informática en la UNLP. Estoy entrando de lleno en el mundo de la programación, y me encanta. Mi objetivo es dedicarme a esto y crear soluciones tecnológicas que cambien positivamente la vida de las personas. Tuve un emprendimiento de una dietética por dos años así que tengo conocimiento en esa área, creo que podemos lograr que la página funcione de manera excepcional y beneficie al negocio de nuestro compañero. Dato de color: amo a los animales.
 
 - Tomás Montaña: Tengo 19 años, resido actualmente en Buenos Aires. Soy estudiante y Tengo muchisimas ganas de progresar en este mundo. siempre me gusto expandir mi conocimiento y espero algun dia poder certificarme en ciberseguridad. Es una de mis metas que voy a cumplir.
 
@@ -14,7 +14,6 @@ COLABORADORES:
 - Jeremías Ezequiel Vellido:
 
 - Maximo Palombo:
-
 
 
 WIREFRAMES: 
