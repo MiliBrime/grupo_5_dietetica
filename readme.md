@@ -11,7 +11,7 @@ COLABORADORES:
 
 - Miguel Andrés Valenzuela Maldonado: Soy Miguel Andrés Valenzuela Maldonado, un apasionado de la programación y el diseño UX, con 27 años y residente de Bogotá. Mi experiencia combina la lógica de la programación con la creatividad del diseño UX para crear interfaces digitales intuitivas y atractivas. Poseo certificaciones de Google en Diseño UX, respaldando mi conocimiento y habilidades en este campo. Mi enfoque se basa en la colaboración y la comunicación efectiva en el trabajo en equipo. Estoy comprometido con la excelencia en cada proyecto, manteniéndome al tanto de las últimas tendencias y tecnologías. Mi dedicación y entusiasmo me han llevado a participar en proyectos innovadores, y estoy emocionado por las futuras oportunidades que me permitan seguir creciendo y contribuyendo al mundo digital.
 
-- Jeremías Ezequiel Vellido:
+- Jeremías Ezequiel Vellido: tengo 27 años, soy una persona respetuosa y siempre con buen humor que busca el superarse momento a momento. hoy en dia descubri el mundo de la programacion y estoy motivado a llegar lo mas lejos posible. Quiero dedicarle todas mis ganas y ansias para poder plasmar las ideas que tengo a nuevas aplicaciones, nuevas paginas, y hasta juegos que la gente disfrute. me gusta que siempre haya un buen ambiente de trabajo y en este proyecto pondre lo mejor para que podamos crear un proyecto que sea del agrado de todos.
 
 - Maximo Palombo:
 
