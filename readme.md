@@ -13,7 +13,7 @@ COLABORADORES:
 
 - Jeremías Ezequiel Vellido: tengo 27 años, soy una persona respetuosa y siempre con buen humor que busca el superarse momento a momento. hoy en dia descubri el mundo de la programacion y estoy motivado a llegar lo mas lejos posible. Quiero dedicarle todas mis ganas y ansias para poder plasmar las ideas que tengo a nuevas aplicaciones, nuevas paginas, y hasta juegos que la gente disfrute. me gusta que siempre haya un buen ambiente de trabajo y en este proyecto pondre lo mejor para que podamos crear un proyecto que sea del agrado de todos.
 
-- Maximo Palombo:
+- Maximo Palombo: Hola, me llamo Máximo Palombo. Tengo 20 años y estoy con el grupo 5 del curso de programación web full stack, me gusta hacer deportes, cocinar y escuchar música, soy una persona tranquila y algo timido, me gustan mucho los animales, especialmente los perros, espero caerles bien!
 
 
 WIREFRAMES: 
@@ -24,31 +24,24 @@ Para entregar es necesario un wireframe con:
 ● Carrito de compras
 ● Formulario de registro
 ● Formulario login
-● Logo (Opcional)
-● Colores (Opcional)
+● Logo (Opcional): listo
+● Colores (Opcional): #ABD0BF, #5079F2, #F23E16, #F2AC57 (colores del logo)
 ● Tipografias(Opcional)
 TIP: crear la carpeta wireframes para incluir este contenido
 
 
 TEMÁTICA DEL SITIO:
 Tienda online de la dietética ubicada en Perón 1775 y en Rodriguez Peña 1266, San Miguel, Buenos Aires.
-____ Productos o servicios que brindaremos 
-Ofrecemos productos de salud y nutrición, como suplementos dietarios y deportivos, hierbas y condimentos naturales, además de harinas, legumbres y frutos secos.
-____ ¿Quien será nuestra audiencia objetivos?  
-La audiencia objetivo de "The Vitamin Shop" serán personas de todas las edades que buscan mejorar su salud y bienestar a través de una dieta equilibrada y suplementación. Entre estas personas se encuentran deportistas, individuos con necesidades dietéticas específicas como diabéticos, vegetarianos, celíacos, etc.
-____ ¿Como ajustaremos nuestra oferta a ese público?
-Vamos a ofrecer una amplia variedad de productos, información detallada de cada uno, feedback y comentarios (retroalimentación de los clientes para mejorar constantemente nuestra oferta y satisfacer las necesidades)
+Productos o servicios que brindaremos 
+- Ofrecemos productos de salud y nutrición, como suplementos dietarios y deportivos, hierbas y condimentos naturales, además de harinas, legumbres y frutos secos.
+¿Quien será nuestra audiencia objetivos?  
+- La audiencia objetivo de "The Vitamin Shop" serán personas de todas las edades que buscan mejorar su salud y bienestar a través de una dieta equilibrada y suplementación. Entre estas personas se encuentran deportistas, individuos con necesidades dietéticas específicas como diabéticos, vegetarianos, celíacos, etc.
+¿Como ajustaremos nuestra oferta a ese público?
+- Vamos a ofrecer una amplia variedad de productos, información detallada de cada uno, feedback y comentarios (retroalimentación de los clientes para mejorar constantemente nuestra oferta y satisfacer las necesidades)
 
 
 PÁGINAS REFERENTES:
-_ Robar ideas de paginas que nos gusten.
-_ Tenemos que buscar sitios relacionados con lo que sea de nustro interes:
-  ● Por los productos o servicios que ofrecen.
-  ● Por los clientes a los que apuntan.
-  ● Por la estética que presentan.
-  ● Por las funcionalidades implementadas.
-Tenemos que entregar un README.md con 5 sitios de referencia, y indicando porque los elegimos.
-
+Elegimos estos sitios como referencia porque sus ventas y productos están relacionados con lo que deseamos ofrecer. Exploramos cada uno de ellos para obtener información e ideas que nos ayudarán en la creación de nuestra página web
 - https://narodidietetica.com/
 - https://www.enasport.com/
 - https://www.natufarma.com/
