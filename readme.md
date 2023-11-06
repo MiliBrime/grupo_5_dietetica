@@ -26,7 +26,7 @@ Para entregar es necesario un wireframe con:
 ● Formulario login
 ● Logo (Opcional): listo
 ● Colores (Opcional): #ABD0BF, #5079F2, #F23E16, #F2AC57 (colores del logo)
-● Tipografias(Opcional)
+● Tipografias(Opcional): La tipografía del logo es "League Spartan"
 TIP: crear la carpeta wireframes para incluir este contenido
 
 
