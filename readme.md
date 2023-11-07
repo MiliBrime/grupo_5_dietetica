@@ -17,17 +17,8 @@ COLABORADORES:
 
 
 WIREFRAMES: 
-Crear un wireframe y un boceto del sitio
-Para entregar es necesario un wireframe con:  
-● Home
-● Detalle de producto
-● Carrito de compras
-● Formulario de registro
-● Formulario login
-● Logo (Opcional): listo
-● Colores (Opcional): #ABD0BF, #5079F2, #F23E16, #F2AC57 (colores del logo)
-● Tipografias(Opcional)
-TIP: crear la carpeta wireframes para incluir este contenido
+Link del wireframe con home, detalle del producto, carrito de compras, formulario de registro, login, logo, colores y tipografías:
+https://www.figma.com/file/ZhTZH1plUaPeCgMQAbqvr3/Diet%C3%A9tica?type=design&node-id=109-2&mode=design
 
 
 TEMÁTICA DEL SITIO:
