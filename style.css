@@ -1,0 +1,93 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f8fa; 
+}
+
+main {
+    max-width: 400px;
+    margin: 50px auto;
+    background-color: rgb(134, 132, 132);
+    padding: 60px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.inicio-cuenta-ingresar {
+    background-color: rgb(94, 94, 218); 
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.inicio-cuenta-ingresar a {
+    text-decoration:none;
+    color: black;
+}
+
+.header2 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.redes-sociales {
+    width: 30%;
+}
+
+.facebook {
+    background-color: gainsboro; 
+}
+
+.google {
+    background-color: gainsboro; 
+}
+
+.apple {
+    background-color: gainsboro;
+}
+
+.formulario {
+    margin-bottom: 20px; 
+}
+
+.input {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.input2{
+    margin: auto;
+    display: block;
+    width: 25%;
+    padding: 5px;
+    border: 1px solid rgb(0, 0, 0);
+    background-color: rgb(94, 94, 172);
+    border-radius: 5px;
+}
+
+.contraseña a {
+    text-decoration: underline;
+    color: #000000; 
+}
+
+.contraseña {
+    margin-top: 10px;
+    text-align: center;
+}
+footer{
+   text-align: center;
+}
+hr{
+    font-size: 200%;
+}
