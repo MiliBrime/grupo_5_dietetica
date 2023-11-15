@@ -1,0 +1,22 @@
+{
+  "name": "trabajo-final",
+  "version": "1.0.0",
+  "description": "S P R I N T - 1",
+  "main": "app.js",
+  "scripts": {
+    "test": "node grupo_5_dietetica/src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MiliBrime/grupo_5_nombre.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MiliBrime/grupo_5_nombre/issues"
+  },
+  "homepage": "https://github.com/MiliBrime/grupo_5_nombre#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
