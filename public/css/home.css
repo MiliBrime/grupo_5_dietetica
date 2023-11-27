@@ -1,0 +1,244 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+/* div {
+    border: solid 1px black;
+} */
+
+i {
+    font-size: 1em;
+}
+
+/* main {
+    background: #e0e0e0;
+} */
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.header {
+    background-color: #24F3ED;
+}
+
+.container1 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px;
+}
+
+.logo>img {
+    height: 100px;
+    margin: 5px;
+}
+
+.location {
+    cursor: pointer;
+}
+
+/* ---- */
+.search-product {
+    position: relative;
+    margin: 30px 0;
+    width: 50%;
+    border-bottom: 2px solid #000;
+}
+
+.search-product label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: #000000;
+    font-size: 1.1rem;
+    pointer-events: none;
+    transition: 0.5s;
+    font-weight: bold;
+}
+
+input:focus~label,
+input:valid~label {
+    top: -3px;
+}
+
+.search-product input {
+    width: 100%;
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 0.99rem;
+    color: #000;
+    font-weight: bold;
+}
+
+/* ---- */
+
+.container2 {
+    display: flex;
+    grid-gap: 25px;
+    justify-content: space-around;
+}
+
+.list1 {
+    display: flex;
+    grid-gap: 50px;
+    list-style: none;
+
+}
+
+.container3 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+}
+
+.list2 {
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    grid-gap: 70px;
+    cursor: pointer;
+}
+
+.info-banner {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding-top: 25px;
+}
+
+.card-info {
+    text-align: center;
+    width: 20%;
+    background: linear-gradient(145deg, #B9B9B9, #FFFFFF);
+    box-shadow: 14.11px 14.11px 32px #C7C7C7, -14.11px -14.11px 32px #FFFFFF;
+}
+
+.icon-info {
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-info:hover {
+    color: #39b54a;
+}
+
+.description-info {
+    padding: 3px;
+}
+
+.sub-title1 {
+    padding: 2px;
+}
+
+.card-info i {
+    font-size: 30px;
+}
+
+.sub-title2{
+    padding: 20px;
+}
+
+.products {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 1px;
+    margin-top: 20px;
+}
+
+.card-product {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 22%;
+    padding: 15px;
+    grid-gap: 30px;
+    border-radius: 15px;
+    border: 1px solid #25fdf6;
+    background: linear-gradient(225deg, #20dbd5, #27fffe);
+    box-shadow:  -6px 6px 20px #23e9e4,
+                 6px -6px 20px #25fdf6;
+    margin-bottom: 45px;
+}
+
+.card-product img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.product-description {
+    width: 100%;
+}
+
+.product-description h3 {
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-bottom: 5px;
+}
+
+button {
+    cursor: pointer;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    grid-gap: 50px;
+}
+
+.add-shipping-cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 55px;
+    width: 55px;
+    border: none;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #20dbd5, #27fffe);
+    box-shadow: 7px 7px 14px #20dbd5,
+        -7px -7px 14px #28ffff;
+}
+
+.add-shipping-cart i {
+    font-size: 25px;
+}
+
+.buy {
+    width: 235px;
+    height: 55px;
+    border-radius: 50px;
+    border: none;
+    background: linear-gradient(145deg, #20dbd5, #27fffe);
+    box-shadow: 7px 7px 14px #20dbd5,
+        -7px -7px 14px #28ffff;
+}
+
+.buy p {
+    font-family:sans-serif;
+    font-size: .95rem;
+}
+
+.add-shipping-cart:hover{
+    box-shadow: inset -30px 30px 60px #20d6d1,
+            inset 30px -30px 60px #28ffff;
+    border: none;
+}
+
+.buy:hover {
+    box-shadow: inset -30px 30px 60px #20d6d1,
+            inset 30px -30px 60px #28ffff;
+    border: none;
+}
