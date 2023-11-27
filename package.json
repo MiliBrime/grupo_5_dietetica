@@ -4,7 +4,7 @@
   "description": "S P R I N T - 1",
   "main": "app.js",
   "scripts": {
-    "test": "node grupo_5_dietetica/src/app.js"
+    "test": "node src/app.js"
   },
   "repository": {
     "type": "git",
