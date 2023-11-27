@@ -11,6 +11,10 @@ app.listen(3010,()=> {
     console.log("servidor corriendo en http://localhost:3010");
 })
 
+app.get("/", (req,res)=> {
+    res.sendFile(path.resolve(__dirname, "./views/home.html"));
+})
+
 app.get("/login", (req,res)=> {
     res.sendFile(path.resolve(__dirname, "./views/login.html"));
 })
