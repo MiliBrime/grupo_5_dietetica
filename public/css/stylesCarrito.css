@@ -1,52 +1,165 @@
 body{
-    width: 90%;
+    margin:0px;
 }
 .arriba{
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     margin-bottom:20px;
+    background-color: #ABD0BF;
 }
 .titulo{
-   background-color: #ebebeb;
-   width: 80%;
-   display: flex;
-   justify-content: center;
-   border-radius: 5px;
+    font-size:14px;
+    margin-left: 10px;
 }
-.texto{
-    display: flex;
-    justify-content: space-between;
+.fa-xmark{
+    margin-left: 10px;
 }
+
 .producto{
     display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
 }
-.fotoProd{
-    width: 40%;
-    margin: 0 15px 10px 0;
+
+.nombre{
+    margin: 0 0 10px 0;
 }
-.detalles{
-    display: flex;
-    flex-direction: column;
+
+.imagen-prod{
+    width: 20%;
+    margin: 0 5px 30px;
 }
-.nombre-precio{
-    margin-bottom: 10px;
+
+.sumador{
+    margin:0 10px 0 0;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    border-radius: 50px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #ABD0BF;
 }
+.restador{
+    margin: 0 0 0 10px;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    border-radius: 50px;
+    border-width: 1px;
+    border-color: #ABD0BF;
+    border-style: solid;
+}
+
+
 .cantidad{
     display: flex;
-    justify-content: space-around;
+    align-items: center;
+} 
+
+.trash{
+    display: flex;
+    margin-left: auto;
+    font-size: 20px;
+}
+
+.precio{
+    position: relative;
+    top: 20px;
+    right: 30px;
+}
+
+.enviosTexto{
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
-.subtotal {
+.fa-truck-fast{
+    margin:0 10px 0 0;
+}
+
+.enviosBotones{
+    display: flex;
+    justify-content: center;
+}
+
+.postal{
+    height: 30px;
+    text-align: center;
+    border-color: #F2AC57;
+    border-style: solid;
+}
+
+.link{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+.total{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 30px;
+    margin-left: 10px;
+    border-top: solid 1px #ABD0BF;
+    font-size: 20px;
+}
+
+.iniciar{
+    text-align: center;
+}
+.botonCompra{
+    width: 60%;
+    height: 25px;
+}
+.verMas{
+    text-align: center;
+    font-size: 12px;
+    margin-top: 8px;
+}
+
+.extra{
+    border-top: solid 1px black;
+    margin-top:20px;
+    margin-bottom: 20px;
+}
+
+.entrega{
     display: flex;
     flex-direction: column;
-    align-items: flex-end; 
-    margin-top: 15px;
+    align-items: center;
 }
-.subtotal h3 {
-    margin-bottom: 5px;
+
+.fa-location-dot{
+    margin:0 10px 0 0
+}
+
+.codPost{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.codigoElegido{
+    margin-left: 10px;
+}
+
+.cambiarCP{
+    margin-right: 10px;
+    border-radius: 50px;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.calcular{
+    border-color: #F2AC57;
+    border-style: solid;
+    background-color: #FFDB9D;
+}
+
+.direccion{
+    text-align: center;
+}
+.domicilio{
+    margin-bottom: 20px;
 }
 
 @media (min-width: 769px){

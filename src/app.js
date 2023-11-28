@@ -22,3 +22,4 @@ app.get("/login", (req,res)=> {
 app.get("/carrito", (req,res)=> {
     res.sendFile(path.resolve(__dirname, "./views/carrito.html"));
 })
+
