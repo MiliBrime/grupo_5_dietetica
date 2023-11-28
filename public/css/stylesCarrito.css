@@ -44,7 +44,15 @@ body{
     border-width: 1px;
     border-style: solid;
     border-color: #ABD0BF;
+    background-color: white;
+    transition-property: background-color;
+    transition-duration: 0.5s;
 }
+
+.sumador:hover{
+    background-color: #ABD0BF;
+}
+
 .restador{
     margin: 0 0 0 10px;
     width: 30px;
@@ -54,8 +62,13 @@ body{
     border-width: 1px;
     border-color: #ABD0BF;
     border-style: solid;
+    background-color: white;
+    transition-property: background-color;
+    transition-duration: 0.5s;
 }
-
+.restador:hover{
+    background-color: #ABD0BF;
+}
 
 .cantidad{
     display: flex;
@@ -66,6 +79,12 @@ body{
     display: flex;
     margin-left: auto;
     font-size: 20px;
+    transition-property: font-size;
+    transition-duration: 0.5s;
+}
+
+.trash:hover{
+    font-size:25px;
 }
 
 .precio{
@@ -115,11 +134,23 @@ body{
 }
 .botonCompra{
     width: 60%;
-    height: 25px;
+    height: 35px;
+    border-color:#ABD0BF;
+    border-style: solid;
+    background-color: #dcebe4;
+    transition-property: all;
+    transition-duration: 0.5s;
 }
+
+.botonCompra:hover{
+    height: 45px;
+    width: 70%;
+    background-color: #ABD0BF;
+}
+
 .verMas{
     text-align: center;
-    font-size: 12px;
+    font-size: 15px;
     margin-top: 8px;
 }
 
@@ -155,13 +186,22 @@ body{
     border-style: solid;
     border-color: #F2AC57;
     background-color: #FFDB9D;
-
+    transition-property: background-color;
+    transition-duration: 0.5s;
+}
+.cambiarCP:hover{
+    background-color: #F2AC57;
 }
 
 .calcular{
     border-color: #F2AC57;
     border-style: solid;
     background-color: #FFDB9D;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+}
+.calcular:hover{
+    background-color: #F2AC57;
 }
 
 .direccion{
