@@ -1,5 +1,6 @@
 body{
     margin:0px;
+    font-family: "nunito";
 }
 .arriba{
     display: flex;
@@ -11,6 +12,7 @@ body{
 .titulo{
     font-size:14px;
     margin-left: 10px;
+    
 }
 .fa-xmark{
     margin-left: 10px;
@@ -21,11 +23,15 @@ body{
 }
 
 .nombre{
-    margin: 0 0 10px 0;
+    margin: 0;
+}
+.descripcionProd{
+    margin:0;
 }
 
 .imagen-prod{
     width: 20%;
+    height: 20%;
     margin: 0 5px 30px;
 }
 
@@ -135,7 +141,7 @@ body{
 
 .codPost{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
 .codigoElegido{
@@ -147,6 +153,9 @@ body{
     border-radius: 50px;
     border-width: 1px;
     border-style: solid;
+    border-color: #F2AC57;
+    background-color: #FFDB9D;
+
 }
 
 .calcular{
@@ -162,6 +171,9 @@ body{
     margin-bottom: 20px;
 }
 
+a{
+    color: #5079F2
+}
 @media (min-width: 769px){
     body{
         width: 50%;
