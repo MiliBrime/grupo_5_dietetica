@@ -7,35 +7,88 @@
     <link rel = "stylesheet" href = "css/stylesCarrito.css">
     <script src="https://kit.fontawesome.com/40671445d5.js" crossorigin="anonymous"></script>
     <meta name= "viewport" content= "width=device-wid th, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&family=Roboto&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <div class="arriba">
+        <i class="fa-solid fa-xmark"></i>
         <div class="titulo"><h1>Carrito de compras</h1></div>
-        <i class="fa-regular fa-circle-xmark"></i>
     </div>
-
-
-    <div class="contenedor-producto">
-        <div class="producto">
-            <h3>Producto</h3>
-            <img src = "./img/diet.jpg" alt = "foto prueba" class="fotoProd">
-        </div>
-            <div class="detalles">
-                <div class="nombre-precio">
-                    <p>Nombre del producto</p>
-                    <p>Precio</p>
-                </div>
-                <div class="cantidad">
-                    <i class="fa-solid fa-plus"></i>
-                    <p>cant</p>
-                    <i class="fa-solid fa-minus"></i>
-                </div>
+    <div class="todos los productos">
+    <div class="producto">
+        <img src="/img/diet.jpg" alt="producto" class="imagen-prod">
+        <div class="descripcion">
+            <p class="nombre">Nombre del producto</p>
+            <p class="descripcionProd">descripción del producto</p>
+            <div class="cantidad">
+            <button class="sumador">+</button>
+            <p class="cant">cant</p>
+            <button class="restador">-</i></button>
             </div>
-        <div class="subtotal">
-            <h3>Subtotal</h3>
-            <p>$$$$$</p>   
         </div>
+        <div class="trash"><i class="fa-regular fa-trash-can"></i></div>
+        <p class="precio">$1111</p>
     </div>
-</body>
-</html>
+    <div class="producto">
+        <img src="/img/diet.jpg" alt="producto" class="imagen-prod">
+        <div class="descripcion">
+            <p class="nombre">Nombre del producto</p>
+            <p class="descripcionProd">descripción del producto</p>
+            <div class="cantidad">
+            <button class="sumador">+</button>
+            <p class="cant">cant</p>
+            <button class="restador">-</i></button>
+            </div>
+        </div>
+        <div class="trash"><i class="fa-regular fa-trash-can"></i></div>
+        <p class="precio">$1111</p>
+    </div>
+    </div>
+
+    <div class="enviosTexto">
+        <i class="fa-solid fa-truck-fast"></i>
+        <p>Medios de envío</p>
+    </div>
+    <div class="enviosBotones">
+        <form>
+            <input class="postal" type="text" placeholder="CÓDIGO POSTAL">
+        </form>
+        <button type="submit" class="calcular">CALCULAR</button>
+    </div>
+    <div class="link">
+        <a href="#">No sé mi código postal</a>
+    </div>
+
+    <div class="total">
+        <p><strong>TOTAL:</strong></p>
+        <p><strong>$1111</strong></p>
+    </div>
+
+    <div class="iniciar">
+        <button class="botonCompra" type="submit">INICIAR COMPRA</button>
+    </div>
+    <div class="verMas">
+        <a class= "verMas" href="/">Ver mas productos</a>
+    </div>
+
+    <p class="extra">(opciones para cuando pone el código postal):</p>
+
+    <div class="codPost">
+        <p class="codigoElegido">Entregas para el CP: 1111</p> 
+        <button class="cambiarCP">Cambiar CP</button>
+    </div>
+
+    <form class="entrega">
+        <label>
+            <input type="radio" name="opciones" class="opcion1"><i class="fa-solid fa-truck-fast"></i>Envío a domicilio
+        </label>
+        <p class="domicilio">Correo Argentino Clásico - Envío a domicilio</p>
+        <label>
+            <input type="radio" name="opciones" class="opcion2"><i class="fa-solid fa-location-dot"></i>Retirar por el local
+        </label>
+    </form>
+    <p class="direccion">(dirección del local)</p>
+    </body>
