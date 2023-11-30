@@ -40,3 +40,25 @@ button {
 button:hover {
     background-color: #ABD0BF;
 }
+.redes-sociales {
+    width: 30%;
+    padding: 5px 0 0 0;
+}
+
+.facebook {
+    background-color: gainsboro; 
+    border-radius: 10px;
+    border: none;
+}
+
+.google {
+    background-color: gainsboro;
+    border-radius: 10px;
+    border: none; 
+}
+
+.apple {
+    background-color: gainsboro;
+    border-radius: 10px;
+    border: none;
+}
