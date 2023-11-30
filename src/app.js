@@ -25,6 +25,9 @@ app.get("/carrito", (req,res)=> {
 app.get("/register", (req,res)=> {
     res.sendFile(path.resolve(__dirname, "./views/register.html"));
 })
+app.get("/loginsignup", (req,res)=> {
+    res.sendFile(path.resolve(__dirname, "./views/loginsignup.html"));
+})
 app.post("/register", (req,res)=> {
-    res.sendFile(path.resolve(__dirname, "./home.html"));
+    res.sendFile(path.resolve(__dirname, "./views/home.html"));
 })
