@@ -28,6 +28,9 @@ app.get("/register", (req,res)=> {
 app.get("/loginsignup", (req,res)=> {
     res.sendFile(path.resolve(__dirname, "./views/loginsignup.html"));
 })
+app.get("/detalleproducto", (req,res)=> {
+    res.sendFile(path.resolve(__dirname, "./views/productDetail.html"));
+})
 app.post("/register", (req,res)=> {
     res.sendFile(path.resolve(__dirname, "./views/home.html"));
 })
