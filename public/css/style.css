@@ -19,6 +19,7 @@ main {
 }
 
 .header {
+    display: flex;
     text-align: center;
     margin-bottom: 20px;
 }
@@ -26,17 +27,18 @@ main {
 .inicio-cuenta-ingresar {
     background-color: transparent;
     color: #000000;
-    padding: 10px 15px;
+    padding: 0;
     border: none;
     border-radius: 25px;
     cursor: pointer;
-    margin: 0 0 10px 10px;
     width: 150px;
     
 }
 
 .inicio-cuenta-ingresar a {
-    color: blue;
+    color: black;
+    font-size: 15px;
+    text-decoration: none;
 }
 
 .header2 {
@@ -49,7 +51,7 @@ main {
 }
 .redes-sociales {
 
-    padding: 5px 0 0 0;
+    padding: 10px 0 0 20px;
     text-decoration: none;
 }
 .redes-sociales a {
@@ -128,5 +130,5 @@ footer{
    text-align: center;
 }
 hr{
-    font-size: 200%;
+    font-size: 300%;
 }
