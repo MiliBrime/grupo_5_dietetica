@@ -4,7 +4,8 @@
   "description": "S P R I N T - 1",
   "main": "app.js",
   "scripts": {
-    "test": "node src/app.js"
+    "start": "node src/app.js",
+    "test": "nodemon src/app.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,7 @@
   },
   "homepage": "https://github.com/MiliBrime/grupo_5_nombre#readme",
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "nodemon": "^3.0.2"
   }
 }
