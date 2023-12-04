@@ -3,15 +3,19 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f5f8fa; 
+    align-items: center;
+    display: flex;
+    justify-content: center;
 }
 
 main {
     max-width: 400px;
     margin: 50px 30px ;
-    background-color: rgb(189, 189, 189);
+    background-color: #D9D9D9;
     padding: 60px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
 }
 
 .header {
@@ -20,55 +24,74 @@ main {
 }
 
 .inicio-cuenta-ingresar {
-    background-color: rgb(94, 94, 218); 
-    color: #fff;
+    background-color: transparent;
+    color: #000000;
     padding: 10px 15px;
     border: none;
     border-radius: 25px;
     cursor: pointer;
     margin: 0 0 10px 10px;
+    width: 150px;
+    
 }
 
 .inicio-cuenta-ingresar a {
-    text-decoration:none;
-    color: black;
+    color: blue;
 }
 
 .header2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-
 }
-
+.header2 a{
+    padding: 15px;
+}
 .redes-sociales {
-    width: 100%;
-    padding: 5px 0 0 0;
-}
 
+    padding: 5px 0 0 0;
+    text-decoration: none;
+}
+.redes-sociales a {
+    text-decoration: none;
+    color: #000000;
+}
 .facebook {
-    background-color: gainsboro; 
+    font-size: 1rem;
+    background-color: #AAA9A9;
     border-radius: 10px;
     border: none;
+    height: 30px;
+    width: 250px;
 }
 
 .google {
-    background-color: gainsboro;
+    font-size: 1rem;
+    background-color: #AAA9A9;
     border-radius: 10px;
     border: none; 
+    height: 30px;
+    width: 250px;
 }
 
 .apple {
-    background-color: gainsboro;
+    font-size: 1rem;
+    background-color: #AAA9A9;
     border-radius: 10px;
     border: none;
+    height: 30px;
+    width: 250px;
 }
 
 .formulario {
     margin-bottom: 20px; 
+    width: 250px;
 }
-
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .input {
     width: 95%;
     padding: 10px;
@@ -78,14 +101,19 @@ main {
 .input2{
     margin: auto;
     display: block;
-    width: 40%;
+    height: 30px;
     padding: 5px;
-    border: 1px solid rgb(0, 0, 0);
-    background-color: rgb(94, 94, 172);
-    border-radius: 5px;
+    border: none;
+    background-color: #3A6DEF;
+    border-radius: 15px;
+    width: 250px;
+    box-shadow: 0 7px 5px rgba(0, 0, 0, 0.5);
     
 }
-
+.input2 a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
 .contraseña a {
     text-decoration: underline;
     color: #000000; 
@@ -93,6 +121,7 @@ main {
 
 .contraseña {
     margin-top: 10px;
+    font-size: 12px;
     text-align: center;
 }
 footer{
