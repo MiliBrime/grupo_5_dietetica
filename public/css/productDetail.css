@@ -9,12 +9,114 @@
     background-color: #24F3ED ;
 } */
 
+i {
+    font-size: 1em;
+}
 
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.header {
+    background-color: #ABD0BF;
+}
+
+.container1 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* Estilos de los elementos internos del encabezado */
+}
+
+.logo>img {
+    height: 100px;
+    margin: 5px;
+}
+
+.location {
+    cursor: pointer;
+}
+
+.search-product {
+    position: relative;
+    margin: 30px 0;
+    width: 50%;
+    border-bottom: 2px solid #000;
+}
+
+.search-product label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: #000000;
+    font-size: 1.1rem;
+    pointer-events: none;
+    transition: 0.5s;
+    font-weight: bold;
+}
+
+input:focus~label,
+input:valid~label {
+    top: -3px;
+}
+
+.search-product input {
+    width: 100%;
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 0.99rem;
+    color: #000;
+    font-weight: bold;
+}
+
+
+.container2 {
+    display: flex;
+    grid-gap: 25px;
+    justify-content: space-around;
+    padding: 5px;
+    /* Estilos para elementos en container2 */
+}
+
+.list1 {
+    display: flex;
+    grid-gap: 50px;
+    list-style: none;
+    /* Estilos para listas en el encabezado */
+}
+
+.container3 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px;
+    /* Estilos para container3 */
+}
+
+.list2 {
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    grid-gap: 70px;
+    cursor: pointer;
+    /* Estilos para listas en container3 */
+}
+
+
+
+
+
+/* ---------------------------------------------------------- */
 
 .container {
     margin: auto;
     padding: 20px;
-    width: 80%;
+    width: 86%;
     text-align: center;
 }
 
@@ -179,16 +281,17 @@
 
 @media (min-width: 1025px){
 
-main {
+/* main {
     background-color: #ebebeb;
-}
+} */
   
 .container {
     display: flex;
     align-items: center;
-    gap: 8%;
+    justify-content: center;
+    gap: 2%;
+    width: 100%;
     background-color: white;
-    width: 83%;
     margin: auto;
     /*  box-shadow: 0px 0px 10px rgb(100, 100, 100); */    
     border-bottom: 1px solid #ccc;
@@ -200,19 +303,19 @@ main {
     display: flex;
     align-items: center;
     padding: 10px; 
-    max-width: 68%;
+    width: 60%;
     /* border: 1px solid #ccc; */
 } 
 
 .product-image {
     flex: 0 0 auto;
-    margin-right: 0px; 
+    margin-right: 5px; 
     margin-bottom: 0px;
 }
 
 .product-image img {
-    max-height: 430px;
-    padding: 10px;
+    max-height: 440px;
+    padding: 15px;
     max-width: 100%;
     display: flex;
     /* max-height: 350px; */
@@ -220,7 +323,7 @@ main {
 }
 
 .name-product {
-    font-size: 20px;
+    font-size: 22px;
     margin-bottom: 5px;
 }
 
@@ -231,6 +334,8 @@ main {
     /* justify-content: space-between; */
 /*     gap: 10px; */
     margin-bottom: 0px;
+    text-align: left;
+    max-width: 50%;
 }
 
 .description {
@@ -245,7 +350,9 @@ main {
 
 .cantidad {
     display: flex;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
+    align-items: left;
+    justify-content: left;
 }
 
 .restador, .sumador {
@@ -273,8 +380,9 @@ main {
     align-items: center;
     flex-direction: column;
     padding: 10px;
-    max-width: 20%;
-    margin-bottom: 0px;
+/*     max-width: 70%;
+ */    margin-bottom: 0px;
+    margin-right: 10px;
     /* max-width: 35%; */
   /*   background-color:  #24F3ED; */
 }
