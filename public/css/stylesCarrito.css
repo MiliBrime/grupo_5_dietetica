@@ -214,6 +214,14 @@ body{
 a{
     color: #5079F2
 }
+
+.totalTexto{
+    margin-left: 50px;
+}
+.totalPrecio{
+    margin-right: 50px;
+}
+
 @media (min-width: 769px){
     body{
         width: 50%;

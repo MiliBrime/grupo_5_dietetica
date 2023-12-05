@@ -20,6 +20,8 @@ WIREFRAMES:
 Link del wireframe con home, detalle del producto, carrito de compras, formulario de registro, login, logo, colores y tipografías:
 https://www.figma.com/file/ZhTZH1plUaPeCgMQAbqvr3/Diet%C3%A9tica?type=design&node-id=109-2&mode=design
 
+La plataforma que usamos para organizar el trabajo es TRELLO: 
+https://trello.com/b/4FPji3F9/grupo-5 
 
 TEMÁTICA DEL SITIO:
 Tienda online de la dietética ubicada en Perón 1775 y en Rodriguez Peña 1266, San Miguel, Buenos Aires.
