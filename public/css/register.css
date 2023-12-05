@@ -110,6 +110,7 @@ form{
     border-radius: 15px;
     width: 250px;
     box-shadow: 0 7px 5px rgba(0, 0, 0, 0.5);
+    margin-bottom: 10px;
     
 }
 .input2 a {
@@ -131,4 +132,9 @@ footer{
 }
 hr{
     font-size: 300%;
+}
+.formulario{
+    font-size: 15px;
+    margin: 2px;
+    font-style: italic;
 }
