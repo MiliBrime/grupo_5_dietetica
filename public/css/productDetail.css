@@ -107,7 +107,38 @@ input:valid~label {
     /* Estilos para listas en container3 */
 }
 
+footer {
+    background-color: silver;
+    padding: 10px;
+}
 
+.footer {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.footer ul{
+    list-style: none;
+    /* text-align: center; */
+    cursor: pointer;
+}
+
+.footer h3 {
+    padding: 5px;
+}
+
+.help-list {
+    padding: 2px;
+}
+
+.social-media {
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+}
 
 
 
@@ -177,7 +208,7 @@ input:valid~label {
     margin: 0 0 0 10px;
 }
 
-.social-media {
+.social-media-1 {
     display: none;
 }
 
@@ -359,7 +390,7 @@ input:valid~label {
     transition-duration: 0.5s;
 }
 
-.social-media {
+.social-media-1 {
     display: block;
 }
 
