@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f5f8fa; 
+    background-color: #ABD0BF; 
     align-items: center;
     display: flex;
     justify-content: center;
@@ -106,24 +106,25 @@ form{
     height: 30px;
     padding: 5px;
     border: none;
-    background-color: #3A6DEF;
+    background-color: #F23E16;
     border-radius: 15px;
     width: 250px;
     box-shadow: 0 7px 5px rgba(0, 0, 0, 0.5);
+    margin-bottom: 10px;
     
 }
 .input2 a {
     text-decoration: none;
     color: #FFFFFF;
 }
-.contraseña {
-    margin-top: 10px;
-    font-size: 12px;
-    text-align: center;
-}
 footer{
    text-align: center;
 }
 hr{
     font-size: 300%;
+}
+.formulario{
+    font-size: 15px;
+    margin: 2px;
+    font-style: italic;
 }
