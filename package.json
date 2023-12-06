@@ -4,8 +4,8 @@
   "description": "S P R I N T - 1",
   "main": "app.js",
   "scripts": {
-    "start": "node src/app.js",
-    "test": "nodemon src/app.js"
+    "start": "nodemon src/app.js",
+    "test": "node src/app.js"
   },
   "repository": {
     "type": "git",
