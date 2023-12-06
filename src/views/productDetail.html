@@ -6,9 +6,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://kit.fontawesome.com/fd4e97413e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/productDetail.css">
+     <!-- <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" /> -->
     <title>The Vitamin Shop</title>
 </head>
 <body>
+    <head>
+        <section class="header">
+            <article class="container1">
+                <div class="logo">
+                    <img src="/img/logo.jpeg" alt="Logo">
+                </div>
+                <div class="location">
+                    <p>Enviar a:</p>
+                </div>
+                <div class="search-product">
+                    <input type="text" name="last-name" id="last-name" required>
+                    <label for="last-name">Buscar producto</label>
+                </div>
+                <div class="logIn">
+                    <a href="/login">
+                        <i class="fa-solid fa-right-to-bracket"></i>
+                        <p>Ingresa</p>
+                    </a>
+                </div>
+                <div class="singUp">
+                    <a href="/register">
+                    <i class="fa-solid fa-user-plus"></i>
+                    <p>Registrate</p>
+                    </a>
+                </div>
+                <div class="shoppingCart">
+                    <a href="/carrito">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </a> 
+                </div>
+            </article>
+            <article class="container2">
+                <nav>
+                    <ul class="list1">
+                        <li><a href="#">Ofertas</a></li>
+                        <li><a href="#">Historial</a></li>
+                        <li><a href="#">Ayuda</a></li>
+                    </ul>
+                </nav>
+            </article>
+
+            <article class="container3">
+                <ul class="list2">
+                    <li><a href="#"><i class="fa-solid fa-bars"></i>Todo</a></li>
+                    <li><a href="#"></a>Suplementos Deportivos</li>
+                    <li><a href="#"></a>Suplementos Naturales</li>
+                    <li><a href="#"></a>Cosmética y Salud</li>
+                    <li><a href="#"></a>Alimentos Nutricionales</li>
+                    <li><a href="#"></a>Bebidas e Infusiones</li>
+                    <li><a href="#">Despensa</a></li>
+                </ul>
+            </article>
+
+        </section>
+
     <main>
         <div class="container">
             <div class="card-product">
@@ -26,7 +83,7 @@
                             <p class="cant">1</p>
                             <button class="sumador">+</i></button>
                         </div>
-                            <div class="social-media">
+                            <div class="social-media-1">
                                 <p>COMPARTIR</p>
                                 <a href="#"><img src="/img/Instagram-Logo.wine.svg" alt="Instagram" class="insta"></a>
                                 <a href="#"><img src="/img/WhatsApp.svg.webp" alt="Whatsapp" class="wpp"></a>                    
@@ -40,8 +97,8 @@
                         <p class="envio">Envío a todo el país</p>
                         <p>Stock disponible</p>
                         <p class="total">Total: $20 USD</p>
-                        <button class="comprar">Comprar ahora</button>
-                        <button class="carrito">Añadir al carrito</button>
+                        <a href="#"><button class="comprar">Comprar ahora</button></a>
+                        <a href="#"><button class="carrito">Añadir al carrito</button></a>
                     </div>      
                 </div>
                     <div class="payment">
@@ -73,8 +130,40 @@
                     <img src="/img/producto1-proteina.jpeg" alt="Proteina ENA">
                 </div>
         </div>
-
-
     </main>
+        <footer>
+            <article class="footer">
+                <div>
+                    <h3>Acerca de</h3>
+                    <ul>
+                        <li><a href="#">Noticias</a></li>
+                        <li><a href="#">Nuevos</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Ayuda</h3>
+                    <ul class="help-list">
+                        <li><a href="#">Envíos y entregas</a></li>
+                        <li><a href="#">Devoluciones</a></li>
+                        <li><a href="#">Cambios</a></li>
+                        <li><a href="#">opciones de pago</a></li>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Mi cuenta</h3>
+                    <ul>
+                        <li><a href="#">¿Todavía no tienes cuenta?</a></li>
+                        <li><a href="#">Registrarte</a></li>
+                    </ul>
+                </div>
+            </article>
+            <article class="social-media">
+                <a href="https://www.instagram.com/thevitaminshop_sm/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.facebook.com/thevitaminshop.sm" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://api.whatsapp.com/message/CWOVR6NBEKYXO1?autoload=1&app_absent=0" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+            </article>MZG-kDg"
+        </footer>
+
 </body>
 </html>
