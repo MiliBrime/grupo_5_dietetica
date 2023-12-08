@@ -6,6 +6,8 @@ const path = require("path");
 app.use(express.static("public"));
 app.use(express.static("views"));
 
+app.set('view engine', 'ejs');
+
 
 app.listen(3010,()=> {
     console.log("servidor corriendo en http://localhost:3010");
