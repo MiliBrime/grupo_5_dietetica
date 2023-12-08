@@ -8,6 +8,7 @@ app.use(express.static("views"));
 
 app.set('view engine', 'ejs');
 
+app.set("views", path.join(__dirname, "views")); 
 
 app.listen(3010,()=> {
     console.log("servidor corriendo en http://localhost:3010");
@@ -31,7 +32,7 @@ app.get("/loginsignup", (req,res)=> {
     res.sendFile(path.resolve(__dirname, "./views/loginsignup.html"));
 })
 app.get("/detalleproducto", (req,res)=> {
-    res.sendFile(path.resolve(__dirname, "./views/productDetail.html"));
+    res.render("productDetail")
 })
 app.post("/register", (req,res)=> {
     res.sendFile(path.resolve(__dirname, "./views/home.html"));
