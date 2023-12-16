@@ -15,7 +15,7 @@ app.listen(3010,()=> {
 })
 
 app.get("/", (req,res)=> {
-    res.sendFile(path.resolve(__dirname, "./views/home.html"));
+    res.render("home")
 })
 
 app.get("/login", (req,res)=> {
