@@ -1,0 +1,66 @@
+[
+    { 
+        "id": 1, 
+        "name": "TrueMade Whey Protein ENA", 
+        "description": "Proteína concentrada + isolatada. Máxima pureza, gran absorción, excelente calidad.", 
+        "price": "30 USD", 
+        "image": "producto1-proteina.jpeg",
+        "category": "Suplementos deportivos" 
+    },
+    { 
+        "id": 2, 
+        "name": "Chia Natufarma", 
+        "description": "Aceite de chía de 60 cápsulas. Contribuye a normalizar los niveles de colesterol y triglicéridos y mantener la flexibilidad de venas y arterias.", 
+        "image": "producto2-chia.jpeg",
+        "price": "9 USD", 
+        "category": "Suplementos naturales" 
+    },
+    { 
+        "id": 3, 
+        "name": "Geonat Flex Colágeno", 
+        "description": "Suplemento dietario en polvo a base de: Colágeno Hidrolizado, Vitamina C, Vitamina D3, Magnesio, Calcio y Ácido Hialurónico. Diseñado para mantener el normal funcionamiento de las articulaciones, ayudando a prevenir el dolor articular y a disminuir el riesgo de lesiones.", 
+        "image": "producto3-colageno.jpeg",
+        "price": "13 USD", 
+        "category": "Suplementos naturales" 
+    },
+    { 
+        "id": 4, 
+        "name": "Creatina Star Nutrition", 
+        "description": "Creatina Star Nutrition x 300 grs. La creatina micronizada es la unión de tres aminoácidos que ofrece mayores ventajas que la creatina normal, mejorando su asimilación. La creatina monohidrato es recomendada durante un plan de entrenamiento para aumentar la fuerza, resistencia y recuperación.", 
+        "image": "producto4-creatina.jpg",
+        "price": "35 USD", 
+        "category": "Suplementos deportivos" 
+    },
+    { 
+        "id": 5, 
+        "name": "Magnesio Natier Cápsulas", 
+        "description": "El magnesio participa en 300 reacciones bioquímicas, como la formación y remineralización de hueso, el buen estado de la pared de las arterias y el control glucémico. Es un elemento esencial para mantener la integridad funcional del sistema nervioso y brindar soporte al sistema inmunológico. Participa en todos los procesos metabólicos de transformación de los alimentos en energía.", 
+        "image": "producto5-magnesio.jpg",
+        "price": "14 USD", 
+        "category": "Suplementos naturales" 
+    },
+    { 
+        "id": 6, 
+        "name": "Acido Hialurónico Geonat Cápsulas", 
+        "description": "Suplemento dietario en cápsulas a base de colágeno, caléndula, ácido hialurónico, coenzima Q10, selenio, vitamina B5, biotina, vitamina A, Vitamina E, vitamina C y ácido fólico. Ayuda a hidratar y mejorar la elasticidad de la piel", 
+        "image": "producto6-ah.jpg",
+        "price": "11.25 USD", 
+        "category": "Suplementos naturales" 
+    },
+    { 
+        "id": 7, 
+        "name": "Aceite de coco neutro Goldfish", 
+        "description": "Aceite de coco refinado de forma natural, sin aroma ni sabor a coco. Sirve tanto para consumo como para uso externo. Brinda propiedades antimicrobianas. Ayuda a tratar infecciones por bacterias y hongos tanto a nivel interno como externo. Se puede aplicar en el cabello/cuero cabelludo ayuda a darle más luminosidad y vitalidad a la fibra capilar. Como aceite de masaje, es humectante y suavizante.", 
+        "image": "producto7-aceitecoco.jpg",
+        "price": "12 USD", 
+        "category": "Cosmética y salud"
+    },
+    { 
+        "id": 8, 
+        "name": "Te sedante SaintGottard", 
+        "description": "Te en saquitos de 20 unidades a base de manzanilla, pasionaria, cedrón, tilo y melisa. Aconsejado para combatir el insomnio, la ansiedad y el nerviosismo", 
+        "image": "producto8-tesedante.jpg",
+        "price": "5.50 USD", 
+        "category": "Bebidas e infusiones" 
+    }
+]
