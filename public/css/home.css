@@ -203,8 +203,11 @@ input:valid~label {
 }
 
 .card-product img {
-    width: 100%;
+    width: auto;
     border-radius: 15px;
+    height: auto;
+    max-width: 300px;
+    max-height: 200px;
 }
 
 .product-description {
