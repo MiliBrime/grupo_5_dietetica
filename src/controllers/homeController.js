@@ -13,7 +13,6 @@ let indexController={
     principal: (req, res) =>{
         //guardamos los productos
         const products= JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-
     res.render("home",{products});
     },
 }
