@@ -10,13 +10,12 @@ app.set('view engine', 'ejs');
 
 app.set("views", path.join(__dirname, "views")); 
 
-app.listen(3010,()=> {
-    console.log("servidor corriendo en http://localhost:3010");
-})
-
-app.get("/", (req,res)=> {
+const rutaHome = require("./routes/homeRouter")
+app.use("/",rutaHome);
+/* app.get("/", (req,res)=> {
     res.render("home")
-})
+}) */
+
 
 app.get("/login", (req,res)=> {
     res.render("login");
@@ -37,4 +36,9 @@ app.get("/detalleproducto", (req,res)=> {
 
 app.post("/register", (req,res)=> {
     res.sendFile(path.resolve(__dirname, "./views/home.html"));
+})
+
+
+app.listen(3010,()=> {
+    console.log("servidor corriendo en http://localhost:3010");
 })

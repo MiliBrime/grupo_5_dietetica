@@ -45,8 +45,27 @@
         </section>
 
         <h1 class="sub-title2">PRODUCTOS DESTACADOS:</h1>
-
         <section class="products">
+            <div class="card-product">
+                <% products.forEach(product => { %>
+                <a href="/detalleproducto">
+                    <img src="img\<%=product.image%>" alt="imagen de producto"></a>
+                <div class="product-description">
+                    <h3 class="name-product"><%=product.name%></h3>
+                    <p class="description"><%=product.description%></p>
+                </div>
+                <div class="buttons">
+                    <button class="add-shipping-cart"><i class="fa-solid fa-cart-shopping"></i></button>
+                    <button class="buy">
+                        <p>Comprar</p>
+                        <p><strong><%=product.price%></strong></p>
+                    </button>
+                </div>
+                <%}); %>
+            </div>
+        </section>
+
+        <!-- <section class="products">
             <div class="card-product">
                 <a href="/detalleproducto"><img src="img\imagen-muestra.jpg" alt="producto"></a>
                 <div class="product-description">
@@ -159,7 +178,7 @@
                     </button>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <h1 class="sub-title">PROMOCIONES DEL MES:</h1>
 
