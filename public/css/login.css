@@ -50,14 +50,19 @@ main {
     padding: 15px;
 }
 .redes-sociales {
-
     padding: 10px 0 0 20px;
     text-decoration: none;
 }
 .redes-sociales a {
     text-decoration: none;
     color: #000000;
+    display: flex;
+    align-items: center;
 }
+.redes-sociales a i{
+    margin-right: 10px;
+}
+
 .facebook {
     font-size: 1rem;
     background-color: #AAA9A9;
@@ -65,6 +70,15 @@ main {
     border: none;
     height: 30px;
     width: 250px;
+    transition-property: background-color;/* esto es para que cambie de color cuando pasas por ahi */
+    transition-duration: 0.5s;
+    display: flex; /* esto es para que queden los iconos alineados */
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.facebook:hover{
+    background-color: #3b5998;
 }
 
 .google {
@@ -74,6 +88,15 @@ main {
     border: none; 
     height: 30px;
     width: 250px;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.google:hover{
+    background-color: #DB4437;
 }
 
 .apple {
@@ -83,11 +106,22 @@ main {
     border: none;
     height: 30px;
     width: 250px;
+    transition-property: all;
+    transition-duration: 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
 }
 
+.apple:hover{
+    background-color: white;
+
+}
+
+
 .formulario {
-    margin-bottom: 20px; 
-    width: 250px;
+    margin: 5px;
+    width: 95%;
 }
 form{
     display: flex;
@@ -99,6 +133,8 @@ form{
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    font-size: 15px;
+    font-style: italic;
 }
 .input2{
     margin: auto;
@@ -110,7 +146,8 @@ form{
     border-radius: 15px;
     width: 250px;
     box-shadow: 0 7px 5px rgba(0, 0, 0, 0.5);
-    
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 .input2 a {
     text-decoration: none;

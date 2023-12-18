@@ -18,6 +18,11 @@ main {
     
 }
 
+.cabecera{
+    margin-bottom: 20px;
+    text-align: center;
+}
+
 .header {
     display: flex;
     text-align: center;
@@ -57,6 +62,11 @@ main {
 .redes-sociales a {
     text-decoration: none;
     color: #000000;
+    display: flex;
+    align-items: center;
+}
+.redes-sociales a i{
+    margin-right: 10px;
 }
 .facebook {
     font-size: 1rem;
@@ -65,6 +75,15 @@ main {
     border: none;
     height: 30px;
     width: 250px;
+    transition-property: background-color;  /* esto es para que cambie de color cuando pasas por ahi */
+    transition-duration: 0.5s;
+    display: flex; /* esto es para que queden los iconos alineados */
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.facebook:hover{
+    background-color: #3b5998;
 }
 
 .google {
@@ -74,7 +93,17 @@ main {
     border: none; 
     height: 30px;
     width: 250px;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
 }
+
+.google:hover{
+    background-color: #DB4437;
+}
+
 
 .apple {
     font-size: 1rem;
@@ -83,6 +112,16 @@ main {
     border: none;
     height: 30px;
     width: 250px;
+    transition-property: all;
+    transition-duration: 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.apple:hover{
+    background-color: white;
+
 }
 
 .formulario {
@@ -100,6 +139,7 @@ form{
     border: 1px solid #ccc;
     border-radius: 5px;
 }
+
 .input2{
     margin: auto;
     display: block;
@@ -110,8 +150,8 @@ form{
     border-radius: 15px;
     width: 250px;
     box-shadow: 0 7px 5px rgba(0, 0, 0, 0.5);
-    margin-bottom: 10px;
-    
+    margin-bottom: 15px;
+    margin-top: 15px;
 }
 .input2 a {
     text-decoration: none;
@@ -125,9 +165,12 @@ hr{
 }
 .formulario{
     font-size: 15px;
-    margin: 2px;
-    font-style: italic;
-}
-section.header2{
-    margin-right: 16px;
+    margin: 5px;
+    font-size: 15px;
+    width: 95%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 15px;
+  font-style: italic;
 }

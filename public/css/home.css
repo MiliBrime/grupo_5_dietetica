@@ -41,6 +41,10 @@ a {
     cursor: pointer;
 }
 
+.iconosHeader{
+    padding-right: 10px;
+}
+
 /* ---- */
 .search-product {
     position: relative;
@@ -94,7 +98,7 @@ input:valid~label {
 }
 
 .container3 {
-    display: flex;
+    display: none;
     justify-content: space-around;
     align-items: center;
     padding: 15px;
@@ -104,8 +108,8 @@ input:valid~label {
     text-decoration: none;
     list-style: none;
     display: flex;
-    justify-content: center;
     grid-gap: 70px;
+    justify-content: center;
     cursor: pointer;
 }
 
@@ -126,6 +130,7 @@ input:valid~label {
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(6.3px);
     border: 1px solid rgba(171, 208, 191, 0.28);
+    display: none;
 }
 
 .icon-info {
@@ -149,12 +154,28 @@ input:valid~label {
 .text-info {
     padding: 5px;
 }
+.card-info-enviosGratis i{
+    font-size: 30px;
+}
+.card-info-enviosGratis{
+    text-align: center;
+    /* background: linear-gradient(145deg, #B9B9B9, #FFFFFF);
+    box-shadow: 14.11px 14.11px 32px #C7C7C7, -14.11px -14.11px 32px #FFFFFF; */
+    background: rgba(171, 208, 191, 0.52);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.3px);
+    border: 1px solid rgba(171, 208, 191, 0.28);
+}
 
 .card-info i {
     font-size: 30px;
 }
 
 .sub-title2 {
+    padding: 20px;
+}
+.sub-title {
     padding: 20px;
 }
 
@@ -170,11 +191,11 @@ input:valid~label {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    width: 22%;
+    flex:100%;
     padding: 15px;
     grid-gap: 30px;
     border-radius: 15px;
-    margin-bottom: 45px;
+    margin: 0 20px 45px 20px;
     background: linear-gradient(225deg, #9abbac, #b7dfcc);
     box-shadow: -7px 7px 17px #a4c8b7,
         7px -7px 17px #b2d8c7;
@@ -283,8 +304,53 @@ footer {
 .social-media {
     display: flex;
     justify-content: space-around;
-    padding: 15px;
-   /*  grid-gap: 15px; */
+    grid-gap: 15px;
+    margin-top: 20px;
     text-align: center;
     cursor: pointer;
+}
+
+.div-footer{
+    flex:1;
+}
+
+.verTodo{
+    display: flex;
+    justify-content: flex-start;
+    margin: 20px;
+    padding-bottom: 10px;
+    list-style: none;
+    cursor:pointer;
+}
+.todosTexto{
+    padding-left: 20px;
+}
+
+.ingresa-registrate-carro{
+    display: none;
+}
+
+/* ---------- */
+
+@media (min-width: 769px){
+    .card-product{
+        flex:45%;
+    }
+    .ingresa-registrate-carro{
+        display: flex;
+    }
+    .card-info{
+        display: block;
+    }
+    .card-info-enviosGratis{
+        width: 20%;
+    }
+}
+@media (min-width: 1000px) {
+    .card-product{
+        flex:20%;
+    }
+    .container3{
+        display: flex;
+    }  
 }

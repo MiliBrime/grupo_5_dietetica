@@ -29,6 +29,10 @@ a {
     /* Estilos de los elementos internos del encabezado */
 }
 
+.ingresa-registrate-carro{
+    display: none;
+}
+
 .logo>img {
     height: 100px;
     margin: 5px;
@@ -90,11 +94,10 @@ input:valid~label {
 }
 
 .container3 {
-    display: flex;
+    display: none;
     justify-content: space-around;
     align-items: center;
     padding: 15px;
-    /* Estilos para container3 */
 }
 
 .list2 {
@@ -135,9 +138,14 @@ footer {
 .social-media {
     display: flex;
     justify-content: space-around;
-    padding: 15px;
+    grid-gap: 15px;
+    margin-top: 20px;
     text-align: center;
     cursor: pointer;
+}
+
+.div-footer{
+    flex:1;
 }
 
 
@@ -307,6 +315,20 @@ footer {
     border-bottom: 1px solid #ccc;
 }
 
+.verTodo{
+    display: flex;
+    justify-content: flex-start;
+    margin: 20px;
+    padding-bottom: 10px;
+    list-style: none;
+    cursor:pointer;
+}
+.todosTexto{
+    padding-left: 20px;
+}
+.iconosHeader{
+    padding-right: 10px;
+}
 
 /* ------------------------------------------------ */
 
@@ -329,6 +351,10 @@ footer {
     padding: 20px;
     /* text-align: */
 }
+.ingresa-registrate-carro{
+    display: flex;
+}
+
 
 .card-product {
     display: flex;
@@ -475,5 +501,9 @@ footer {
   .carrito:hover {
     background-color: #1976D2;
   }
+
+  .container3{
+    display: flex;
+}  
 
 }
