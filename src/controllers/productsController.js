@@ -1,8 +1,9 @@
+const fs = require('fs');
+const path = require('path');
+
 const express = require('express');
 const app= express();
 
-const fs = require('fs');
-const path = require('path');
 app.use(express.static("public"));
 app.use(express.static("views"));
 
@@ -19,13 +20,13 @@ const productsController = {
 
 	// Detalle de un producto
 	detail: (req, res) => {
-		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+		const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
 
 		//cuando ponemos /detail/4 por ej, nos lleva a ese producto
-		const singleProduct= products.find(product =>{
+		const singleProduct = products.find(product =>{
 			return product.id == req.params.id;
 		});
-
+		//si lo encuentra nos lleva al detalle de ese producto
 		if (singleProduct !== undefined){
 			res.render("productDetail", {singleProduct});
 		}else{
@@ -41,9 +42,6 @@ const productsController = {
 	// // guardar el producto con la info del usuario, y redirigir a alguna pagina para q el usuario sepa q salio todo ok
 	processCreate: (req, res) => {
 		//traigo el array
-		
-		console.log(req.body);
-
 		const products = JSON.parse (fs.readFileSync(productsFilePath, "utf-8"));
 		
 		//creo el nuevo producto con la info que pedimos en el form
@@ -52,11 +50,11 @@ const productsController = {
 			id: products[products.length - 1].id + 1,
   			name: req.body.name,
   			price: req.body.price,
+			image: "logo.jpeg",
  			category: req.body.category,
 			descriptionProduct: req.body.descriptionProduct,
 			descriptionHome: req.body.descriptionHome,
 			ofertaOdestacado: req.body.ofertaOdestacado,
-  			image: "logo.jpeg",
 		}
 
 		//metodo push para agregarlo al array
@@ -66,7 +64,7 @@ const productsController = {
 		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
 
 		//redirigimos
-		res.redirect("/");
+		res.redirect("/products");
 
 	},
 
