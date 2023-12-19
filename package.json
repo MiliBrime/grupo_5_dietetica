@@ -1,7 +1,7 @@
 {
   "name": "trabajo-final",
   "version": "1.0.0",
-  "description": "S P R I N T - 1",
+  "description": "S P R I N T S",
   "main": "app.js",
   "scripts": {
     "start": "nodemon src/app.js",
@@ -20,6 +20,7 @@
   "dependencies": {
     "ejs": "^3.1.9",
     "express": "^4.18.2",
+    "method-override": "^3.0.0",
     "nodemon": "^3.0.2"
   }
 }

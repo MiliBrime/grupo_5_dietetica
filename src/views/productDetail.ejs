@@ -20,7 +20,7 @@
                     <div class="product-description">
                         <h2 class="name-product"><%=singleProduct.name%></h2>
                         <p class="description"><%=singleProduct.descriptionProduct%> </p>
-                        <p class="price"><%=singleProduct.price%></p>
+                        <p class="price"><%=singleProduct.price%> USD</p>
                         
                         <div class="cantidad">
                             <button class="restador">-</button>
@@ -40,7 +40,7 @@
                     <div class="buy-description">
                         <p class="envio">Envío a todo el país</p>
                         <p>Stock disponible</p>
-                        <p class="total">Total: <%=singleProduct.price%></p>
+                        <p class="total">Total: <%=singleProduct.price%> USD</p>
                         <a href="#"><button class="comprar">Comprar ahora</button></a>
                         <a href="#"><button class="carrito">Añadir al carrito</button></a>
                     </div>      
@@ -56,13 +56,17 @@
                             </div>
                     </div>
                 </div>
-                    <div class="social-media-2">
+                <div class="social-media-2">
                         <p>COMPARTIR</p>
                         <a href="#"><img src="/img/Instagram-Logo.wine.svg" alt="Instagram" class="insta"></a>
                         <a href="#"><img src="/img/WhatsApp.svg.webp" alt="Whatsapp" class="wpp"></a>                    
                     </div>
                         
         </div>
+        <div class="editarBorrar">
+            <a class="editarProducto" href="/products/edit/<%=singleProduct.id%>">EDITAR PRODUCTO</a>
+            <a class="borrarProducto" href="/products/borrar/<%=singleProduct.id%>">BORRAR PRODUCTO</a>
+            </div>
 
         <div class="container-products">
             <h2 class="related-products">Productos relacionados</h2>

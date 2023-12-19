@@ -2,7 +2,7 @@
  {
   "id": 1,
   "name": "TrueMade Whey Protein ENA",
-  "price": "30 USD",
+  "price": "30",
   "image": "producto1-proteina.jpeg",
   "category": "Suplementos deportivos",
   "descriptionProduct": "Proteína concentrada + isolatada. Máxima pureza, gran absorción, excelente calidad.",
@@ -12,7 +12,7 @@
  {
   "id": 2,
   "name": "Chia Natufarma",
-  "price": "9 USD",
+  "price": "9",
   "image": "producto2-chia.jpeg",
   "category": "Suplementos naturales",
   "descriptionProduct": "Aceite de chía de 60 cápsulas. Contribuye a normalizar los niveles de colesterol y triglicéridos y mantener la flexibilidad de venas y arterias.",
@@ -22,7 +22,7 @@
  {
   "id": 3,
   "name": "Geonat Flex Colágeno",
-  "price": "13 USD",
+  "price": "13",
   "image": "producto3-colageno.jpeg",
   "category": "Suplementos naturales",
   "descriptionProduct": "Suplemento dietario en polvo a base de: Colágeno Hidrolizado, Vitamina C, Vitamina D3, Magnesio, Calcio y Ácido Hialurónico. Diseñado para mantener el normal funcionamiento de las articulaciones, ayudando a prevenir el dolor articular y a disminuir el riesgo de lesiones.",
@@ -32,7 +32,7 @@
  {
   "id": 4,
   "name": "Creatina Star Nutrition",
-  "price": "35 USD",
+  "price": "35",
   "image": "producto4-creatina.jpg",
   "category": "Suplementos deportivos",
   "descriptionProduct": "Creatina micronizada que ofrece ventajas para aumentar la fuerza, resistencia y recuperación durante el entrenamiento.",
@@ -42,7 +42,7 @@
  {
   "id": 5,
   "name": "Magnesio Natier Cápsulas",
-  "price": "14 USD",
+  "price": "14",
   "image": "producto5-magnesio.jpg",
   "category": "Suplementos naturales",
   "descriptionProduct": "El magnesio participa en 300 reacciones bioquímicas, manteniendo el buen estado de las arterias y soportando el sistema nervioso e inmunológico.",
@@ -52,7 +52,7 @@
  {
   "id": 6,
   "name": "Acido Hialurónico Geonat Cápsulas",
-  "price": "11.25 USD",
+  "price": "11.25",
   "image": "producto6-ah.jpg",
   "category": "Suplementos naturales",
   "descriptionProduct": "Suplemento en cápsulas que ayuda a hidratar y mejorar la elasticidad de la piel con ingredientes esenciales como colágeno, ácido hialurónico y vitaminas.",
@@ -62,7 +62,7 @@
  {
   "id": 7,
   "name": "Aceite de coco neutro Goldfish",
-  "price": "12 USD",
+  "price": "12",
   "image": "producto7-aceitecoco.jpg",
   "category": "Cosmética y salud",
   "descriptionProduct": "Aceite de coco refinado, sin sabor ni aroma, con propiedades antimicrobianas para uso interno y externo, incluso como aceite de masaje.",
@@ -71,15 +71,14 @@
  {
   "id": 8,
   "name": "Te sedante SaintGottard",
-  "price": "5.50 USD",
+  "price": "5.50",
   "image": "producto8-tesedante.jpg",
   "category": "Bebidas e infusiones",
   "descriptionProduct": "Te en saquitos a base de manzanilla, pasionaria, cedrón, tilo y melisa, recomendado para combatir el insomnio, la ansiedad y el nerviosismo.",
   "descriptionHome": "Te en saquitos para aliviar insomnio, ansiedad y nerviosismo."
  },
  {
-  "id": 9,
-  "image": "logo.jpeg"
+  "id": 9
  },
  {
   "id": 10,
@@ -88,5 +87,18 @@
  {
   "id": 11,
   "image": "logo.jpeg"
+ },
+ {
+  "id": 12,
+  "image": "logo.jpeg"
+ },
+ {
+  "id": 13,
+  "name": "aaaa",
+  "price": "2",
+  "category": "aasdad",
+  "descriptionProduct": "adfadfaf",
+  "descriptionHome": "asdad",
+  "ofertaOdestacado": "oferta"
  }
 ]

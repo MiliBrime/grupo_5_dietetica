@@ -30,7 +30,8 @@ const productsController = {
 		if (singleProduct !== undefined){
 			res.render("productDetail", {singleProduct});
 		}else{
-			res.render("products", {products}) //no me aparece la imagen de los productos
+			res.render("products", {products}) 
+			//no me aparece la imagen de los productos
 		}
 	},
 
@@ -65,21 +66,66 @@ const productsController = {
 
 		//redirigimos
 		res.redirect("/products");
-
 	},
 
-	// (get) Update - Formulario para editar
+	// Formulario para editar
 	edit: (req, res) => {
-		
-	},
-	// (post) Update - Método para actualizar la info
-	update: (req, res) => {
-		
+
+		//traigo el json
+		let products = JSON.parse (fs.readFileSync(productsFilePath, "utf-8"));
+
+		//busco el prod segun id
+		const productEdit = products.find(product => {
+			return product.id == req.params.id
+		})
+
+		res.render("form-edit-product", {productEdit});
 	},
 
-	// (delete) Delete - Eliminar un producto de la DB
-	destroy : (req, res) => {
+	// Actualizar la info
+	processEdit: (req, res) => {
+		//traemos el json
+		const products = JSON.parse (fs.readFileSync(productsFilePath, "utf-8"));
+
+		//buscamos el producto por id que queremos editar
+		const id= req.params.id;
+
+		let productEdit= products.find(product => product.id == id);
+
+		//creamos el objeto literal
+		productEdit = {
+			id: productEdit.id,
+  			name: productEdit.name,
+  			price:productEdit.price,
+ 			category: productEdit.category,
+			descriptionProduct: productEdit.descriptionProduct,
+			descriptionHome: productEdit.descriptionHome,
+			ofertaOdestacado: productEdit.ofertaOdestacado,
+		}
+
+		//buscamos la posicion del producto a reemplazar
+		let indice = products.findIndex(product =>{
+			return product.id == id
+		})
+		//Lo reemplazamos
+		products[indice]=productEdit;
+
+		//edito el json para q se guarde
+		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
+
+		res.redirect("/products");
+	},
+
+	// Eliminar un producto de la DB
+	borrar : (req, res) => {
+		let products = JSON.parse (fs.readFileSync(productsFilePath, "utf-8"));
+		//hacemos un nuevo array de products donde queden todos los productos que sean distintos al del params
+		products= products.filter(product =>{
+			return product.id != req.params.id
+		})
+		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
 		
+		res.redirect("/products");
 	}
 };
 

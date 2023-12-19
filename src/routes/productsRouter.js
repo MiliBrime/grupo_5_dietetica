@@ -16,16 +16,14 @@ router.get('/create', productsController.create);
 
 router.post('/create', productsController.processCreate); 
 
-/* Quiten el comentario y editen según el enunciado
-
 // Editar un producto 
-router.???('/:id/???', productsController.edit); 
-router.???('/:id', productsController.update); 
+router.get('/edit/:id', productsController.edit); 
+router.put('/edit/:id', productsController.processEdit); 
+
 
 // Eliminar un producto 
-router.???('/:id', productsController.destroy);
+router.delete('/borrar/:id', productsController.borrar);
 
-*/
 
 
 module.exports = router;

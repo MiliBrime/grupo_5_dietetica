@@ -338,6 +338,29 @@ footer {
     padding-right: 10px;
 }
 
+/* -------- editar y borrar prod*/
+.editarProducto, .borrarProducto{
+    border: 1px solid #000;
+    padding: 10px;
+    text-decoration: none;
+    max-width: 30%;
+    justify-content: center;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+}
+
+.editarProducto:hover{
+    background-color: #ABD0BF;
+}
+.borrarProducto:hover{
+    background-color: #ABD0BF;
+}
+
+.editarBorrar{
+    display: flex;
+    justify-content: center;
+}
+
 /* ------------------------------------------------ */
 
 @media (min-width: 1025px){
