@@ -11,6 +11,7 @@ router.get('/', productsController.index);
 // Devolver un producto 
 router.get('/detail/:id/', productsController.detail); 
 
+
 /* Quiten el comentario y editen según el enunciado
 
 

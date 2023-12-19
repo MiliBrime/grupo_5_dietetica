@@ -1,18 +1,37 @@
 const fs = require('fs');
 const path = require('path');
 
-const productsFilePath = path.join(__dirname, '../data/products.json');
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+const express = require('express');
+const app= express();
 
-const controller = {
-	// (get) Root - Mostrar todos los productos
+app.use(express.static("public"));
+app.use(express.static("views"));
+
+const productsFilePath = path.join(__dirname, '../data/products.json');
+
+/* const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8')); */
+
+const productsController = {
+	// Mostrar todos los productos (donde dice todos los productos)
 	index: (req, res) => {
-		// Do the magic
+		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+		res.render("products", {products});
 	},
 
-	// (get) Detail - Detalle de un producto
+	// Detalle de un producto
 	detail: (req, res) => {
-		// Do the magic
+		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
+		//cuando ponemos /detail/4 por ej, nos lleva a ese producto
+		const singleProduct= products.find(product =>{
+			return product.id == req.params.id;
+		});
+
+		if (singleProduct !== undefined){
+			res.render("productDetail", {singleProduct});
+		}else{
+			res.render("products", {products}) //no me aparece la imagen de los productos
+		}
 	},
 
 	// (get) Create - Formulario para crear
@@ -42,4 +61,4 @@ const controller = {
 
 
 
-module.exports = controller;
+module.exports = productsController;

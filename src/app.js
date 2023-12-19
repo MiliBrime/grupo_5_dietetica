@@ -12,9 +12,9 @@ app.set("views", path.join(__dirname, "views"));
 
 const rutaHome = require("./routes/homeRouter")
 app.use("/",rutaHome);
-/* app.get("/", (req,res)=> {
-    res.render("home")
-}) */
+
+const productsRouter = require('./routes/productsRouter'); // Rutas /products
+app.use('/products', productsRouter);
 
 
 app.get("/login", (req,res)=> {

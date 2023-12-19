@@ -15,13 +15,12 @@
         <div class="container">
             <div class="card-product">
                 <div class="product-image">
-                    <img src="/img/producto1-proteina.jpeg" alt="Proteina ENA">
+                    <img src="/img/<%=singleProduct.image%>" alt="imagen del producto">
                 </div>
                     <div class="product-description">
-                        <h2 class="name-product">TrueMade Whey Protein ENA</h2>
-                        <p class="description">Proteína concentrada + isolatada. Máxima pureza, gran absorción, excelente calidad. 
-                        Proteína concentrada + isolatada. Máxima pureza, gran absorción, excelente calidad. </p>
-                        <p class="price">$20 USD</p>
+                        <h2 class="name-product"><%=singleProduct.name%></h2>
+                        <p class="description"><%=singleProduct.descriptionProduct%> </p>
+                        <p class="price"><%=singleProduct.price%></p>
                         
                         <div class="cantidad">
                             <button class="restador">-</button>
@@ -41,7 +40,7 @@
                     <div class="buy-description">
                         <p class="envio">Envío a todo el país</p>
                         <p>Stock disponible</p>
-                        <p class="total">Total: $20 USD</p>
+                        <p class="total">Total: <%=singleProduct.price%></p>
                         <a href="#"><button class="comprar">Comprar ahora</button></a>
                         <a href="#"><button class="carrito">Añadir al carrito</button></a>
                     </div>      
