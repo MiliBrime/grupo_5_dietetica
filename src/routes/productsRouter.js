@@ -11,14 +11,12 @@ router.get('/', productsController.index);
 // Devolver un producto 
 router.get('/detail/:id/', productsController.detail); 
 
+// Crear un producto
+router.get('/create', productsController.create); 
+
+router.post('/create', productsController.processCreate); 
 
 /* Quiten el comentario y editen según el enunciado
-
-
-// Crear un producto
-router.???('/???/', productsController.create); 
-router.???('/', productsController.store); 
-
 
 // Editar un producto 
 router.???('/:id/???', productsController.edit); 

@@ -1,9 +1,8 @@
-const fs = require('fs');
-const path = require('path');
-
 const express = require('express');
 const app= express();
 
+const fs = require('fs');
+const path = require('path');
 app.use(express.static("public"));
 app.use(express.static("views"));
 
@@ -34,28 +33,55 @@ const productsController = {
 		}
 	},
 
-	// (get) Create - Formulario para crear
+	// Formulario para crear
 	create: (req, res) => {
-		// Do the magic
+		res.render("form-creacion-producto")
 	},
 	
-	// (post) Create - Método para guardar la info
-	store: (req, res) => {
-		// Do the magic
+	// // guardar el producto con la info del usuario, y redirigir a alguna pagina para q el usuario sepa q salio todo ok
+	processCreate: (req, res) => {
+		//traigo el array
+		
+		console.log(req.body);
+
+		const products = JSON.parse (fs.readFileSync(productsFilePath, "utf-8"));
+		
+		//creo el nuevo producto con la info que pedimos en el form
+		const newProduct = {
+			//-1 porq arranca de 0 un array, y despues +1 porq le sumo 1 al ultimo id que hay
+			id: products[products.length - 1].id + 1,
+  			name: req.body.name,
+  			price: req.body.price,
+ 			category: req.body.category,
+			descriptionProduct: req.body.descriptionProduct,
+			descriptionHome: req.body.descriptionHome,
+			ofertaOdestacado: req.body.ofertaOdestacado,
+  			image: "logo.jpeg",
+		}
+
+		//metodo push para agregarlo al array
+		products.push(newProduct);
+
+		//reescribimos el json, las comillas son para que no quede todo en una sola linea
+		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
+
+		//redirigimos
+		res.redirect("/");
+
 	},
 
 	// (get) Update - Formulario para editar
 	edit: (req, res) => {
-		// Do the magic
+		
 	},
 	// (post) Update - Método para actualizar la info
 	update: (req, res) => {
-		// Do the magic
+		
 	},
 
 	// (delete) Delete - Eliminar un producto de la DB
 	destroy : (req, res) => {
-		// Do the magic
+		
 	}
 };
 

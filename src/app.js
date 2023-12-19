@@ -30,9 +30,9 @@ app.get("/register", (req,res)=> {
 app.get("/loginsignup", (req,res)=> {
     res.render("loginsignup");
 })
-app.get("/detalleproducto", (req,res)=> {
+/* app.get("/detalleproducto", (req,res)=> {
     res.render("productDetail")
-})
+}) */
 
 app.post("/register", (req,res)=> {
     res.sendFile(path.resolve(__dirname, "./views/home.html"));
