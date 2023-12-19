@@ -5,8 +5,9 @@
         "price": "30 USD", 
         "image": "producto1-proteina.jpeg",
         "category": "Suplementos deportivos",
-        "description-product": "Proteína concentrada + isolatada. Máxima pureza, gran absorción, excelente calidad.",
-        "description-home": "Proteína concentrada de alta calidad y gran absorción."
+        "descriptionProduct": "Proteína concentrada + isolatada. Máxima pureza, gran absorción, excelente calidad.",
+        "descriptionHome": "Proteína concentrada de alta calidad y gran absorción.",
+        "ofertaOdestacado": "destacado"
     },
     { 
         "id": 2, 
@@ -14,8 +15,9 @@
         "price": "9 USD", 
         "image": "producto2-chia.jpeg",
         "category": "Suplementos naturales",
-        "description-product": "Aceite de chía de 60 cápsulas. Contribuye a normalizar los niveles de colesterol y triglicéridos y mantener la flexibilidad de venas y arterias.",
-        "description-home": "Aceite de chía en cápsulas para mejorar niveles de colesterol y flexibilidad de venas y arterias."
+        "descriptionProduct": "Aceite de chía de 60 cápsulas. Contribuye a normalizar los niveles de colesterol y triglicéridos y mantener la flexibilidad de venas y arterias.",
+        "descriptionHome": "Aceite de chía en cápsulas para mejorar niveles de colesterol y flexibilidad de venas y arterias.",
+        "ofertaOdestacado": "oferta"
     },
     { 
         "id": 3, 
@@ -23,8 +25,9 @@
         "price": "13 USD", 
         "image": "producto3-colageno.jpeg",
         "category": "Suplementos naturales",
-        "description-product": "Suplemento dietario en polvo a base de: Colágeno Hidrolizado, Vitamina C, Vitamina D3, Magnesio, Calcio y Ácido Hialurónico. Diseñado para mantener el normal funcionamiento de las articulaciones, ayudando a prevenir el dolor articular y a disminuir el riesgo de lesiones.",
-        "description-home": "Suplemento en polvo con colágeno y vitaminas para articulaciones y prevención de lesiones."
+        "descriptionProduct": "Suplemento dietario en polvo a base de: Colágeno Hidrolizado, Vitamina C, Vitamina D3, Magnesio, Calcio y Ácido Hialurónico. Diseñado para mantener el normal funcionamiento de las articulaciones, ayudando a prevenir el dolor articular y a disminuir el riesgo de lesiones.",
+        "descriptionHome": "Suplemento en polvo con colágeno y vitaminas para articulaciones y prevención de lesiones.",
+        "ofertaOdestacado": "destacado"
     },
     { 
         "id": 4, 
@@ -32,8 +35,9 @@
         "price": "35 USD", 
         "image": "producto4-creatina.jpg",
         "category": "Suplementos deportivos",
-        "description-product": "Creatina micronizada que ofrece ventajas para aumentar la fuerza, resistencia y recuperación durante el entrenamiento.",
-        "description-home": "Suplemento de creatina para mejorar fuerza y resistencia en el entrenamiento."
+        "descriptionProduct": "Creatina micronizada que ofrece ventajas para aumentar la fuerza, resistencia y recuperación durante el entrenamiento.",
+        "descriptionHome": "Suplemento de creatina para mejorar fuerza y resistencia en el entrenamiento.",
+        "ofertaOdestacado": "destacado"
     },
     { 
         "id": 5, 
@@ -41,8 +45,9 @@
         "price": "14 USD", 
         "image": "producto5-magnesio.jpg",
         "category": "Suplementos naturales",
-        "description-product": "El magnesio participa en 300 reacciones bioquímicas, manteniendo el buen estado de las arterias y soportando el sistema nervioso e inmunológico.",
-        "description-home": "Suplemento esencial que contribuye al bienestar general del cuerpo al apoyar la función muscular, nerviosa y ósea."
+        "descriptionProduct": "El magnesio participa en 300 reacciones bioquímicas, manteniendo el buen estado de las arterias y soportando el sistema nervioso e inmunológico.",
+        "descriptionHome": "Suplemento esencial que contribuye al bienestar general del cuerpo al apoyar la función muscular, nerviosa y ósea.",
+        "ofertaOdestacado": "oferta"
     },
     { 
         "id": 6, 
@@ -50,8 +55,8 @@
         "price": "11.25 USD", 
         "image": "producto6-ah.jpg",
         "category": "Suplementos naturales",
-        "description-product": "Suplemento en cápsulas que ayuda a hidratar y mejorar la elasticidad de la piel con ingredientes esenciales como colágeno, ácido hialurónico y vitaminas.",
-        "description-home": "Cápsulas que mejoran la elasticidad y la hidratación de la piel."
+        "descriptionProduct": "Suplemento en cápsulas que ayuda a hidratar y mejorar la elasticidad de la piel con ingredientes esenciales como colágeno, ácido hialurónico y vitaminas.",
+        "descriptionHome": "Cápsulas que mejoran la elasticidad y la hidratación de la piel."
     },
     { 
         "id": 7, 
@@ -59,8 +64,8 @@
         "price": "12 USD", 
         "image": "producto7-aceitecoco.jpg",
         "category": "Cosmética y salud",
-        "description-product": "Aceite de coco refinado, sin sabor ni aroma, con propiedades antimicrobianas para uso interno y externo, incluso como aceite de masaje.",
-        "description-home": "Aceite de coco refinado con múltiples usos, desde antimicrobiano hasta aceite de masaje."
+        "descriptionProduct": "Aceite de coco refinado, sin sabor ni aroma, con propiedades antimicrobianas para uso interno y externo, incluso como aceite de masaje.",
+        "descriptionHome": "Aceite de coco refinado con múltiples usos, desde antimicrobiano hasta aceite de masaje."
     },
     { 
         "id": 8, 
@@ -68,7 +73,7 @@
         "price": "5.50 USD", 
         "image": "producto8-tesedante.jpg",
         "category": "Bebidas e infusiones",
-        "description-product": "Te en saquitos a base de manzanilla, pasionaria, cedrón, tilo y melisa, recomendado para combatir el insomnio, la ansiedad y el nerviosismo.",
-        "description-home": "Te en saquitos para aliviar insomnio, ansiedad y nerviosismo."
+        "descriptionProduct": "Te en saquitos a base de manzanilla, pasionaria, cedrón, tilo y melisa, recomendado para combatir el insomnio, la ansiedad y el nerviosismo.",
+        "descriptionHome": "Te en saquitos para aliviar insomnio, ansiedad y nerviosismo."
     }
 ]
