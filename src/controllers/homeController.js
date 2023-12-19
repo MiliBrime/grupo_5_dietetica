@@ -13,8 +13,16 @@ let indexController={
     principal: (req, res) =>{
         //guardamos los productos
         const products= JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-    res.render("home",{products});
-    },
-}
+        
+        const productosDestacados = products.filter(product => {
+            return product.ofertaOdestacado == "destacado"
+        })
+        const productosOfertas = products.filter(product => {
+            return product.ofertaOdestacado == "oferta"
+        })
+
+    res.render("home",{productosDestacados,productosOfertas});
+
+}};
 
 module.exports=indexController;

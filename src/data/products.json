@@ -56,7 +56,8 @@
         "image": "producto6-ah.jpg",
         "category": "Suplementos naturales",
         "descriptionProduct": "Suplemento en cápsulas que ayuda a hidratar y mejorar la elasticidad de la piel con ingredientes esenciales como colágeno, ácido hialurónico y vitaminas.",
-        "descriptionHome": "Cápsulas que mejoran la elasticidad y la hidratación de la piel."
+        "descriptionHome": "Cápsulas que mejoran la elasticidad y la hidratación de la piel.",
+        "ofertaOdestacado": "destacado"
     },
     { 
         "id": 7, 

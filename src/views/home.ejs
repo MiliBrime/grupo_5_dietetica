@@ -47,8 +47,7 @@
 
         <h1 class="sub-title2">PRODUCTOS DESTACADOS:</h1>
         <section class="products">
-            <% products.forEach(product => { %>
-                <% if (product.ofertaOdestacado == "destacado") { %>
+            <% productosDestacados.forEach(product => { %>
             <div class="card-product">
                 <a href="/detalleproducto">
                     <img src="img\<%=product.image%>" alt="imagen de producto"></a>
@@ -64,14 +63,12 @@
                     </button>
                 </div>
             </div>
-            <% } %>
             <%}); %>
         </section>
 
         <h1 class="sub-title">PROMOCIONES DEL MES:</h1>
         <section class="products">
-            <% products.forEach(product => { %>
-                <% if (product.ofertaOdestacado == "oferta") { %>
+            <% productosOfertas.forEach(product => { %>
             <div class="card-product">
                 <a href="/detalleproducto">
                     <img src="img\<%=product.image%>" alt="imagen de producto"></a>
@@ -87,7 +84,6 @@
                     </button>
                 </div>
             </div>
-            <% } %>
             <%}); %>
         </section>
     </main>
