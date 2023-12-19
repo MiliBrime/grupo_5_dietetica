@@ -5,17 +5,9 @@
     box-sizing: border-box;
 }
 
-/* div {
-    border: solid 1px black;
-} */
-
 i {
     font-size: 1em;
 }
-
-/* main {
-    background: #e0e0e0;
-} */
 
 a {
     text-decoration: none;
@@ -123,8 +115,6 @@ input:valid~label {
 .card-info {
     text-align: center;
     width: 20%;
-    /* background: linear-gradient(145deg, #B9B9B9, #FFFFFF);
-    box-shadow: 14.11px 14.11px 32px #C7C7C7, -14.11px -14.11px 32px #FFFFFF; */
     background: rgba(171, 208, 191, 0.52);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -159,8 +149,6 @@ input:valid~label {
 }
 .card-info-enviosGratis{
     text-align: center;
-    /* background: linear-gradient(145deg, #B9B9B9, #FFFFFF);
-    box-shadow: 14.11px 14.11px 32px #C7C7C7, -14.11px -14.11px 32px #FFFFFF; */
     background: rgba(171, 208, 191, 0.52);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -292,7 +280,6 @@ footer {
 
 .footer ul{
     list-style: none;
-    /* text-align: center; */
     cursor: pointer;
 }
 
