@@ -66,7 +66,8 @@
   "image": "producto7-aceitecoco.jpg",
   "category": "Cosmética y salud",
   "descriptionProduct": "Aceite de coco refinado, sin sabor ni aroma, con propiedades antimicrobianas para uso interno y externo, incluso como aceite de masaje.",
-  "descriptionHome": "Aceite de coco refinado con múltiples usos, desde antimicrobiano hasta aceite de masaje."
+  "descriptionHome": "Aceite de coco refinado con múltiples usos, desde antimicrobiano hasta aceite de masaje.",
+  "ofertaOdestacado": "oferta"
  },
  {
   "id": 8,
@@ -75,7 +76,8 @@
   "image": "producto8-tesedante.jpg",
   "category": "Bebidas e infusiones",
   "descriptionProduct": "Te en saquitos a base de manzanilla, pasionaria, cedrón, tilo y melisa, recomendado para combatir el insomnio, la ansiedad y el nerviosismo.",
-  "descriptionHome": "Te en saquitos para aliviar insomnio, ansiedad y nerviosismo."
+  "descriptionHome": "Te en saquitos para aliviar insomnio, ansiedad y nerviosismo.",
+  "ofertaOdestacado": "oferta"
  },
  {
   "id": 9
