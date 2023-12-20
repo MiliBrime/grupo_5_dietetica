@@ -20,26 +20,6 @@ app.use("/",rutaHome);
 const productsRouter = require('./routes/productsRouter');
 app.use('/products', productsRouter);
 
-
-//hacer las rutas
-app.get("/login", (req,res)=> {
-    res.render("login");
-})
-
-app.get("/carrito", (req,res)=> {
-    res.render("carrito")
-})
-app.get("/register", (req,res)=> {
-    res.render("register");
-})
-app.get("/loginsignup", (req,res)=> {
-    res.render("loginsignup");
-})
-
-app.post("/register", (req,res)=> {
-    res.sendFile(path.resolve(__dirname, "./views/home.html"));
-})
-
 app.listen(3010,()=> {
     console.log("servidor corriendo en http://localhost:3010");
 })

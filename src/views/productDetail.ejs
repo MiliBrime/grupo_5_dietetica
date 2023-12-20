@@ -65,7 +65,9 @@
         </div>
         <div class="editarBorrar">
             <a class="editarProducto" href="/products/edit/<%=singleProduct.id%>">EDITAR PRODUCTO</a>
-            <a class="borrarProducto" href="/products/borrar/<%=singleProduct.id%>">BORRAR PRODUCTO</a>
+            <form action="/products/borrar/<%=singleProduct.id%>?_method=DELETE" method="POST" style="display: inline-flex">
+                <button type="submit" class="action-button delete">ELIMINAR</button>
+            </form>
             </div>
 
         <div class="container-products">

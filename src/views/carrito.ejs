@@ -2,10 +2,12 @@
 <html lang="en">
 
 <head>
-    <%- include ("./partials/head.ejs" , { cssSheet: "stylesCarrito" icons: "https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&family=Roboto&display=swap"} ) %>
+    <%- include ("./partials/head.ejs" , { cssSheet: "stylesCarrito", icons: "https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&family=Roboto&display=swap"} ) %>
 </head>
 <body>
-    <main>
+    <%- include("./partials/header.ejs")%>
+<main>
+<!--     <%- include("./partials/info-banner.ejs")%> -->
     <div class="arriba">
         <i class="fa-solid fa-xmark"></i>
         <div class="titulo"><h1>Carrito de compras</h1></div>
@@ -84,6 +86,7 @@
         </label>
     </form>
     <p class="direccion">(dirección del local)</p>
-</main>
+    </main>
+    <%- include('partials/footer.ejs') %>
     </body>
 </html>

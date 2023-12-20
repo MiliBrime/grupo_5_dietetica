@@ -360,6 +360,10 @@ footer {
     display: flex;
     justify-content: center;
 }
+.delete {
+    margin: 0 0 0 20px;
+    padding: 10px;
+}
 
 /* ------------------------------------------------ */
 

@@ -116,18 +116,19 @@ const productsController = {
 	},
 
 	// Eliminar un producto de la DB
-	borrar : (req, res) => {
+	borrar: (req, res) => {
 		let products = JSON.parse (fs.readFileSync(productsFilePath, "utf-8"));
+		
 		//hacemos un nuevo array de products donde queden todos los productos que sean distintos al del params
-		products= products.filter(product =>{
+		
+		products = products.filter(product => {
 			return product.id != req.params.id
 		})
+
 		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
 		
 		res.redirect("/products");
 	}
 };
-
-
 
 module.exports = productsController;
