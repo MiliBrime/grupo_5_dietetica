@@ -30,8 +30,7 @@ const productsController = {
 		if (singleProduct !== undefined){
 			res.render("productDetail", {singleProduct});
 		}else{
-			res.render("products", {products}) 
-			//no me aparece la imagen de los productos
+			res.redirect("/products");
 		}
 	},
 
@@ -84,6 +83,7 @@ const productsController = {
 
 	// Actualizar la info
 	processEdit: (req, res) => {
+
 		//traemos el json
 		const products = JSON.parse (fs.readFileSync(productsFilePath, "utf-8"));
 
@@ -92,17 +92,16 @@ const productsController = {
 
 		let productEdit= products.find(product => product.id == id);
 
-		//creamos el objeto literal
+		//creamos el objeto literal q reemplaza al anterior
 		productEdit = {
 			id: productEdit.id,
-  			name: productEdit.name,
-  			price:productEdit.price,
- 			category: productEdit.category,
-			descriptionProduct: productEdit.descriptionProduct,
-			descriptionHome: productEdit.descriptionHome,
-			ofertaOdestacado: productEdit.ofertaOdestacado,
+  			name: req.body.name,
+  			price:req.body.price,
+ 			category: req.body.category,
+			descriptionProduct: req.body.descriptionProduct,
+			descriptionHome: req.body.descriptionHome,
+			ofertaOdestacado: req.body.ofertaOdestacado,
 		}
-
 		//buscamos la posicion del producto a reemplazar
 		let indice = products.findIndex(product =>{
 			return product.id == id

@@ -1,6 +1,7 @@
 // Requires
 const express = require('express');
 const router = express.Router();
+const multer= require('multer');
 
 // requires del controlador
 const productsController = require('../controllers/productsController');
@@ -18,6 +19,7 @@ router.post('/create', productsController.processCreate);
 
 // Editar un producto 
 router.get('/edit/:id', productsController.edit); 
+
 router.put('/edit/:id', productsController.processEdit); 
 
 

@@ -21,6 +21,7 @@ const productsRouter = require('./routes/productsRouter');
 app.use('/products', productsRouter);
 
 
+//hacer las rutas
 app.get("/login", (req,res)=> {
     res.render("login");
 })
