@@ -181,7 +181,7 @@ input:valid~label {
     flex-wrap: wrap;
     flex:100%;
     padding: 15px;
-    grid-gap: 30px;
+    grid-gap: 15px;
     border-radius: 15px;
     margin: 0 20px 45px 20px;
     background: linear-gradient(225deg, #9abbac, #b7dfcc);
