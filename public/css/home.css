@@ -182,11 +182,11 @@ input:valid~label {
     flex:100%;
     padding: 15px;
     grid-gap: 15px;
-    border-radius: 15px;
+    border-radius: 10px;
     margin: 0 20px 45px 20px;
-    background: linear-gradient(225deg, #9abbac, #b7dfcc);
-    box-shadow: -7px 7px 17px #a4c8b7,
-        7px -7px 17px #b2d8c7;
+    border: solid #e6eae6;
+ /*    background: linear-gradient(225deg, #9abbac, #b7dfcc); */
+ /*    box-shadow: -3px 3px 8px #a4c8b7, 3px -3px 8px #b2d8c7; */
 
 }
 
@@ -194,18 +194,20 @@ input:valid~label {
     width: auto;
     border-radius: 15px;
     height: auto;
-    max-width: 300px;
-    max-height: 200px;
+    max-width: 280px;
+    max-height: 180px;
 }
 
 .product-description {
     width: 100%;
+    border-top: solid #f0f5f0
 }
 
 .product-description h3 {
     font-weight: bold;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     padding-bottom: 5px;
+    margin-top: 15px;
 }
 
 button {
@@ -217,21 +219,21 @@ button {
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    grid-gap: 50px;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .add-shipping-cart {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 55px;
-    width: 55px;
+    height: 50px;
+    width: 50px;
     border: 1px solid #ABD0BF;
     border-radius: 50%;
     background: #ABD0BF;
-    background: linear-gradient(145deg, #b7dfcc, #9abbac);
-    box-shadow: 8px 8px 16px #a6cab9,
-        -8px -8px 16px #b0d6c5;
+    /* background: linear-gradient(145deg, #b7dfcc, #9abbac); */
+    /* box-shadow: -3px 3px 8px #a4c8b7, 3px -3px 8px #b2d8c7 */;
 }
 
 .add-shipping-cart i {
@@ -239,13 +241,14 @@ button {
 }
 
 .buy {
-    width: 235px;
-    height: 55px;
+    width: 220px;
+    height: 50px;
     border-radius: 50px;
     border: none;
-    background: linear-gradient(145deg, #b7dfcc, #9abbac);
+    background-color:  #ABD0BF
+/*     background: linear-gradient(145deg, #b7dfcc, #9abbac);
     box-shadow: 8px 8px 16px #a6cab9,
-        -8px -8px 16px #b0d6c5;
+        -8px -8px 16px #b0d6c5; */
 }
 
 .buy p {
@@ -352,6 +355,9 @@ footer {
 @media (min-width: 1000px) {
     .card-product{
         flex:20%;
+    }
+    .card-product:hover{
+        box-shadow: -3px 3px 8px #a4c8b7, 3px -3px 8px #b2d8c7;
     }
     .container3{
         display: flex;
