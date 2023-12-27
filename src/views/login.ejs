@@ -45,81 +45,21 @@
                         <label for="formCheck">Recuerdame</label>
                     </div>
                     <div class="input-field">
-                        <input type="submit" class="input-submit" value="Sign In" required>
+                        <input type="submit" class="input-submit" value="Ingresa" required>
                     </div>
                     <div class="forgot">
                         <a href="#">¿Olvidaste tu contraseña?</a>
                     </div>
                 </form>
             </div>
-
-            <!---------------------------- register --------------------------------------->
-
-            <div class="box-register" id="register">
-                <div class="top-header">
-                    <h3>¡Registrate ahora!</h3>
-                    <small>Es un gusto que hagas parte de nuestra familia.</small>
-                </div>
-                <div class="buttons-icons">
-                    <button type="button" class="buttonfb">
-                        <h4>Registrate con Facebook</h4>
-                    </button>
-                    <button type="button" class="buttonfb">
-                        <h4>Registrate con Google</h4>
-                    </button>
-                    <button type="button" class="buttonfb">
-                        <h4>Registrate con Apple</h4>
-                    </button>
-                </div>
-                <hr>
-                <form class="input-group" method="">
-                    <div class="input-field">
-                        <input type="text" class="input-box" id="regUsername" required>
-                        <label for="regUsername">Nombre</label>
-                    </div>
-                    <div class="input-field">
-                        <input type="text" class="input-box" id="regEmail" required>
-                        <label for="regEmail">Correo Electrónico</label>
-                    </div>
-                    <div class="input-field">
-                        <input type="password" class="input-box" id="regPassword" required>
-                        <label for="regPassword">Contraseña</label>
-                        <div class="eye-area">
-                            <div class="eye-box" onclick="myRegPassword()">
-                                <i class="fa-regular fa-eye" id="eye-2"></i>
-                                <i class="fa-regular fa-eye-slash" id="eye-slash-2"></i>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="input-field">
-                        <input type="submit" class="input-submit" value="Sign Up" required>
-                    </div>
-                </form>
-            </div>
             <div class="switch">
-                <a href="#" class="login active" onclick="login()">Login</a>
-                <a href="#" class="register" onclick="register()">Register</a>
+                <a href="login.html" class="login active" onclick="login()">Iniciar Sesión</a>
+                <a href="register.html" class="register" onclick="register()">Registrarse</a>
                 <div class="btn-active" id="btn"></div>
             </div>
         </div>
     </div>
     <script>
-        var x = document.getElementById('login');
-        var y = document.getElementById('register');
-        var z = document.getElementById('btn');
-
-        function login() {
-            x.style.left = "27px";
-            y.style.right = "-350px";
-            z.style.left = "0px";
-        }
-        function register() {
-            x.style.left = "-350px";
-            y.style.right = "25px";
-            z.style.left = "150px";
-        }
-
         // View Password codes
 
         function myLogPassword() {

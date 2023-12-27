@@ -28,20 +28,12 @@ body {
     background-color: rgba(255, 220, 220, 0.406);
     backdrop-filter: blur(15px);
     border: 3px solid rgba(255, 255, 255, 0.2);
-    overflow: hidden;
 }
 
 .box-login {
     position: absolute;
     width: 85%;
     left: 27px;
-    transition: .5s ease-in-out;
-}
-
-.box-register {
-    position: absolute;
-    width: 85%;
-    right: -350px;
     transition: .5s ease-in-out;
 }
 
