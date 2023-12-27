@@ -197,7 +197,14 @@ input:valid~label {
     max-width: 280px;
     max-height: 180px;
 }
-
+.card-product1{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex: 100%;
+    padding: 15px;
+    grid-gap: 15px;
+}
 .product-description {
     width: 100%;
     border-top: solid #f0f5f0
