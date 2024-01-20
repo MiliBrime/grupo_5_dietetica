@@ -18,7 +18,7 @@
             <% productosDestacados.forEach(product => { %>
             <div class="card-product">
                 <a class="card-product1" href="/products/detail/<%=product.id%>">
-                    <img src="img\<%=product.image%>" alt="imagen de producto">
+                    <img src="img/products/<%=product.image%>" alt="imagen de producto">
                     <div class="product-description">
                         <h3 class="name-product"><%=product.name%></h3>
                         <p class="description"><%=product.descriptionHome%></p>
@@ -39,7 +39,7 @@
             <% productosOfertas.forEach(product => { %>
             <div class="card-product">
                 <a class="card-product1" href="/products/detail/<%=product.id%>">
-                    <img src="img\<%=product.image%>" alt="imagen de producto">
+                    <img src="img/products/<%=product.image%>" alt="imagen de producto">
                 <div class="product-description">
                     <h3 class="name-product"><%=product.name%></h3>
                     <p class="description"><%=product.descriptionHome%></p>

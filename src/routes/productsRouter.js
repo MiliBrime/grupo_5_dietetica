@@ -4,7 +4,6 @@ const multer= require('multer');
 const path = require('path');
 
 const router = express.Router();
-router.use(express.static(path.join(__dirname, 'public')));
 
 // requires del controlador
 const productsController = require('../controllers/productsController');

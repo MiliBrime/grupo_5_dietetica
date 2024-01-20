@@ -99,13 +99,6 @@ body {
     transition: .3s ease-in-out;
 }
 
-.input-box:focus~label,
-.input-box:valid~label {
-    top: 2px;
-    font-size: 10px;
-    color: #c12828;
-    font-weight: 500;
-}
 
 .remember {
     display: flex;

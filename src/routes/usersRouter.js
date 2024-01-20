@@ -3,7 +3,7 @@ const router=express.Router();
 const path= require("path");
 const multer=require("multer");
 
-router.use(express.static("public"));
+const registerValidation = require("../middlewares/validateRegister");
 
 let usersController=require("../controllers/usersController");
 
@@ -22,8 +22,8 @@ const upload= multer({storage:storage}); //especificarle a multer que deseamos u
 
 router.get("/login", usersController.login);
 
-router.get("/register",validation, usersController.register);
+router.get("/register", registerValidation, usersController.register);
 
-router.post("/register", validation, upload.single("image"), usersController.processRegister);
+router.post("/register", upload.single("image"),registerValidation, usersController.processRegister);
 
 module.exports=router;

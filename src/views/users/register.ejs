@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<%- include ("./partials/head.ejs" , { cssSheet: "register", icons: "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"} ) %>
+<%- include ("../partials/head.ejs" , { cssSheet: "register", icons: "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"} ) %>
 
 <body>
     <div class="container">
@@ -22,23 +22,26 @@
                         <h4>Registrate con Apple</h4>
                     </button>
                 </div>
-                <hr>
+                <hr>                    
                 <form class="input-group" method="POST" enctype="multipart/form-data">                        
                     <div class="input-field">
-                        <input type="text" class="input-box" id="name" name="name">
-                        <label for="name">Nombre</label>
+                        <input type="text" class="input-box"
+                        id="name" name="name"  placeholder="Nombre" value= "<%= locals.old ? old.name : "" %>">
+                        <% if (locals.mensajesDeError && mensajesDeError.name) { %> 
+                            <%= mensajesDeError.name.msg%> <% } %>
                     </div>
                     <div class="input-field">
-                        <input type="text" class="input-box" id="lastName" name="lastName">
-                        <label for="lastName">Apellido</label>
+                        <input type="text" class="input-box" id="lastName" name="lastName" placeholder="Apellido" value= "<%= locals.old ? old.lastName : "" %>">
+                        <% if (locals.mensajesDeError && mensajesDeError.lastName) { %> 
+                            <%= mensajesDeError.lastName.msg%> <% } %>
                     </div>
                     <div class="input-field">
-                        <input type="text" class="input-box" id="email" name="email">
-                        <label for="email">Correo Electrónico</label>
+                        <input type="text" class="input-box" id="email" name="email" placeholder="Correo electrónico" value= "<%= locals.old ? old.email : "" %>">
+                        <% if (locals.mensajesDeError && mensajesDeError.email) { %> 
+                            <%= mensajesDeError.email.msg%> <% } %>
                     </div>
                     <div class="input-field">
-                        <input type="password" class="input-box" id="password" name="password">
-                        <label for="password">Contraseña</label>
+                        <input type="password" class="input-box" id="password" name="password" placeholder="Contraseña">
                         <div class="eye-area">
                             <div class="eye-box" onclick="myRegPassword()">
                                 <i class="fa-regular fa-eye" id="eye-2"></i>
