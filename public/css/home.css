@@ -89,6 +89,14 @@ input:valid~label {
 
 }
 
+.list1Transition:hover{
+    text-decoration: underline;
+}
+.list1Transition{
+    transition-property: all;
+}
+
+
 .container3 {
     display: none;
     justify-content: space-around;
@@ -98,11 +106,12 @@ input:valid~label {
 
 .list2 {
     text-decoration: none;
-    list-style: none;
+    list-style: circle;
     display: flex;
     grid-gap: 70px;
     justify-content: center;
     cursor: pointer;
+    color: #3c3c3c;
 }
 
 .info-banner {
@@ -161,10 +170,17 @@ input:valid~label {
 }
 
 .sub-title2 {
+    margin-top: 20px;
     padding: 20px;
+    font-size: 25px;
+    font-weight: 500;
 }
+
 .sub-title {
+    margin-top: 20px;
     padding: 20px;
+    font-size: 25px;
+    font-weight: 500;
 }
 
 .products {
@@ -323,8 +339,15 @@ footer {
     cursor:pointer;
 }
 
+.todosLosProductos{
+    display: flex;
+}
+
 .ingresa-registrate-carro{
     display: none;
+}
+.fa-bars{
+    margin: 0 5px 0 0;
 }
 
 .crearProducto{
@@ -341,6 +364,14 @@ footer {
 
 .crearProducto:hover{
     background-color: #ABD0BF;
+}
+
+.item{
+    margin: 0 0 10px 0;
+}
+
+.item a{
+    color:#3c3c3c
 }
 
 /* ---------- */
