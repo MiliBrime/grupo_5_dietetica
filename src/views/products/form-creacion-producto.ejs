@@ -13,7 +13,7 @@
     <main>
         <%- include("./partials/info-banner.ejs")%>
         <h2 class="sub-title2">Bienvenido a la creación de tu producto:</h2>
-        <form action="/products/create" method="POST">
+        <form action="/products/create" method="POST" enctype="multipart/form-data">
             <div class="formCreate">
                 <div class="inputCreate">
                     <label for="name" class="form-label">Nombre:</label>
@@ -45,7 +45,7 @@
                 </div>
                 <div class="inputCreate">
                     <label for="image" class="form-label">Imagen:</label>
-                    <input type="file" name="image" id="image" class="form-input" accept= ".jpg, .png" ></input>
+                    <input type="file" name="image" class="form-input" id="image" accept= ".jpg, .png" ></input>
                 </div>
                 <div class="inputCreate">
                     <button type="submit" class="guardarProd">Guardar producto</button>

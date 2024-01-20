@@ -41,6 +41,7 @@ const productsController = {
 	
 	// // guardar el producto con la info del usuario, y redirigir a alguna pagina para q el usuario sepa q salio todo ok
 	processCreate: (req, res) => {
+		
 		//traigo el array
 		const products = JSON.parse (fs.readFileSync(productsFilePath, "utf-8"));
 		
@@ -50,8 +51,8 @@ const productsController = {
 			id: products[products.length - 1].id + 1,
   			name: req.body.name,
   			price: req.body.price,
-			image: "logo.jpeg",
- 			category: req.body.category,
+			image: req.file.filename,
+			category: req.body.category,
 			descriptionProduct: req.body.descriptionProduct,
 			descriptionHome: req.body.descriptionHome,
 			ofertaOdestacado: req.body.ofertaOdestacado,
@@ -101,13 +102,14 @@ const productsController = {
 			descriptionProduct: req.body.descriptionProduct,
 			descriptionHome: req.body.descriptionHome,
 			ofertaOdestacado: req.body.ofertaOdestacado,
+			image: req.file != undefined ? req.file.filename : productEdit.image,
 		}
 		//buscamos la posicion del producto a reemplazar
 		let indice = products.findIndex(product =>{
 			return product.id == id
 		})
 		//Lo reemplazamos
-		products[indice]=productEdit;
+		products[indice] = productEdit;
 
 		//edito el json para q se guarde
 		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));

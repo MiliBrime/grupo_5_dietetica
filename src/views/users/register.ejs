@@ -23,18 +23,22 @@
                     </button>
                 </div>
                 <hr>
-                <form class="input-group" method="">
+                <form class="input-group" method="POST" enctype="multipart/form-data">                        
                     <div class="input-field">
-                        <input type="text" class="input-box" id="regUsername" required>
-                        <label for="regUsername">Nombre</label>
+                        <input type="text" class="input-box" id="name" name="name">
+                        <label for="name">Nombre</label>
                     </div>
                     <div class="input-field">
-                        <input type="text" class="input-box" id="regEmail" required>
-                        <label for="regEmail">Correo Electrónico</label>
+                        <input type="text" class="input-box" id="lastName" name="lastName">
+                        <label for="lastName">Apellido</label>
                     </div>
                     <div class="input-field">
-                        <input type="password" class="input-box" id="regPassword" required>
-                        <label for="regPassword">Contraseña</label>
+                        <input type="text" class="input-box" id="email" name="email">
+                        <label for="email">Correo Electrónico</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" class="input-box" id="password" name="password">
+                        <label for="password">Contraseña</label>
                         <div class="eye-area">
                             <div class="eye-box" onclick="myRegPassword()">
                                 <i class="fa-regular fa-eye" id="eye-2"></i>
@@ -42,15 +46,19 @@
                             </div>
                         </div>
                     </div>
+                    <div class="image">
+                        <p class="textImage">Imagen de perfil</p>
+                        <input type="file" name= "image" class="image" id="image" >
+                    </div>
 
                     <div class="input-field">
-                        <input type="submit" class="input-submit" value="Registrate" required>
+                        <input type="submit" class="input-submit" value="Registrate">
                     </div>
                 </form>
             </div>
             <div class="switch">
-                <a href="/login" class="login active" onclick="login()">Iniciar Sesión</a>
-                <a href="/register" class="register" onclick="register()">Registrarse</a>
+                <a href="/users/login" class="login active" onclick="login()">Iniciar Sesión</a>
+                <a href="/users/register" class="register" onclick="register()">Registrarse</a>
                 <div class="btn-active" id="btn"></div>
             </div>
         </div>

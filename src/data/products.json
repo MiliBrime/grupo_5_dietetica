@@ -78,25 +78,5 @@
   "descriptionProduct": "Te en saquitos a base de manzanilla, pasionaria, cedrón, tilo y melisa, recomendado para combatir el insomnio, la ansiedad y el nerviosismo.",
   "descriptionHome": "Te en saquitos para aliviar insomnio, ansiedad y nerviosismo.",
   "ofertaOdestacado": "oferta"
- },
- {
-  "id": 9
- },
- {
-  "id": 11,
-  "image": "logo.jpeg"
- },
- {
-  "id": 12,
-  "image": "logo.jpeg"
- },
- {
-  "id": 13,
-  "name": "aaaa",
-  "price": "2",
-  "category": "aasdad",
-  "descriptionProduct": "adfadfaf",
-  "descriptionHome": "asdad",
-  "ofertaOdestacado": "oferta"
  }
 ]

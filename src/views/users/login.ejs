@@ -27,11 +27,11 @@
                 <hr>
                 <form class="input-group" method="">
                     <div class="input-field">
-                        <input type="text" class="input-box" id="logEmail" required>
+                        <input type="text" class="input-box" id="logEmail" name="email">
                         <label for="logEmail">Correo electrónico</label>
                     </div>
                     <div class="input-field">
-                        <input type="password" class="input-box" id="logPassword" required>
+                        <input type="password" class="input-box" id="logPassword" name="password">
                         <label for="logPassword">Contraseña</label>
                         <div class="eye-area">
                             <div class="eye-box" onclick="myLogPassword()">
@@ -53,8 +53,8 @@
                 </form>
             </div>
             <div class="switch">
-                <a href="/login" class="login active" onclick="login()">Iniciar Sesión</a>
-                <a href="/register" class="register" onclick="register()">Registrarse</a>
+                <a href="/users/login" class="login active" onclick="login()">Iniciar Sesión</a>
+                <a href="/users/register" class="register" onclick="register()">Registrarse</a>
                 <div class="btn-active" id="btn"></div>
             </div>
         </div>
