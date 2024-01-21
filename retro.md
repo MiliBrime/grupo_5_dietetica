@@ -1,3 +1,11 @@
-En la retrospectiva del primer sprint, identificamos algunas áreas clave para mejorar. Notamos que necesitamos más reuniones diarias para fortalecer nuestra comunicación. A pesar de esto, el equipo está demostrando un gran compromiso, dedicando tiempo y esfuerzo para ayudarse mutuamente y resolver dudas. En general, estamos en camino, pero reconocemos que ajustar la comunicación diaria nos hará aún más eficientes.
+-- STARFISH RETROSPECTIVE --
 
-En la retrospectiva del segundo sprint, si bien hubo más reuniones semanales y un compromiso mayor en ese sentido, notamos una falta de organización al establecer horarios y días fijos para reunirnos todos. Aunque las reuniones espontáneas son positivas, a veces implican la ausencia de algunos integrantes. El compromiso se mantuvo y logramos dividir tareas con éxito para agilizar el trabajo. Nos brindamos apoyo cuando fue necesario. En resumen, hubo compromiso, queda pendiente mejorar la organización.
+Empezar a hacer: mejorar la organización de las daily. Establecer días fijos para las reuniones diarias con el objetivo de mejorar la planificación y la comunicación.
+
+Más de: en el sprint anterior faltó comunicación. Vamos a enfocarnos en mejorarla para optimizar la colaboración y el flujo de información.
+
+Continuar haciendo: compromiso para ponernos al día y avanzar con el proyecto 
+
+Menos de: enfocarse en evitar la tendencia a postergar tareas y trabajar hacia una distribución más efectiva del trabajo
+
+Stop Doing: -

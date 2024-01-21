@@ -13,7 +13,7 @@
     <main>
         <%- include("./partials/info-banner.ejs")%>
         <h2 class="sub-title2">Estás editando el producto: <%=productEdit.name%></h2>
-        <form action="/products/edit/<%=productEdit.id%>?_method=PUT" method="post" enctype=”multipart/form-data” enctype="text/plain">
+        <form action="/products/edit/<%=productEdit.id%>?_method=PUT" method="post" enctype="multipart/form-data">
             <div class="formCreate">
                 <div class="inputCreate">
                     <label for="name" class="form-label">Nombre:</label>
@@ -43,10 +43,10 @@
                     <label for="descriptionProduct" class="form-label">Descipción para el detalle:</label>
                     <textarea name="descriptionProduct" id="descriptionProduct" class="form-input-texto" placeholder="Descripción completa"><%=productEdit.descriptionProduct%></textarea>
                 </div>
-                <!-- <div class="inputCreate">
+                <div class="inputCreate">
                     <label for="image" class="form-label">Imagen:</label>
-                    <input type="file" name="image" id="image" class="form-input" accept= ".jpg, .png" ></input>
-                </div> -->
+                    <input type="file" name="image" class="form-input" id="image" accept= ".jpg, .png" ></input>
+                </div>
                 <div class="inputCreate">
                     <button type="submit" class="guardarProd">Guardar producto</button>
                 </div>

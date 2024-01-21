@@ -7,12 +7,10 @@
 <body>
     <%- include("./partials/header.ejs")%>
 <main>
-<!--     <%- include("./partials/info-banner.ejs")%> -->
     <div class="arriba">
-        <i class="fa-solid fa-xmark"></i>
+        <a href="/" class="fa-solid fa-xmark"></a>
         <div class="titulo"><h1>Carrito de compras</h1></div>
     </div>
-    <div class="todos los productos">
     <div class="producto">
         <img src="/img/diet.jpg" alt="producto" class="imagen-prod">
         <div class="descripcion">
@@ -24,7 +22,9 @@
             <button class="restador">+</i></button>
             </div>
         </div>
-        <div class="trash"><i class="fa-regular fa-trash-can"></i></div>
+        <div class="trash">
+            <i class="fa-regular fa-trash-can"></i>
+        </div>
         <p class="precio">$1111</p>
     </div>
     <div class="producto">
@@ -38,10 +38,12 @@
             <button class="restador">+</i></button>
             </div>
         </div>
-        <div class="trash"><i class="fa-regular fa-trash-can"></i></div>
+        <div class="trash">
+            <i class="fa-regular fa-trash-can"></i>
+        </div>
         <p class="precio">$1111</p>
     </div>
-    </div>
+    
 
     <div class="enviosTexto">
         <i class="fa-solid fa-truck-fast"></i>

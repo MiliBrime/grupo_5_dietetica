@@ -1,58 +1,72 @@
 [
-    {
-        "id": 1,
-        "firstName": "Jeremías",
-        "lastName": "Bondarczuk",
-        "email": "gere.bond.ar@gmail.com",
-        "password": "contraseña123",
-        "category": "Administrador",
-        "image": "usuario1-foto.jpg"
-    },
-    {
-        "id": 2,
-        "firstName": "Milagros",
-        "lastName": "Brime",
-        "email": "mili@gmail.com",
-        "password": "duko1996",
-        "category": "Administrador",
-        "image": "usuario2-foto.jpg"
-    },
-    {
-        "id": 3,
-        "firstName": "Miguel Andrés",
-        "lastName": "Valenzuela",
-        "email": "miguel@example.com",
-        "password": "css9876",
-        "category": "Administrador",
-        "image": "usuario3-foto.jpg"
-    },
-    {
-        "id": 4,
-        "firstName": "Jeremías Ezequiel",
-        "lastName": "Vellido",
-        "email": "jerevellido@gmail.com",
-        "password": "jerevllc95",
-        "category": "Administrador",
-        "image": "usuario4-foto.jpg"
-    },
-    {
-        "id": 5,
-        "firstName": "Tomás",
-        "lastName": "Montaña",
-        "email": "thomasmountain@gmail.com",
-        "password": "tmtm43",
-        "category": "Administrador",
-        "image": "usuario5-foto.jpg"
-    },
-    {
-        "id": 6,
-        "firstName": "Carlos",
-        "lastName": "Vega",
-        "email": "carlitosv@gmail.com",
-        "password": "blink182",
-        "category": "Cliente",
-        "image": "usuario6-foto.png"
-    }
+ {
+  "id": 1,
+  "firstName": "Jeremías",
+  "lastName": "Bondarczuk",
+  "email": "gere.bond.ar@gmail.com",
+  "password": "contraseña123",
+  "category": "Administrador",
+  "image": "usuario1-foto.jpg"
+ },
+ {
+  "id": 2,
+  "firstName": "Milagros",
+  "lastName": "Brime",
+  "email": "mili@gmail.com",
+  "password": "duko1996",
+  "category": "Administrador",
+  "image": "usuario2-foto.jpg"
+ },
+ {
+  "id": 3,
+  "firstName": "Miguel Andrés",
+  "lastName": "Valenzuela",
+  "email": "miguel@example.com",
+  "password": "css9876",
+  "category": "Administrador",
+  "image": "usuario3-foto.jpg"
+ },
+ {
+  "id": 4,
+  "firstName": "Jeremías Ezequiel",
+  "lastName": "Vellido",
+  "email": "jerevellido@gmail.com",
+  "password": "jerevllc95",
+  "category": "Administrador",
+  "image": "usuario4-foto.jpg"
+ },
+ {
+  "id": 5,
+  "firstName": "Tomás",
+  "lastName": "Montaña",
+  "email": "thomasmountain@gmail.com",
+  "password": "tmtm43",
+  "category": "Administrador",
+  "image": "usuario5-foto.jpg"
+ },
+ {
+  "id": 6,
+  "firstName": "Carlos",
+  "lastName": "Vega",
+  "email": "carlitosv@gmail.com",
+  "password": "blink182",
+  "category": "Cliente",
+  "image": "usuario6-foto.png"
+ },
+ {
+  "id": 7,
+  "name": "prueba",
+  "lastName": "ojala salga bien",
+  "email": "mili@hola.com",
+  "password": "$2a$10$5mvDypfH32qWulXk3bYiJOXVTMFoRN2jQIkTfZB.55/0PMG/XM/ne",
+  "image": ""
+ },
+ {
+  "id": 8,
+  "name": "hola",
+  "lastName": "adfd",
+  "email": "mili@asds.com",
+  "password": "$2a$10$OYTrFqFTaA7jawKqA3klAOhzKnhF264eX8lT2CWbNbQQmKejO6Nqe",
+  "image": "default.jpg"
+ }
 ]
-
- 

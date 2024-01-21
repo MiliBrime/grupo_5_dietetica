@@ -5,21 +5,21 @@
                 <img src="/img/logo.jpeg" alt="Logo">
             </div>
         </a>
-            <div class="location">
+           <!--  <div class="location">
                 <p>Enviar a:</p>
-            </div>
+            </div> -->
             <div class="search-product">
                 <input type="text" name="last-name" id="last-name" required>
                 <label for="last-name">Buscar producto</label>
             </div>
             <div class="iconosHeader">
-                <a href="/login">
+                <a href="/users/login">
                     <i class="fa-solid fa-right-to-bracket"></i>
                     <p class="ingresa-registrate-carro">Ingresa</p>
                 </a>
             </div>
             <div class="iconosHeader">
-                <a href="/register">
+                <a href="/users/register">
                     <i class="fa-solid fa-user-plus"></i>
                     <p class="ingresa-registrate-carro">Registrate</p>
                 </a>
@@ -35,9 +35,9 @@
         <article class="container2">
             <nav>
                 <ul class="list1">
-                    <li><a href="#">Ofertas</a></li>
-                    <li><a href="#">Historial</a></li>
-                    <li><a href="#">Ayuda</a></li>
+                    <li><a class="list1Transition" href="#">Ofertas</a></li>
+                    <li><a class="list1Transition" href="#">Historial</a></li>
+                    <li><a class="list1Transition" href="#">Ayuda</a></li>
                 </ul>
             </nav>
         </article>
@@ -49,9 +49,15 @@
                 <li><a href="#"></a>Cosmética y Salud</li>
                 <li><a href="#"></a>Alimentos Nutricionales</li>
                 <li><a href="#"></a>Bebidas e Infusiones</li>
-                <li><a href="#">Despensa</a></li>
+                <li><a href="#"></a>Despensa</li>
             </ul>
         </article>
-        <article class="verTodo"><li><a href="/products"><i class="fa-solid fa-bars"></i><p class="todosTexto">Todos los productos</p></a></li>
+        <article class="verTodo">
+            <li class="todosLosProductos">
+                <a class="todosLosProductos" href="/products">
+                    <i class="fa-solid fa-bars"></i>
+                    <p class="todosTexto">Todos los productos</p>
+                </a>
+            </li>
         </article>
 </section>

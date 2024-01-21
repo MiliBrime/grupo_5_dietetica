@@ -26,7 +26,6 @@ a {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    /* Estilos de los elementos internos del encabezado */
 }
 
 .ingresa-registrate-carro{
@@ -100,15 +99,23 @@ input:valid~label {
     padding: 15px;
 }
 
+.list1Transition:hover{
+    text-decoration: underline;
+}
+.list1Transition{
+    transition-property: all;
+}
 .list2 {
     text-decoration: none;
-    list-style: none;
+    list-style: circle;
     display: flex;
     justify-content: center;
     grid-gap: 70px;
     cursor: pointer;
-    /* Estilos para listas en container3 */
+    color: #3c3c3c;
 }
+    /* Estilos para listas en container3 */
+
 
 footer {
     background-color: silver;
@@ -331,9 +338,13 @@ footer {
     list-style: none;
     cursor:pointer;
 }
-.todosTexto{
-    padding-left: 20px;
+.todosLosProductos{
+    display: flex;
 }
+.fa-bars{
+    margin: 0 5px 0 0;
+}
+
 .iconosHeader{
     padding-right: 10px;
 }
@@ -365,6 +376,13 @@ footer {
     padding: 10px;
 }
 
+.item{
+    margin: 0 0 10px 0;
+}
+
+.item a{
+    color:#3c3c3c
+}
 /* ------------------------------------------------ */
 
 @media (min-width: 1000px){
