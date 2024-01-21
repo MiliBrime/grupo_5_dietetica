@@ -52,6 +52,10 @@
                     <div class="image">
                         <p class="textImage">Imagen de perfil</p>
                         <input type="file" name= "image" class="image" id="image" >
+                        <% if (locals.mensajesDeError && mensajesDeError.image) { %>
+                            <%= mensajesDeError.image.msg %> 
+                        <% } %>
+                        
                     </div>
 
                     <div class="input-field">
