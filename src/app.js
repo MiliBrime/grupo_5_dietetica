@@ -3,6 +3,9 @@ const app=express();
 
 const path = require("path");
 
+let bcrypt = require("bcryptjs")
+//bcript.hashSync(“variable del texto q queremos encriptar”, sal)
+
 const methodOverride = require('method-override'); // Para poder usar PUT y DELETE
 app.use(methodOverride('_method')); 
 

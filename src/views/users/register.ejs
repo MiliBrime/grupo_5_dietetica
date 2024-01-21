@@ -23,7 +23,7 @@
                     </button>
                 </div>
                 <hr>                    
-                <form class="input-group" method="POST" enctype="multipart/form-data">                        
+                <form class="input-group" method="POST" action="/users/register" enctype="multipart/form-data">                        
                     <div class="input-field">
                         <input type="text" class="input-box"
                         id="name" name="name"  placeholder="Nombre" value= "<%= locals.old ? old.name : "" %>">
@@ -39,6 +39,9 @@
                         <input type="text" class="input-box" id="email" name="email" placeholder="Correo electrónico" value= "<%= locals.old ? old.email : "" %>">
                         <% if (locals.mensajesDeError && mensajesDeError.email) { %> 
                             <%= mensajesDeError.email.msg%> <% } %>
+                        <% if (locals.errorMessage) { %>
+                            <p class="error-message"><%= locals.errorMessage %></p>
+                              <% } %>
                     </div>
                     <div class="input-field">
                         <input type="password" class="input-box" id="password" name="password" placeholder="Contraseña">

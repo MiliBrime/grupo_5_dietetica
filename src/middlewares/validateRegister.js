@@ -23,9 +23,6 @@ const validation=[
             { //si no es la extension q queremos
                 throw new Error(`Las extensiones de archivo permitidas son ${acceptedExtensions.join(" y ")}`);
             }}
-        else{
-            const defaultImagePath = './img/users/default.jpg'; // Ponemos imagen por defecto
-            }
         return true //indicamos q la validacion tuvo exito
         }),
 ]
