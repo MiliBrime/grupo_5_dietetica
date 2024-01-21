@@ -25,12 +25,16 @@
                     </button>
                 </div>
                 <hr>
-                <form class="input-group" method="">
+                <form class="input-group" method="POST">
                     <div class="input-field">
-                        <input type="text" class="input-box" id="logEmail" name="email" placeholder="Correo electrónico">
+                        <input type="text" class="input-box" id="logEmail" name="email" placeholder="Correo electrónico" value= "<%= locals.old ? old.email : "" %>">
+                        <% if (locals.mensajesDeError && mensajesDeError.email) { %> 
+                            <%= mensajesDeError.email.msg%> <% } %>
                     </div>
                     <div class="input-field">
                         <input type="password" class="input-box" id="logPassword" name="password" placeholder="Contraseña">
+                        <% if (locals.mensajesDeError && mensajesDeError.password) { %> 
+                            <%= mensajesDeError.password.msg%> <% } %>
                         <div class="eye-area">
                             <div class="eye-box" onclick="myLogPassword()">
                                 <i class="fa-regular fa-eye" id="eye"></i>

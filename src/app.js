@@ -9,6 +9,9 @@ app.use(methodOverride('_method'));
 app.use(express.json()); //para tomar los datos del body (del form)
 app.use(express.urlencoded({extended: false})); //para manipular datos con form
 
+const session = require ("express-session");
+app.use(session ({secret:"secret", resave:false, saveUninitialized:true}));
+
 app.set('view engine', 'ejs');
 app.set('views', [
     path.join(__dirname, 'views'),

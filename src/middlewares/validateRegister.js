@@ -21,7 +21,7 @@ const validation=[
             let fileExtension = path.extname(file.originalname); //saco la extension del archivo
             if (!acceptedExtensions.includes(fileExtension))
             { //si no es la extension q queremos
-                throw new Error(`Las extensiones de archivo permitidas son ${acceptedExtensions.join(", ")}`);
+                throw new Error(`Las extensiones de archivo permitidas son ${acceptedExtensions.join(" y ")}`);
             }}
         else{
             const defaultImagePath = './img/users/default.jpg'; // Ponemos imagen por defecto

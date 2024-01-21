@@ -4,6 +4,7 @@ const path= require("path");
 const multer=require("multer");
 
 const registerValidation = require("../middlewares/validateRegister");
+const loginValidation = require("../middlewares/validateLogin");
 
 let usersController=require("../controllers/usersController");
 
@@ -20,7 +21,9 @@ const storage= multer.diskStorage({
 const upload= multer({storage:storage}); //especificarle a multer que deseamos usar la config anterior como disco de almacenamiento de archivos. 
 
 
-router.get("/login", usersController.login);
+router.get("/login",  loginValidation, usersController.login);
+
+router.post("/login", loginValidation, usersController.processLogin);
 
 router.get("/register", registerValidation, usersController.register);
 

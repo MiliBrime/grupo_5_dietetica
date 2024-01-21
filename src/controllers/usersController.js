@@ -10,6 +10,15 @@ let usersController={
     login:(req,res)=>{
         res.render("login");
     },
+    processLogin:(req,res)=>{
+        const errores= validationResult(req);
+        const old= req.body;
+        if (!errores.isEmpty()) {
+            return res.render("login", { mensajesDeError: errores.mapped(), old});
+        } else{
+        res.send("procesado");
+        }
+    },
     register:(req,res)=>{
         res.render("register");
     },
