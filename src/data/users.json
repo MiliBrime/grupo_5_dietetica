@@ -68,5 +68,13 @@
   "email": "mili@asds.com",
   "password": "$2a$10$OYTrFqFTaA7jawKqA3klAOhzKnhF264eX8lT2CWbNbQQmKejO6Nqe",
   "image": "default.jpg"
+ },
+ {
+  "id": 9,
+  "name": "mili",
+  "lastName": "brime",
+  "email": "milibrime@hotmail.com",
+  "password": "$2a$10$zVo4.Av923uAL4ytFpHsiuumEv/Tx8JS271LGbRYzyLwdtvV4hrTK",
+  "image": "image - 1705933265202.jpg"
  }
 ]

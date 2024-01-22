@@ -23,24 +23,44 @@
                     </button>
                 </div>
                 <hr>
-                <form class="input-group" method="">
+                <form class="input-group" method="POST" action="/users/register" enctype="multipart/form-data">  
                     <div class="input-field">
-                        <input type="text" class="input-box" id="regUsername" required>
-                        <label for="regUsername">Nombre</label>
+                        <input type="text" class="input-box"
+                        id="name" name="name"  placeholder="Nombre" value= "<%= locals.old ? old.name : "" %>">
+                        <% if (locals.mensajesDeError && mensajesDeError.name) { %> 
+                            <%= mensajesDeError.name.msg%> <% } %>
                     </div>
                     <div class="input-field">
-                        <input type="text" class="input-box" id="regEmail" required>
-                        <label for="regEmail">Correo Electrónico</label>
+                        <input type="text" class="input-box" id="lastName" name="lastName" placeholder="Apellido" value= "<%= locals.old ? old.lastName : "" %>">
+                        <% if (locals.mensajesDeError && mensajesDeError.lastName) { %> 
+                            <%= mensajesDeError.lastName.msg%> <% } %>
                     </div>
                     <div class="input-field">
-                        <input type="password" class="input-box" id="regPassword" required>
-                        <label for="regPassword">Contraseña</label>
+                        <input type="text" class="input-box" id="email" name="email" placeholder="Correo electrónico" value= "<%= locals.old ? old.email : "" %>">
+                        <% if (locals.mensajesDeError && mensajesDeError.email) { %> 
+                            <%= mensajesDeError.email.msg%> <% } %>
+                        <% if (locals.errorMessage) { %>
+                            <p class="error-message"><%= locals.errorMessage %></p>
+                              <% } %>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" class="input-box" id="password" name="password" placeholder="Contraseña">
+                        <% if (locals.mensajesDeError && mensajesDeError.password) { %> 
+                            <%= mensajesDeError.password.msg%> <% } %>
                         <div class="eye-area">
                             <div class="eye-box" onclick="myRegPassword()">
                                 <i class="fa-regular fa-eye" id="eye-2"></i>
                                 <i class="fa-regular fa-eye-slash" id="eye-slash-2"></i>
                             </div>
                         </div>
+                    </div>
+                    <div class="image">
+                        <p class="textImage">Imagen de perfil</p>
+                        <input type="file" name= "image" class="image" id="image" >
+                        <% if (locals.mensajesDeError && mensajesDeError.image) { %>
+                            <%= mensajesDeError.image.msg %> 
+                        <% } %>
+
                     </div>
 
                     <div class="input-field">
@@ -49,8 +69,8 @@
                 </form>
             </div>
             <div class="switch">
-                <a href="/login" class="login active" onclick="login()">Iniciar Sesión</a>
-                <a href="/register" class="register" onclick="register()">Registrarse</a>
+                <a href="/users/login" class="login active" onclick="login()">Iniciar Sesión</a>
+                <a href="/users/register" class="register" onclick="register()">Registrarse</a>
                 <div class="btn-active" id="btn"></div>
             </div>
         </div>

@@ -8,7 +8,8 @@ const checkDuplicateEmail = (req, res, next) => {
 
     if (userInDB) {
         res.locals.errorMessage ="Este correo electrónico ya está registrado"
-        return res.render("register", {oldData:req.body})
+        res.locals.old = req.body; // Establece los datos antiguos en locals.old
+        return res.render("register", res.locals);
         };
     // Si no hay duplicados, pasa al siguiente middleware
     next();
