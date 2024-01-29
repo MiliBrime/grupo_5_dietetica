@@ -2,7 +2,7 @@ const express = require("express");
 const {validationResult} = require ("express-validator");
 const fs=require("fs");
 const path = require("path");
-
+const bcryptjs = require('bcryptjs')
 const users= require("../models/users");
 
 
@@ -11,6 +11,39 @@ let usersController={
         res.render("login");
     },
     processLogin: (req, res) => {
+        let userToLogin = users.findByField("email", req.body.email);
+        if(userToLogin) {
+            let isThePasswordOk = bcryptjs.compareSync (req.body.password, userToLogin.password);
+            if (isThePasswordOk) {
+                delete userToLogin.password; //por seguridad
+                req.session.UserLogged = userToLogin;
+                if(req.body.rememberUser) {
+                    res.cookie("userEmail", req.body.email, {maxAge: 365 * 24 * 60 * 60 * 1000})
+                }
+                     return res.send("logeada exitosa :)")
+                }
+            
+                    return res.render("login", {
+                        errors: {
+                            password: {
+                                msg: 'Los datos ingresados son incorrectos. Vuelva a intentarlo.'
+                            }
+                        }
+                    });
+                } 
+                    return res.render("login", {
+                        errors: {
+                            email: {
+                                msg: 'El correo electrónico ingresado no está registrado. Vuelva a intentarlo.'
+                            }
+                        }
+                    });
+                    
+                },
+        
+
+
+
         /* const errores = validationResult(req);
         const old = req.body;
     
@@ -47,7 +80,7 @@ let usersController={
             req.session.usuarioLogueado = usuarioALoguearse;
             res.render("success"); // Renderizar la vista de éxito
         } */
-    },
+   
 
     register:(req,res)=>{
         res.render("register");

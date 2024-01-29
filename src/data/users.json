@@ -76,5 +76,13 @@
   "email": "milibrime@hotmail.com",
   "password": "$2a$10$zVo4.Av923uAL4ytFpHsiuumEv/Tx8JS271LGbRYzyLwdtvV4hrTK",
   "image": "image - 1705933265202.jpg"
+ },
+ {
+  "id": 10,
+  "name": "Carlo",
+  "lastName": "Magno",
+  "email": "carlos@gmail.com",
+  "password": "$2a$10$n8JefBuKRaG09dwn4EgvJuHDA2mScoSajyqPvWlbE8qtRsLFNO6Ta",
+  "image": "default.jpg"
  }
 ]
