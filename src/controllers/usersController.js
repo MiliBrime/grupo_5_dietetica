@@ -16,35 +16,57 @@ let usersController={
             let isThePasswordOk = bcryptjs.compareSync (req.body.password, userToLogin.password);
             if (isThePasswordOk) {
                 delete userToLogin.password; //por seguridad
-                req.session.UserLogged = userToLogin;
+                req.session.userLogged = userToLogin;
                 if(req.body.rememberUser) {
                     res.cookie("userEmail", req.body.email, {maxAge: 365 * 24 * 60 * 60 * 1000})
                 }
-                     return res.send("logeada exitosa :)")
+                return res.redirect("/") //redirigir al perfil
                 }
             
-                    return res.render("login", {
-                        errors: {
-                            password: {
-                                msg: 'Los datos ingresados son incorrectos. Vuelva a intentarlo.'
-                            }
+            return res.render("login", {
+                errors: {
+                    password: {
+                         msg: 'Los datos ingresados son incorrectos. Vuelva a intentarlo.'
                         }
-                    });
-                } 
-                    return res.render("login", {
-                        errors: {
-                            email: {
-                                msg: 'El correo electrónico ingresado no está registrado. Vuelva a intentarlo.'
-                            }
-                        }
-                    });
+                    }
+                });
+            } 
+        return res.render("login", {
+            errors: {
+                email: {
+                    msg: 'El correo electrónico ingresado no está registrado. Vuelva a intentarlo.'
+                }
+            }
+        });
                     
-                },
-        
+    },
+
+    logout:(req,res)=>{
+        res.clearCookie("userEmail");
+        req.session.destroy ();  //borra todo lo que esté en session
+        res.redirect ("/"); 
+    },
+    
+    register:(req,res)=>{
+        res.render("register");
+    },
+    processRegister:(req,res)=>{
+        const errores= validationResult(req);
+        const old= req.body;
+        if (!errores.isEmpty()) {
+            return res.render("register", { mensajesDeError: errores.mapped(), old });
+        } else{
+            users.processCreate(req,res);
+            res.send("usuario creado!!!") //redireccionar al perfil
+            }
+    },
+
+}
+
+module.exports=usersController;
 
 
-
-        /* const errores = validationResult(req);
+/* const errores = validationResult(req);
         const old = req.body;
     
         if (!errores.isEmpty()) { //si hay errores
@@ -80,22 +102,3 @@ let usersController={
             req.session.usuarioLogueado = usuarioALoguearse;
             res.render("success"); // Renderizar la vista de éxito
         } */
-   
-
-    register:(req,res)=>{
-        res.render("register");
-    },
-    processRegister:(req,res)=>{
-        const errores= validationResult(req);
-        const old= req.body;
-        if (!errores.isEmpty()) {
-            return res.render("register", { mensajesDeError: errores.mapped(), old });
-        } else{
-            users.processCreate(req,res);
-            res.send("usuario creado!!!") //redireccionar al perfil
-            }
-    },
-
-}
-
-module.exports=usersController;

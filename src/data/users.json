@@ -84,5 +84,13 @@
   "email": "carlos@gmail.com",
   "password": "$2a$10$n8JefBuKRaG09dwn4EgvJuHDA2mScoSajyqPvWlbE8qtRsLFNO6Ta",
   "image": "default.jpg"
+ },
+ {
+  "id": 11,
+  "name": "Milagros ",
+  "lastName": "Brime",
+  "email": "milibrime@gmail.com",
+  "password": "$2a$10$aG.7iRrFYPmmt.Aw7rI4l.jcofoOh7QdhPXbF8N5wr8TMs695B1Mm",
+  "image": "default.jpg"
  }
 ]

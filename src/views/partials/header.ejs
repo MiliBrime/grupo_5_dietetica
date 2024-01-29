@@ -12,25 +12,51 @@
                 <input type="text" name="last-name" id="last-name" required>
                 <label for="last-name">Buscar producto</label>
             </div>
-            <div class="iconosHeader">
-                <a href="/users/login">
-                    <i class="fa-solid fa-right-to-bracket"></i>
-                    <p class="ingresa-registrate-carro">Ingresa</p>
-                </a>
-            </div>
-            <div class="iconosHeader">
-                <a href="/users/register">
-                    <i class="fa-solid fa-user-plus"></i>
-                    <p class="ingresa-registrate-carro">Registrate</p>
-                </a>
-            </div>
-            <div class="iconosHeader">
-                <a href="/carrito">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                    <p class="ingresa-registrate-carro">Carrito</p>
 
-                </a> 
-            </div>
+            <% if (locals.isLogged) { %>
+            <div class="container2">
+                <div class="iconosHeader">
+                    <a href="#">
+                        <i class="fa-solid fa-user"></i>
+                        <p class="ingresa-registrate-carro">Mi perfil</p>
+                    </a>
+                </div>
+                <div class="iconosHeader">
+                    <a href="/users/logout">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        <p class="ingresa-registrate-carro">Cerrar sesión</p>
+                    </a>
+                </div>
+                <div class="iconosHeader">
+                    <a href="/carrito">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <p class="ingresa-registrate-carro">Carrito</p>
+                    </a> 
+                </div>
+                </div>
+                <% } else { %>
+                <div class="container2">
+                    <div class="iconosHeader">
+                        <a href="/users/login">
+                            <i class="fa-solid fa-right-to-bracket"></i>
+                            <p class="ingresa-registrate-carro">Ingresa</p>
+                        </a>
+                    </div>
+                    <div class="iconosHeader">
+                        <a href="/users/register">
+                            <i class="fa-solid fa-user-plus"></i>
+                            <p class="ingresa-registrate-carro">Registrate</p>
+                        </a>
+                    </div>
+                    <div class="iconosHeader">
+                        <a href="/carrito">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <p class="ingresa-registrate-carro">Carrito</p>
+        
+                        </a> 
+                    </div>
+                    </div>
+                    <% } %>
         </article>
         <article class="container2">
             <nav>

@@ -3,8 +3,10 @@ const app = express();
 
 const path = require("path");
 
-let bcrypt = require("bcryptjs")
-//bcript.hashSync(“variable del texto q queremos encriptar”, sal)
+const cookieParser = require('cookie-parser');
+
+/* let bcrypt = require("bcryptjs")
+ *///bcript.hashSync(“variable del texto q queremos encriptar”, sal)
 
 const methodOverride = require('method-override'); // Para poder usar PUT y DELETE
 app.use(methodOverride('_method'));
@@ -15,6 +17,11 @@ app.use(express.urlencoded({ extended: false })); //para manipular datos con for
 const session = require("express-session");
 app.use(session({ secret: "secret", resave: false, saveUninitialized: true }));
 
+app.use(cookieParser());
+
+const userLoggedMiddleware = require("./middlewares/userLogged");
+app.use(userLoggedMiddleware);
+
 app.set('view engine', 'ejs');
 app.set('views', [
   path.join(__dirname, 'views'),
@@ -24,7 +31,6 @@ app.set('views', [
 
 app.use(express.static("public"));
 app.use(express.static("views"));
-
 
 const rutaHome = require("./routes/homeRouter");
 app.use("/", rutaHome);
