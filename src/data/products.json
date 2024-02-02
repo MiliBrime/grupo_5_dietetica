@@ -1,13 +1,13 @@
 [
  {
   "id": 1,
-  "name": "TrueMade Whey Protein ENA",
+  "name": "TrueMade Whey Protein ENA ",
   "price": "30",
-  "image": "producto1-proteina.jpeg",
   "category": "Suplementos deportivos",
   "descriptionProduct": "Proteína concentrada + isolatada. Máxima pureza, gran absorción, excelente calidad.",
   "descriptionHome": "Proteína concentrada de alta calidad y gran absorción.",
-  "ofertaOdestacado": "destacado"
+  "ofertaOdestacado": "oferta",
+  "image": "producto1-proteina.jpeg"
  },
  {
   "id": 2,
@@ -78,5 +78,15 @@
   "descriptionProduct": "Te en saquitos a base de manzanilla, pasionaria, cedrón, tilo y melisa, recomendado para combatir el insomnio, la ansiedad y el nerviosismo.",
   "descriptionHome": "Te en saquitos para aliviar insomnio, ansiedad y nerviosismo.",
   "ofertaOdestacado": "oferta"
+ },
+ {
+  "id": 9,
+  "name": "hola",
+  "price": "",
+  "image": " ",
+  "category": "",
+  "descriptionProduct": "",
+  "descriptionHome": "",
+  "ofertaOdestacado": ""
  }
 ]

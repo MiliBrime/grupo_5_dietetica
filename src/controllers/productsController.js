@@ -51,7 +51,7 @@ const productsController = {
 			id: products[products.length - 1].id + 1,
   			name: req.body.name,
   			price: req.body.price,
-			image: req.file.filename,
+			image: req.file != undefined ? req.file.filename : " ",			
 			category: req.body.category,
 			descriptionProduct: req.body.descriptionProduct,
 			descriptionHome: req.body.descriptionHome,
