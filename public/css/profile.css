@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.box-profile {
+    border: 2px solid #333;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ededed;
+    border-radius: 10px;
+}
+
+.caja {
+    width: auto;
+    height: auto;
+    margin: 10px 10px 20px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenido {
+    color: white;
+}
+
+.photo-profile {
+    width: 250px;
+    height: auto;
+    clip-path: circle(50% at 50% 50%);
+}
+
+.photo-profile img {
+    width: 100%;
+}
+
+label {
+    display: block;
+    width: 200px;
+    background: rgb(80, 121, 242);
+    background: linear-gradient(90deg, rgba(80, 121, 242, 1) 0%, rgba(83, 151, 254, 1) 47%, rgba(16, 104, 237, 1) 92%);
+    color: white;
+    padding: 12px;
+    margin: 10px auto;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.input-photo {
+    display: none;
+}
+
+/* inputs */
+
+.input-profile {
+    width: 400px;
+}
+
+.input {
+    color: #000;
+    font-size: 0.9rem;
+    background-color: transparent;
+    width: 100%;
+    box-sizing: border-box;
+    padding-inline: 0.5em;
+    padding-block: 0.7em;
+    border: none;
+    border-bottom: var(--border-height) solid var(--border-before-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.input-border {
+    position: absolute;
+    background: var(--border-after-color);
+    height: 2px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0%);
+    transition: transform 0.3s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+
+.input:focus {
+    outline: none;
+}
+
+.input:focus+.input-border {
+    transform: scaleX(100%);
+}
+
+.form-control {
+    position: relative;
+    --width-of-input: 300px;
+}
+
+.input-alt {
+    font-size: 1.2rem;
+    padding-inline: 1em;
+    padding-block: 0.8em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.input-border-alt {
+    height: 3px;
+    background: radial-gradient(circle, rgba(80, 121, 242, 1) 11%, rgba(26, 71, 228, 1) 48%, rgba(49, 8, 184, 1) 88%);
+    transition: transform 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+.input-alt:focus+.input-border-alt {
+    transform: scaleX(100%);
+}
+
+/* Button Save Changes */
+
+.btn {
+    transition: all 0.3s ease-in-out;
+    font-family: "Dosis", sans-serif;
+}
+
+.btn {
+    width: 150px;
+    height: 60px;
+    border-radius: 50px;
+    background: linear-gradient(90deg, rgba(80, 121, 242, 1) 8%, rgba(122, 109, 224, 1) 48%, rgba(163, 86, 182, 1) 88%);
+    box-shadow: 0 20px 30px -6px rgba(80, 121, 242, 1);
+    outline: none;
+    cursor: pointer;
+    border: none;
+    font-size: 24px;
+    color: white;
+}
+
+.btn:hover {
+    transform: translateY(3px);
+    box-shadow: none;
+}
+
+.btn:active {
+    opacity: 0.5;
+}
+
+
+@media (max-width: 568px) {
+
+    .box-profile {
+        width: auto;
+        height: auto;
+    }
+
+    .caja {
+        flex-direction: column;
+    }
+}

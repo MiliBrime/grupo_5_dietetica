@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="public\css\profile.css">
+    <title>Perfil | The Vitamin Shop</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box-profile">
+            <div class="caja">
+                <div class="contenido">
+                    <div class="img-profile-user">
+                        <div class="photo-profile">
+                            <img src="blank-profile.png" alt="photo-profile" id="profile-pic">
+                        </div>
+                        <div class="input-file">
+                            <label for="input-photo">Selecciona una imagen</label>
+                            <input class="input-photo" type="file" id="input-photo"
+                                accept="image/jpeg, image/png, image,jpg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="caja name-complete">
+                <div class="contenido input-profile">
+                    <div class="form-control">
+                        <input type="text" id="first_name_user" required placeholder="Nombre" class="input input-alt" />
+                        <span class="input-border input-border-alt"></span>
+                    </div>
+                </div>
+                <div class="contenido input-profile">
+                    <div class="form-control">
+                        <input type="text" id="last_name_user" placeholder="Apellido"
+                            class="input input-alt" />
+                        <span class="input-border input-border-alt"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="caja">
+                <div class="contenido input-profile">
+                    <div class="form-control">
+                        <input type="text" id="phone_user" placeholder="Teléfono celular"
+                            class="input input-alt" />
+                        <span class="input-border input-border-alt"></span>
+                    </div>
+                </div>
+                <div class="contenido input-profile">
+                    <div class="form-control">
+                        <input type="text" id="address" placeholder="Dirección" class="input input-alt" />
+                        <span class="input-border input-border-alt"></span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="caja">
+                <div class="contenido input-profile">
+                    <div class="form-control">
+                        <input type="email" id="email_user" placeholder="Correo Electrónico"
+                            class="input input-alt" />
+                        <span class="input-border input-border-alt"></span>
+                    </div>
+                </div>
+                <div class="contenido input-profile">
+                    <div class="form-control">
+                        <input type="password" id="password_user" placeholder="Contraseña"
+                            class="input input-alt" />
+                        <span class="input-border input-border-alt"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="caja">
+                <div class="contenido button-save">
+                    <button class="btn">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+<script src="perfilUser.js"></script>
