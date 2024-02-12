@@ -49,6 +49,7 @@ const user={
         //sobreeescribo el JSON
         fs.writeFileSync(this.jsonUsers, JSON.stringify(allUsers, null, " "));
     },
+
     delete: function(id){
         let allUsers = this.findAll();
         let finalUsers = allUsers.filter(oneUser => oneUser.id !==id);
@@ -60,3 +61,36 @@ const user={
 module.exports = user;
 
 
+//proceso de edicion de usuario fallida
+
+/* edit:function(req,res){ //ARREGLARR
+    const userId = req.session.userLogged.id; // Obtener el ID del usuario logueado
+
+    // Obtener todos los usuarios
+    let allUsers = this.findAll();
+
+    // Encontrar al usuario que está intentando editar su perfil
+    let editedUser = allUsers.find(user => user.id === userId);
+
+    if (editedUser) {
+        // Actualizar los campos que el usuario intenta modificar
+        editedUser.name = req.body.name;
+        editedUser.lastName = req.body.lastName;
+        editedUser.email = req.body.email;
+        editedUser.image = req.file ? req.file.filename : editedUser.image;
+
+        // Actualizar la contraseña solo si se proporciona una nueva contraseña en el formulario
+        if (req.body.password) {
+            editedUser.password = bcryptjs.hashSync(req.body.password, 10);
+        }
+
+        // Guardar los cambios en el archivo JSON
+        fs.writeFileSync(this.jsonUsers, JSON.stringify(allUsers, null, 2));
+
+        // Redireccionar al perfil del usuario después de la edición
+        return res.redirect("/users/profile");
+    } else {
+        // Manejar el caso en que no se encuentre al usuario
+        return res.status(404).send("Usuario no encontrado");
+    }
+}, */

@@ -11,4 +11,4 @@ function authMiddleware(req,res,next){
 module.exports = authMiddleware;
 
 
- //router.get (“/profile”, authMiddleware, usersController.profile);
+ 

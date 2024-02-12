@@ -5,14 +5,18 @@
     font-family: 'poppins', sans-serif;
 }
 
-.container {
-    display: flex;
+body {
     justify-content: center;
     align-items: center;
-    height: 100vh;
     margin: 0;
 }
 
+.formProfile{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
 .box-profile {
     border: 2px solid #333;
     padding: 20px;
@@ -28,13 +32,8 @@
     width: auto;
     height: auto;
     margin: 10px 10px 20px 10px;
-    display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.contenido {
-    color: white;
 }
 
 .photo-profile {
@@ -47,7 +46,7 @@
     width: 100%;
 }
 
-label {
+.label {
     display: block;
     width: 200px;
     background: rgb(80, 121, 242);
@@ -103,8 +102,7 @@ label {
 }
 
 .form-control {
-    position: relative;
-    --width-of-input: 300px;
+    color:black
 }
 
 .input-alt {
@@ -135,13 +133,14 @@ label {
     width: 150px;
     height: 60px;
     border-radius: 50px;
-    background: linear-gradient(90deg, rgba(80, 121, 242, 1) 8%, rgba(122, 109, 224, 1) 48%, rgba(163, 86, 182, 1) 88%);
-    box-shadow: 0 20px 30px -6px rgba(80, 121, 242, 1);
+    background: #ABD0BF;
+    box-shadow: 0 20px 30px -6px #799192;
     outline: none;
     cursor: pointer;
     border: none;
     font-size: 24px;
     color: white;
+    margin:15px;
 }
 
 .btn:hover {

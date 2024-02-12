@@ -20,7 +20,7 @@ let usersController={
                 if(req.body.rememberUser) {
                     res.cookie("userEmail", req.body.email, {maxAge: 365 * 24 * 60 * 60 * 1000})
                 }
-                return res.redirect("/") //redirigir al perfil
+                return res.redirect("/users/profile") 
                 }
             
             return res.render("login", {
@@ -50,6 +50,7 @@ let usersController={
     register:(req,res)=>{
         res.render("register");
     },
+
     processRegister:(req,res)=>{
         const errores= validationResult(req);
         const old= req.body;
@@ -57,48 +58,21 @@ let usersController={
             return res.render("register", { mensajesDeError: errores.mapped(), old });
         } else{
             users.processCreate(req,res);
-            res.send("usuario creado!!!") //redireccionar al perfil
+            const newUser = users.findByField("email", req.body.email);
+            req.session.userLogged = newUser;
+            res.redirect("/users/profile")
             }
     },
 
+    profile:(req,res)=>{
+        res.render("profile", {user: req.session.userLogged});
+    },
+
+    /* editProfile:(req,res)=>{
+            users.edit(req,res);
+            res.redirect("/users/profile") 
+        }
+ */
 }
 
 module.exports=usersController;
-
-
-/* const errores = validationResult(req);
-        const old = req.body;
-    
-        if (!errores.isEmpty()) { //si hay errores
-            return res.render("login", { mensajesDeError: errores.mapped(), old });
-        } else {
-            // Leer los usuarios
-            let usersJSON = fs.readFileSync(path.join(__dirname, "../data/users.json"), { encoding: "utf-8" });
-            let users;
-    
-            if (usersJSON === "") {
-                users = []; // Creamos el array de usuarios
-            } else {
-                users = JSON.parse(usersJSON); // Convertimos en un objeto
-            }
-    
-            let usuarioALoguearse;
-    
-            // Buscamos el usuario por correo electrónico
-            const userFound = users.find((user) => user.email === req.body.email);
-    
-            if (userFound && bcrypt.compareSync(req.body.password, userFound.password)) {
-                usuarioALoguearse = userFound;
-            }
-    
-            if (!usuarioALoguearse) {
-                // Si no se encontró el usuario o la contraseña no es válida
-                return res.render("login", {
-                    errores: [{ msg: "Credenciales inválidas" }],
-                });
-            }
-    
-            // Si el usuario se autenticó correctamente, lo guardamos en la sesión
-            req.session.usuarioLogueado = usuarioALoguearse;
-            res.render("success"); // Renderizar la vista de éxito
-        } */

@@ -7,6 +7,8 @@ const registerValidation = require("../middlewares/validateRegister");
 const loginValidation = require("../middlewares/validateLogin");
 const checkDuplicateEmail = require("../middlewares/checkDuplicateEmail");
 const guestMiddleware = require("../middlewares/guest");
+const authMiddleware = require("../middlewares/auth");
+
 
 let usersController=require("../controllers/usersController");
 
@@ -33,6 +35,10 @@ router.get("/register", checkDuplicateEmail,guestMiddleware, registerValidation,
 
 router.post("/register", upload.single("image"), checkDuplicateEmail,registerValidation,usersController.processRegister);
 
+router.get("/profile",authMiddleware,usersController.profile)
+
+/* router.post("/profile",authMiddleware,usersController.editProfile)
+ */
 
 module.exports=router;
 

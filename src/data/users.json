@@ -54,22 +54,6 @@
   "image": "usuario6-foto.png"
  },
  {
-  "id": 7,
-  "name": "prueba",
-  "lastName": "ojala salga bien",
-  "email": "mili@hola.com",
-  "password": "$2a$10$5mvDypfH32qWulXk3bYiJOXVTMFoRN2jQIkTfZB.55/0PMG/XM/ne",
-  "image": ""
- },
- {
-  "id": 8,
-  "name": "hola",
-  "lastName": "adfd",
-  "email": "mili@asds.com",
-  "password": "$2a$10$OYTrFqFTaA7jawKqA3klAOhzKnhF264eX8lT2CWbNbQQmKejO6Nqe",
-  "image": "default.jpg"
- },
- {
   "id": 9,
   "name": "mili",
   "lastName": "brime",
@@ -87,10 +71,10 @@
  },
  {
   "id": 11,
-  "name": "Milagros ",
-  "lastName": "Brime",
-  "email": "milibrime@gmail.com",
-  "password": "$2a$10$aG.7iRrFYPmmt.Aw7rI4l.jcofoOh7QdhPXbF8N5wr8TMs695B1Mm",
+  "name": "mili",
+  "lastName": "brime",
+  "email": "mili@hola.com",
+  "password": "$2a$10$HOsMCSUuujiHKA8pSlyZBuQtbF9EbjaYUkcqkEjkO.x17e3WYJBUq",
   "image": "default.jpg"
  }
 ]
