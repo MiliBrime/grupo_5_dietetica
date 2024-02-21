@@ -2,7 +2,7 @@ module.exports = (sequelize, dataTypes) => {
     let alias = 'Product';
     let cols = {
         id: {
-            autoincrement: true,
+            autoIncrement: true,
             primaryKey: true,
             type: dataTypes.INTERGER
         },
@@ -11,6 +11,10 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false,
         },
         description: {
+            type: dataTypes.STRING,
+            allowNull: false,
+        },
+        description_home: {
             type: dataTypes.STRING,
             allowNull: false,
         },
@@ -28,6 +32,10 @@ module.exports = (sequelize, dataTypes) => {
         },
         price: {
             type: dataTypes.DECIMAL,
+            allowNull: false,
+        },
+        status_id: {
+            type: dataTypes.INTERGER,
             allowNull: false,
         }
     };

@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = "Brand";
+    let alias = 'Status'
     let cols = {
         id: {
             autoIncrement: true,
@@ -7,16 +7,16 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.INTEGER
         },
         name: {
-            allowNull: false,
+            allowNull: true,
             type: dataTypes.STRING
         }
     };
 
     let config = {
-        tableName: "brands",
+        tableName: 'status',
         timestamps: false
     };
 
-    const Brand = sequelize.define(alias, cols, config)
-    return Brand;
+    const Status = sequelize.define(alias, cols, config)
+    return Status;
 }
