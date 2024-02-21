@@ -4,7 +4,7 @@ module.exports = (sequelize, dataTypes) => {
         id: {
             autoIncrement: true,
             primaryKey: true,
-            type: dataTypes.INTERGER
+            type: dataTypes.INTEGER
         },
         name: {
             type: dataTypes.STRING,
@@ -23,11 +23,11 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false,
         },
         category_id: {
-            type: dataTypes.INTERGER,
+            type: dataTypes.INTEGER,
             allowNull: false,
         },
         brand_id: {
-            type: dataTypes.INTERGER,
+            type: dataTypes.INTEGER,
             allowNull: false,
         },
         price: {
@@ -35,7 +35,7 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false,
         },
         status_id: {
-            type: dataTypes.INTERGER,
+            type: dataTypes.INTEGER,
             allowNull: false,
         }
     };
