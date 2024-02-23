@@ -28,19 +28,14 @@ const productsController = {
 	},
 
 	// Detalle de un producto
-	detail: (req, res) => {
-		const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
-
-		//cuando ponemos /detail/4 por ej, nos lleva a ese producto
-		const singleProduct = products.find(product =>{
-			return product.id == req.params.id;
-		});
-		//si lo encuentra nos lleva al detalle de ese producto
-		if (singleProduct !== undefined){
-			res.render("productDetail", {singleProduct});
-		}else{
-			res.redirect("/products");
-		}
+	detail: async (req, res) => {
+		try {
+			const singleProduct = await Product.findByPk(req.params.id);
+			res.render('productDetail', {singleProduct})
+	} catch (error) {
+		console.error('Error:', error);
+		res.status(500).send('Error interno del servidor');
+	}
 	},
 
 	// Formulario para crear
