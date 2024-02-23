@@ -9,13 +9,22 @@ app.use(express.static("views"));
 
 const productsFilePath = path.join(__dirname, '../data/products.json');
 
+const db = require('../../database/models');
+const {	Product, Status, Category, Brand } = db 
+
 /* const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8')); */
 
 const productsController = {
 	// Mostrar todos los productos (donde dice todos los productos)
-	index: (req, res) => {
-		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-		res.render("products", {products});
+	index: async (req, res) => {
+		try { 
+		const products = await Product.findAll();
+			res.render("products", {products});
+		
+	} catch (error) {
+		console.error('Error:', error);
+		res.status(500).send('Error interno del servidor');
+	}
 	},
 
 	// Detalle de un producto
@@ -35,37 +44,43 @@ const productsController = {
 	},
 
 	// Formulario para crear
-	create: (req, res) => {
-		res.render("form-creacion-producto")
-	},
+	create: async (req, res) => {
+		try { 
+			const statuses = await Status.findAll()
+			const categories = await Category.findAll()
+			res.render("form-creacion-producto", {statuses, categories})
+		} catch (error) {
+			console.error('Error:', error);
+			res.status(500).send('Error interno del servidor');
+		}
+	  },
 	
 	// // guardar el producto con la info del usuario, y redirigir a alguna pagina para q el usuario sepa q salio todo ok
-	processCreate: (req, res) => {
-		
-		//traigo el array
-		const products = JSON.parse (fs.readFileSync(productsFilePath, "utf-8"));
-		
-		//creo el nuevo producto con la info que pedimos en el form
-		const newProduct = {
-			//-1 porq arranca de 0 un array, y despues +1 porq le sumo 1 al ultimo id que hay
-			id: products[products.length - 1].id + 1,
-  			name: req.body.name,
-  			price: req.body.price,
-			image: req.file != undefined ? req.file.filename : " ",			
-			category: req.body.category,
-			descriptionProduct: req.body.descriptionProduct,
-			descriptionHome: req.body.descriptionHome,
-			ofertaOdestacado: req.body.ofertaOdestacado,
+	processCreate: async (req, res) => {
+		try {
+			   const brandName = req.body.brand;
+
+			   const brands = await Brand.create({ name: brandName });
+	   	
+			const newProduct = await Product.create ({
+				name: req.body.name,
+				price: req.body.price,
+				img: req.file != undefined ? req.file.filename : " ",
+				category_id: req.body.category,
+				status_id: req.body.ofertaOdestacado,
+				description_home: req.body.descriptionHome,
+				description: req.body.descriptionProduct,
+				brand_id: brands.id
+			})
+
+			const products = await Product.findAll();
+
+			res.render('/products', { products });
 		}
-
-		//metodo push para agregarlo al array
-		products.push(newProduct);
-
-		//reescribimos el json, las comillas son para que no quede todo en una sola linea
-		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
-
-		//redirigimos
-		res.redirect("/products");
+		catch(error) {
+			console.error('Error:', error);
+			res.status(500).send('Error interno del servidor');
+		}
 	},
 
 	// Formulario para editar

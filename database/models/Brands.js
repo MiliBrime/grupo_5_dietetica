@@ -8,7 +8,8 @@ module.exports = (sequelize, dataTypes) => {
         },
         name: {
             allowNull: false,
-            type: dataTypes.STRING
+            type: dataTypes.STRING,
+            unique: true
         }
     };
 
@@ -18,5 +19,12 @@ module.exports = (sequelize, dataTypes) => {
     };
 
     const Brand = sequelize.define(alias, cols, config)
+
+    Brand.associate = function(models) {
+        Brand.hasMany(models.Product, {
+            as: 'products', 
+            foreignKey: 'brand_id'
+        })};
+
     return Brand;
 }
