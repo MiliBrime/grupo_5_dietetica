@@ -75,7 +75,7 @@ const productsController = {
 
 			const products = await Product.findAll();
 
-			res.render('/products', { products });
+			res.render('products', { products });
 		}
 		catch(error) {
 			console.error('Error:', error);
