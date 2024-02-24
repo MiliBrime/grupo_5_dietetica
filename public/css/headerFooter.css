@@ -14,7 +14,7 @@ a {
 }
 
 .header {
-    background-color: #ABD0BF;
+    background-color: #c4ded2; /* abd0bf */
 }
 .container1 {
     display: flex;
@@ -23,8 +23,9 @@ a {
 }
 
 .logo>img {
-    height: 100px;
-    margin: 5px;
+    height: 120px;
+    top: 15px;
+    position: relative;
 }
 
 .ingresa-registrate-carro{
@@ -41,7 +42,7 @@ a {
 
 .search-product {
     position: relative;
-    margin: 30px 0;
+    margin: 30px 10px;
     width: 50%;
     border-bottom: 2px solid #000;
 }
@@ -105,7 +106,7 @@ input:valid~label {
     text-decoration: none;
     list-style: circle;
     display: flex;
-    grid-gap: 70px;
+    grid-gap: 45px;
     justify-content: center;
     cursor: pointer;
     color: #3c3c3c;
@@ -168,11 +169,16 @@ footer {
     flex:1;
 }
 
-@media (min-width: 769px){
+@media (min-width: 880px){
     .ingresa-registrate-carro{
         display: flex;
     }
     .container3{
         display: flex;
     }  
+}
+@media (min-width: 900px){
+.list2{
+    grid-gap: 70px;
+}
 }

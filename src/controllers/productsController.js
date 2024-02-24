@@ -19,7 +19,7 @@ const productsController = {
 	index: async (req, res) => {
 		try { 
 		const products = await Product.findAll();
-			res.render("products", {products});
+		res.render("products", {products});
 		
 	} catch (error) {
 		console.error('Error:', error);
@@ -55,7 +55,7 @@ const productsController = {
 		}
 	  },
 	
-	// // guardar el producto con la info del usuario, y redirigir a alguna pagina para q el usuario sepa q salio todo ok
+	// guardar el producto con la info del usuario, y redirigir a alguna pagina para q el usuario sepa q salio todo ok
 	processCreate: async (req, res) => {
 		try {
 			   const brandName = req.body.brand;
@@ -75,7 +75,7 @@ const productsController = {
 
 			const products = await Product.findAll();
 
-			res.render('/products', { products });
+			res.render('products', { products });
 		}
 		catch(error) {
 			console.error('Error:', error);

@@ -2,7 +2,7 @@ module.exports= {
   "development": {
     "username": "root",
     "password": null,
-    "database": "dietetica_db", //poner el nombre de nuestra db cuando la tengamos
+    "database": "dietetica_db", 
     "host": "127.0.0.1",
     "dialect": "mysql"
   }, //aca no cambiar nada:

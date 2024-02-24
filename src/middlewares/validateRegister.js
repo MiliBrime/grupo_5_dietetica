@@ -2,12 +2,16 @@ const {body} = require("express-validator");
 const path=require("path");
 
 const validation=[
-    body("name")
+    body("first_name")
         .notEmpty()
         .withMessage("Ingresa tu nombre"),
-    body("lastName")
+    body("last_name")
         .notEmpty()
         .withMessage("Ingresa tu apellido"),
+    body("phone")
+        .notEmpty()
+        .withMessage("Ingresa tu teléfono").bail()
+        .isLength({ min: 9 }).withMessage("El teléfono debe tener por lo menos 9 caracteres"),
     body("email")
         .notEmpty().withMessage("Ingresa tu correo electrónico").bail()
         .isEmail().withMessage("Ingresa un correo electrónico válido"),

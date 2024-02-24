@@ -26,14 +26,14 @@
                 <form class="input-group" method="POST" action="/users/register" enctype="multipart/form-data">  
                     <div class="input-field">
                         <input type="text" class="input-box"
-                        id="name" name="name"  placeholder="Nombre" value= "<%= locals.old ? old.name : "" %>">
-                        <% if (locals.mensajesDeError && mensajesDeError.name) { %> 
-                            <%= mensajesDeError.name.msg%> <% } %>
+                        id="first_name" name="first_name"  placeholder="Nombre" value= "<%= locals.old ? old.first_name : "" %>">
+                        <% if (locals.mensajesDeError && mensajesDeError.first_name) { %> 
+                            <%= mensajesDeError.first_name.msg%> <% } %>
                     </div>
                     <div class="input-field">
-                        <input type="text" class="input-box" id="lastName" name="lastName" placeholder="Apellido" value= "<%= locals.old ? old.lastName : "" %>">
-                        <% if (locals.mensajesDeError && mensajesDeError.lastName) { %> 
-                            <%= mensajesDeError.lastName.msg%> <% } %>
+                        <input type="text" class="input-box" id="last_name" name="last_name" placeholder="Apellido" value= "<%= locals.old ? old.last_name : "" %>">
+                        <% if (locals.mensajesDeError && mensajesDeError.last_name) { %> 
+                            <%= mensajesDeError.last_name.msg%> <% } %>
                     </div>
                     <div class="input-field">
                         <input type="text" class="input-box" id="email" name="email" placeholder="Correo electrónico" value= "<%= locals.old ? old.email : "" %>">
@@ -42,6 +42,11 @@
                         <% if (locals.errorMessage) { %>
                             <p class="error-message"><%= locals.errorMessage %></p>
                               <% } %>
+                    </div>
+                    <div class="input-field">
+                        <input type="text" class="input-box" id="phone" name="phone" placeholder="Teléfono" value= "<%= locals.old ? old.phone : "" %>">
+                        <% if (locals.mensajesDeError && mensajesDeError.lastName) { %> 
+                            <%= mensajesDeError.phone.msg%> <% } %>
                     </div>
                     <div class="input-field">
                         <input type="password" class="input-box" id="password" name="password" placeholder="Contraseña">
