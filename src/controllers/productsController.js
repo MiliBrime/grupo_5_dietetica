@@ -55,7 +55,14 @@ const productsController = {
 		try {
 			   const brandName = req.body.brand;
 
-			   const brands = await Brand.create({ name: brandName });
+			    // Busca si la marca ya existe en la base de datos
+				const existingBrand = await Brand.findOne({
+					where: { name: brandName }
+				});
+		
+				// Si la marca existe, usa su brand_id
+				// Si no existe, crea la marca y obtén su brand_id
+				const brand_id = existingBrand ? existingBrand.id : await Brand.create({ name: brandName }).then(newBrand => newBrand.id);
 	   	
 			const newProduct = await Product.create ({
 				name: req.body.name,
@@ -65,7 +72,7 @@ const productsController = {
 				status_id: req.body.ofertaOdestacado,
 				description_home: req.body.descriptionHome,
 				description: req.body.descriptionProduct,
-				brand_id: brands.id
+				brand_id: brand_id
 			})
 
 			const products = await Product.findAll();
