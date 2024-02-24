@@ -29,6 +29,11 @@ const validation=[
             }}
         return true //indicamos q la validacion tuvo exito
         }),
+    
+    body("zip_code")
+        .isNumeric()
+        .withMessage("Ingresa un código postal válido")
+        
 ]
 
 module.exports = validation;

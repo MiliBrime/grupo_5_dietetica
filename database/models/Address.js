@@ -8,11 +8,9 @@ module.exports = (sequelize, dataTypes) => {
         },
         address: {
             type: dataTypes.STRING,
-            allowNull: false
         },
         zip_code: {
             type: dataTypes.INTEGER,
-            allowNull: false
         },
         user_id: {
             type: dataTypes.INTEGER,

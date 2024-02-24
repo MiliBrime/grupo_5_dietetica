@@ -1,14 +1,21 @@
-const user= require("../models/users"); 
+let userModel= require ("../models/users");
 
-function userLoggedMiddleware(req,res,next){
+async function  userLoggedMiddleware(req,res,next){ 
     res.locals.isLogged = false;
     
-    let emailInCookie = req.cookies.userEmail;
-
-    let userFromCookie = user.findByField("email", emailInCookie);
-
-    if(userFromCookie){ //si alguien puso para recordarlo, y hay un usuario en la cookie
-        req.session.userLogged = userFromCookie;
+    let emailInCookie = req.cookies.userEmail; //userEmail es el nombre de la cookie
+    
+    if(emailInCookie) { 
+        try{
+            let userFromCookie = await userModel.findByField("email", emailInCookie);
+            
+            if(userFromCookie){
+                //si alguien puso para recordarlo, hay un usuario en la cookie, y ese va a ser el user logueado
+                req.session.userLogged = userFromCookie;
+            }
+        } catch(error){
+            console.error("error devolviendo usuario de la db: ", error)
+        }
     }
     
     if (req.session && req.session.userLogged){

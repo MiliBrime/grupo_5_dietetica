@@ -5,10 +5,11 @@ const multer=require("multer");
 
 const registerValidation = require("../middlewares/validateRegister");
 const loginValidation = require("../middlewares/validateLogin");
+const profileValidation = require("../middlewares/validateProfile");
+
 const checkDuplicateEmail = require("../middlewares/checkDuplicateEmail");
 const guestMiddleware = require("../middlewares/guest");
 const authMiddleware = require("../middlewares/auth");
-
 
 let usersController=require("../controllers/usersController");
 
@@ -33,12 +34,12 @@ router.get("/logout", usersController.logout);
 
 router.get("/register", checkDuplicateEmail,guestMiddleware, registerValidation,usersController.register);
 
-router.post("/register", upload.single("image"), checkDuplicateEmail,registerValidation,usersController.processRegister);
+router.post("/register", upload.single("photo"), checkDuplicateEmail,registerValidation,usersController.processRegister);
 
-router.get("/profile",authMiddleware,usersController.profile)
+router.get("/profile",profileValidation,authMiddleware, usersController.profile)
 
-/* router.post("/profile",authMiddleware,usersController.editProfile)
- */
+router.post("/profile", profileValidation, upload.single("photo"), authMiddleware, usersController.editProfile)
+
 
 module.exports=router;
 

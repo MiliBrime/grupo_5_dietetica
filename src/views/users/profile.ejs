@@ -19,14 +19,24 @@
                 <h3>Mis datos:</h3>
             </div>
             
-            <form class="formProfile" method="post" enctype="multipart/form-data" action="/users/profile">
+            <form class="formProfile" method="POST" enctype="multipart/form-data" action="/users/profile">
                 <div class="photo-profile">
-                    <img src="/img/users/<%=user.image%>" alt="Foto de perfil">
+                    <img src="/img/users/<%=user.photo%>" alt="Foto de perfil">
                 </div>
                     <div class="input-file">
                         <label class= "label" for="input-photo">Selecciona una imagen</label>
-                        <input class="input-photo" type="file" name="image"
-                            accept="image/jpeg, image/png, image,jpg">
+                        <input class="input-photo" type="file" name="photo"
+                            accept="image/jpeg, image/png, image/jpg">
+                    </div>
+                    <div class="contenido input-profile">
+                        <input type="text" name="first_name" placeholder="Nombre"
+                        value="<%=user.first_name %>"
+                            class="input input-alt" />
+                    </div>
+                    <div class="contenido input-profile">
+                        <input type="text" name="last_name" placeholder="Apellido"
+                        value="<%=user.last_name %>"
+                            class="input input-alt" />
                     </div>
                 <div class="contenido input-profile">
                     <input type="email" name="email" placeholder="Correo Electrónico"
@@ -41,12 +51,17 @@
                 </div>
                 <div class="contenido input-profile">
                     <div class="form-control">
-                        <input type="text" name="address" placeholder="Dirección" class="input input-alt" />
+                        <input type="text" name="address" placeholder="Dirección" class="input input-alt" value="<%=address.address %>"/>
+                    </div>
+                </div>
+                <div class="contenido input-profile">
+                    <div class="form-control">
+                        <input type="number" name="zip_code" placeholder="Código postal" class="input input-alt" value="<%= address.zip_code%>"/>
                     </div>
                 </div>
                 <div class="contenido button-save">
                     <button class="btn">
-                        Guardar
+                        Actualizar información
                     </button>
                 </div>
         </form>

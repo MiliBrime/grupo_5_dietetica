@@ -4,6 +4,8 @@ const fs=require("fs");
 const path = require("path");
 const bcryptjs = require('bcryptjs')
 const users= require("../models/users");
+const user = require("../models/users");
+const db = require("../../database/models");
 
 let usersController={
     login:(req,res)=>{
@@ -71,15 +73,25 @@ let usersController={
                 }
         },
 
-    profile:(req,res)=>{
-        res.render("profile", {user: req.session.userLogged});
+    profile: async (req,res)=>{
+        let user= req.session.userLogged;
+        let address= await db.Address.findOne({
+            where: {
+                user_id: user.id
+            }
+        })
+        res.render("profile", {user, address});
     },
 
-    /* editProfile:(req,res)=>{
-            users.edit(req,res);
-            res.redirect("/users/profile") 
+    editProfile: async (req, res) => {
+        try {
+            await users.edit(req, res);
+            res.redirect("/users/profile");
+        } catch (error) {
+            res.status(500).send("Error al editar el perfil");
         }
- */
+    }
+
 }
 
 module.exports=usersController;

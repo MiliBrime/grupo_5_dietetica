@@ -49,18 +49,8 @@ body {
 .label {
     display: block;
     width: 200px;
-    background: rgb(80, 121, 242);
-    background: linear-gradient(90deg, rgba(80, 121, 242, 1) 0%, rgba(83, 151, 254, 1) 47%, rgba(16, 104, 237, 1) 92%);
-    color: white;
     padding: 12px;
     margin: 10px auto;
-    border-radius: 5px;
-    text-align: center;
-    cursor: pointer;
-}
-
-.input-photo {
-    display: none;
 }
 
 /* inputs */
