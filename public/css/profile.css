@@ -11,6 +11,18 @@ body {
     margin: 0;
 }
 
+.name-img{
+    display: flex;
+}
+.name-img h2{
+    align-self: center;
+    padding: 30px;
+}
+
+.misDatos{
+    margin-top: 30px 0;
+}
+
 .formProfile{
     display: flex;
     align-items: center;
@@ -37,27 +49,22 @@ body {
 }
 
 .photo-profile {
-    width: 250px;
-    height: auto;
+    width: 150px;
+    height: 150px;
     clip-path: circle(50% at 50% 50%);
 }
 
 .photo-profile img {
     width: 100%;
+    height: 100%;
 }
 
 .label {
     display: block;
     width: 200px;
     padding: 12px;
-    margin: 10px auto;
 }
 
-/* inputs */
-
-.input-profile {
-    width: 400px;
-}
 
 .input {
     color: #000;
@@ -143,14 +150,16 @@ body {
 }
 
 
-@media (max-width: 568px) {
-
-    .box-profile {
-        width: auto;
-        height: auto;
+@media (min-width: 880px) {
+    .datos{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
     }
-
-    .caja {
-        flex-direction: column;
+    .div1{
+        padding: 20px;
+    }
+    .div2{
+        padding: 20px;
     }
 }
