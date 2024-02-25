@@ -74,10 +74,8 @@ const productsController = {
 				description: req.body.descriptionProduct,
 				brand_id: brand_id
 			})
-
-			const products = await Product.findAll();
-
-			res.render('products', { products });
+			
+			res.redirect('/')
 		}
 		catch(error) {
 			console.error('Error:', error);
@@ -86,53 +84,53 @@ const productsController = {
 	},
 
 	// Formulario para editar
-	edit: (req, res) => {
+	edit: async (req, res) => {
+		try { 
+		const productEdit = await Product.findByPk(req.params.id);
+		const statuses = await Status.findAll();
+		const categories = await Category.findAll();
 
-		//traigo el json
-		let products = JSON.parse (fs.readFileSync(productsFilePath, "utf-8"));
-
-		//busco el prod segun id
-		const productEdit = products.find(product => {
-			return product.id == req.params.id
-		})
-
-		res.render("form-edit-product", {productEdit});
+		res.render('form-edit-product', {productEdit, statuses, categories})
+		} catch (error) {
+			console.error('Error:', error);
+			res.status(500).send('Error interno del servidor');
+		}
 	},
 
 	// Actualizar la info
-	processEdit: (req, res) => {
+	processEdit: async (req, res) => {
+		try { 
+			const brandName = req.body.brand;
 
-		//traemos el json
-		const products = JSON.parse (fs.readFileSync(productsFilePath, "utf-8"));
+			const existingBrand = await Brand.findOne({
+				where: { name: brandName }
+			});
+	
+			const brand_id = existingBrand ? existingBrand.id : await Brand.create({ name: brandName }).then(newBrand => newBrand.id);
 
-		//buscamos el producto por id que queremos editar
-		const id= req.params.id;
+			//imagen
+			const newImage = req.file ? req.file.filename : Product.img
 
-		let productEdit= products.find(product => product.id == id);
+			updateProduct = await Product.update({
+				name: req.body.name,
+				price: req.body.price,
+				category_id: req.body.category,
+				status_id: req.body.ofertaOdestacado, 
+				description_home: req.body.descriptionHome,
+				description: req.body.descriptionProduct,
+				img: newImage,
+				brand_id: brand_id
+			}, {
+				where: {id: req.params.id}
+			}); 
+			
+			res.redirect('/')
 
-		//creamos el objeto literal q reemplaza al anterior
-		productEdit = {
-			id: productEdit.id,
-  			name: req.body.name,
-  			price:req.body.price,
- 			category: req.body.category,
-			descriptionProduct: req.body.descriptionProduct,
-			descriptionHome: req.body.descriptionHome,
-			ofertaOdestacado: req.body.ofertaOdestacado,
-			image: req.file != undefined ? req.file.filename : productEdit.image,
-		}
-		//buscamos la posicion del producto a reemplazar
-		let indice = products.findIndex(product =>{
-			return product.id == id
-		})
-		//Lo reemplazamos
-		products[indice] = productEdit;
-
-		//edito el json para q se guarde
-		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
-
-		res.redirect("/products");
-	},
+			} catch (error) {
+				console.error('Error:', error);
+				res.status(500).send('Error interno del servidor');
+				}
+				},
 
 	// Eliminar un producto de la DB
 	borrar: (req, res) => {
