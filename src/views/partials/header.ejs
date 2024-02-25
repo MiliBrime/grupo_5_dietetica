@@ -5,9 +5,6 @@
                 <img src="/img/sinFondo.png" alt="Logo">
             </div>
         </a>
-           <!--  <div class="location">
-                <p>Enviar a:</p>
-            </div> -->
             <div class="search-product">
                 <input type="text" name="last-name" id="last-name" required>
                 <label for="last-name">Buscar producto</label>
@@ -68,7 +65,7 @@
             </nav>
         </article>
 
-        <article class="container3">
+       <!--  <article class="container3">
             <ul class="list2">
                 <li><a href="#"></a>Suplementos Deportivos</li>
                 <li><a href="#"></a>Suplementos Naturales</li>
@@ -77,13 +74,23 @@
                 <li><a href="#"></a>Bebidas e Infusiones</li>
                 <li><a href="#"></a>Despensa</li>
             </ul>
-        </article>
-        <article class="verTodo">
-            <li class="todosLosProductos">
-                <a class="todosLosProductos" href="/products">
-                    <i class="fa-solid fa-bars"></i>
-                    <p class="todosTexto">Todos los productos</p>
-                </a>
-            </li>
-        </article>
+        </article> -->
+
+        <div class="categories">
+            <button onclick="toggleDropdown()" class="dropbtn">
+                <i class="fa-solid fa-bars"></i>
+                Categorías
+              </button>
+            <div id="myDropdown" class="dropdown-content">
+              <a href="#">Suplementos naturales</a>
+              <a href="#">Suplementos deportivos</a>
+              <a href="#">Cosmética y salud</a>
+              <a href="#">Alimentos nutricionales</a>
+              <a href="#">Bebidas e infusiones</a>
+              <a href="#">Despensa</a>
+              <a href="/products">Ver todos los productos</a>
+
+            </div>
+          </div>
+        <script src = "/js/categories.js" type= "text/javascript"> </script>
 </section>
