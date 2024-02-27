@@ -11,42 +11,70 @@
 
 <body>
         <div class="box-profile">
-            <div class="contenido input-profile">
-                <h2>¡Hola <%=user.name%>! </h2>
-            </div>
             
-            <div class="misDatos">
-                <h3>Mis datos:</h3>
-            </div>
-            
-            <form class="formProfile" method="post" enctype="multipart/form-data" action="/users/profile">
+            <div class="name-img">
+                <h2>¡Hola <%=user.first_name%>! </h2>
                 <div class="photo-profile">
-                    <img src="/img/users/<%=user.image%>" alt="Foto de perfil">
+                    <img src="/img/users/<%=user.photo%>" alt="Foto de perfil">
                 </div>
+            </div>
+                      
+            <div class="misDatos">
+                <h3>¿Queres actualizar tus datos?</h3>
+            </div>
+
+            <form class="formProfile" method="POST" enctype="multipart/form-data" action="/users/profile">
+                <div class="datos">
+                <div class="div1">
                     <div class="input-file">
-                        <label class= "label" for="input-photo">Selecciona una imagen</label>
-                        <input class="input-photo" type="file" name="image"
-                            accept="image/jpeg, image/png, image,jpg">
+                        <label class= "label" for="input-photo">Imagen de perfil</label>
+                        <input class="input-photo" type="file" name="photo"
+                            accept="image/jpeg, image/png, image/jpg">
+                    </div>
+                    <div class="contenido input-profile">
+                        <label class= "label" for="first_name">Nombre</label>
+                        <input type="text" name="first_name" placeholder="Nombre"
+                        value="<%=user.first_name %>"
+                            class="input input-alt" />
+                    </div>
+                    <div class="contenido input-profile">
+                        <label class= "label" for="last_name">Apellido</label>
+                        <input type="text" name="last_name" placeholder="Apellido"
+                        value="<%=user.last_name %>"
+                            class="input input-alt" />
                     </div>
                 <div class="contenido input-profile">
+                    <label class= "label" for="email">Email</label>
                     <input type="email" name="email" placeholder="Correo Electrónico"
                     value="<%=user.email %>"
                         class="input input-alt" />
                 </div>
+                </div>
+                <div class="div2">
                 <div class="contenido input-profile">
                     <div class="form-control">
-                        <input type="text" name="phone" placeholder="Teléfono celular"
+                        <label class= "label" for="phone">Teléfono</label>
+                        <input type="text" name="phone" placeholder="Teléfono celular" value="<%=user.phone %>"
                             class="input input-alt" />
                     </div>
                 </div>
                 <div class="contenido input-profile">
                     <div class="form-control">
-                        <input type="text" name="address" placeholder="Dirección" class="input input-alt" />
+                        <label class= "label" for="address">Dirección</label>
+                        <input type="text" name="address" placeholder="Dirección" class="input input-alt" value="<%=address.address %>"/>
                     </div>
                 </div>
+                <div class="contenido input-profile">
+                    <div class="form-control">
+                        <label class= "label" for="zip_code">Código postal</label>
+                        <input type="number" name="zip_code" placeholder="Código postal" class="input input-alt" value="<%= address.zip_code%>"/>
+                    </div>
+                </div>
+            </div>
+            </div>
                 <div class="contenido button-save">
                     <button class="btn">
-                        Guardar
+                        Actualizar información
                     </button>
                 </div>
         </form>

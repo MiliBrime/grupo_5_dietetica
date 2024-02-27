@@ -2,95 +2,91 @@ const path=require("path");
 const fs=require("fs");
 const bcryptjs = require("bcryptjs");
 
-const user={
-    //guardo el json el fileName
-    jsonUsers: path.join(__dirname, '../data/users.json'),
+let db= require ("../../database/models");
 
-    //leer el json, el parse es para q se haga un objeto
-    getData: function (){ 
-        return JSON.parse(fs.readFileSync(this.jsonUsers, 'utf8'));
-    },
+const user={
 
     //encontrar a todos los usuarios
-    findAll: function(){ 
-        return this.getData();
+    findAll: async function (){ 
+        return await db.User.findAll();
     },
 
     //encontrar por primary key
-    findByPk: function(id){
-        //obtenemos todos los usuarios
-        let allUsers= this.findAll();
-        //buscamos entre ellos el q coincida con el id pasado
-        let userFound= allUsers.find(oneUser => oneUser.id==id);
-        return userFound;
+    findByPk: async function(id){
+        return await db.User.findByPk(id);
     },
     //encontrar por cualquier campo. muestra al primero q encuentre
-    findByField: function(field,text){
-        //obtenemos todos los usuarios
-        let allUsers= this.findAll();
-        //buscamos entre ellos el q coincida con el texto pasado
-        let userFound= allUsers.find(oneUser => oneUser[field]==text);
-        return userFound;
-    },
-    //guardar un usuario
-    processCreate: function(req,res){
-        let allUsers= this.findAll();
-        //creo el nuevo user con la info q pedimos en el form
-        const userData = {
-            id: allUsers.length > 0 ? allUsers[allUsers.length - 1].id + 1 : 1,
-            name: req.body.name,
-            lastName: req.body.lastName,
-            email: req.body.email,
-            password: bcryptjs.hashSync(req.body.password, 10),
-            image: req.file ? req.file.filename : "default.jpg",
-        }
-        //agrego al JSON
-        allUsers.push(userData);
-        //sobreeescribo el JSON
-        fs.writeFileSync(this.jsonUsers, JSON.stringify(allUsers, null, " "));
+    findByField: async function(field, text) {
+        if (field && text) { // Verificar si field y text son valores válidos
+            return await db.User.findOne({
+                where: {
+                    [field]: text
+                }
+            });
+        } 
     },
 
-    delete: function(id){
-        let allUsers = this.findAll();
-        let finalUsers = allUsers.filter(oneUser => oneUser.id !==id);
-        fs.writeFileSync(this.jsonUsers, JSON.stringify(finalUsers, null, " "));
-        return finalUsers;
+    //guardar un usuario
+    processCreate: function(req,res){
+        return db.User.create({
+            first_name: req.body.first_name,
+            last_name: req.body.last_name,
+            email: req.body.email,
+            phone: req.body.phone,
+            password: bcryptjs.hashSync(req.body.password, 10),
+            photo: req.file ? req.file.filename : "/img/users/default.jpg",
+        })
+        .then(newUser => {
+            return newUser;
+        }) 
+    },
+
+    delete: function(req,res){
+        db.User.destroy({
+            where: {id: req.params.id},
+        })
+        res.redirect("/")
     }, 
+
+    edit: async function(req, res) {
+        let userId =  req.session.userLogged.id;
+        try {
+            await db.User.update({
+                first_name: req.body.first_name,
+                last_name: req.body.last_name,
+                email: req.body.email,
+                phone: req.body.phone,
+                photo: req.file ? req.file.filename : req.session.userLogged.photo,
+            }, {
+                where: {
+                    id: userId,
+                }
+            });
+
+            //actualizar la direccion del usuario
+            let address= await db.Address.findOne({
+                where:{
+                    user_id: userId 
+                }
+            });
+            if (address){
+                await address.update({
+                    address: req.body.address ? req.body.address : address.address,
+                    zip_code: req.body.zip_code ? req.body.zip_code : address.zip_code,
+                })
+            } else{
+                await db.Address.create({
+                    address: req.body.address ? req.body.address : '',
+                    zip_code: req.body.zip_code ? req.body.zip_code : '',
+                    user_id: userId,
+                })
+            }
+            
+        } catch (error) {
+            console.log(error);
+            res.json(error)    
+        }
+    }
 }
 
 module.exports = user;
-
-
-//proceso de edicion de usuario fallida
-
-/* edit:function(req,res){ //ARREGLARR
-    const userId = req.session.userLogged.id; // Obtener el ID del usuario logueado
-
-    // Obtener todos los usuarios
-    let allUsers = this.findAll();
-
-    // Encontrar al usuario que está intentando editar su perfil
-    let editedUser = allUsers.find(user => user.id === userId);
-
-    if (editedUser) {
-        // Actualizar los campos que el usuario intenta modificar
-        editedUser.name = req.body.name;
-        editedUser.lastName = req.body.lastName;
-        editedUser.email = req.body.email;
-        editedUser.image = req.file ? req.file.filename : editedUser.image;
-
-        // Actualizar la contraseña solo si se proporciona una nueva contraseña en el formulario
-        if (req.body.password) {
-            editedUser.password = bcryptjs.hashSync(req.body.password, 10);
-        }
-
-        // Guardar los cambios en el archivo JSON
-        fs.writeFileSync(this.jsonUsers, JSON.stringify(allUsers, null, 2));
-
-        // Redireccionar al perfil del usuario después de la edición
-        return res.redirect("/users/profile");
-    } else {
-        // Manejar el caso en que no se encuentre al usuario
-        return res.status(404).send("Usuario no encontrado");
-    }
-}, */

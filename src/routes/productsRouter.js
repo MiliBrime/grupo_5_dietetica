@@ -35,10 +35,11 @@ router.post("/create", upload.single("image"), productsController.processCreate)
 // Editar un producto 
 router.get('/edit/:id', productsController.edit); 
 
-router.put('/edit/:id',  upload.single("image"), productsController.processEdit); 
+router.put('/edit/:id', upload.single("image"), productsController.processEdit); 
 
 // Eliminar un producto 
 router.delete('/borrar/:id', productsController.borrar);
 
+router.post("/search", productsController.search);
 
 module.exports = router;

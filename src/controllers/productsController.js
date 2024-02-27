@@ -4,11 +4,13 @@ const path = require('path');
 const express = require('express');
 const app= express();
 
+const { Op } = require('sequelize');
+
 app.use(express.static("public"));
 app.use(express.static("views"));
 
-const productsFilePath = path.join(__dirname, '../data/products.json');
-
+/* const productsFilePath = path.join(__dirname, '../data/products.json');
+ */
 const db = require('../../database/models');
 const {	Product, Status, Category, Brand } = db 
 
@@ -19,7 +21,7 @@ const productsController = {
 	index: async (req, res) => {
 		try { 
 		const products = await Product.findAll();
-			res.render("products", {products});
+		res.render("products", {products});
 		
 	} catch (error) {
 		console.error('Error:', error);
@@ -28,19 +30,14 @@ const productsController = {
 	},
 
 	// Detalle de un producto
-	detail: (req, res) => {
-		const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
-
-		//cuando ponemos /detail/4 por ej, nos lleva a ese producto
-		const singleProduct = products.find(product =>{
-			return product.id == req.params.id;
-		});
-		//si lo encuentra nos lleva al detalle de ese producto
-		if (singleProduct !== undefined){
-			res.render("productDetail", {singleProduct});
-		}else{
-			res.redirect("/products");
-		}
+	detail: async (req, res) => {
+		try {
+			const singleProduct = await Product.findByPk(req.params.id);
+			res.render('productDetail', {singleProduct})
+	} catch (error) {
+		console.error('Error:', error);
+		res.status(500).send('Error interno del servidor');
+	}
 	},
 
 	// Formulario para crear
@@ -55,12 +52,19 @@ const productsController = {
 		}
 	  },
 	
-	// // guardar el producto con la info del usuario, y redirigir a alguna pagina para q el usuario sepa q salio todo ok
+	// guardar el producto con la info del usuario, y redirigir a alguna pagina para q el usuario sepa q salio todo ok
 	processCreate: async (req, res) => {
 		try {
 			   const brandName = req.body.brand;
 
-			   const brands = await Brand.create({ name: brandName });
+			    // Busca si la marca ya existe en la base de datos
+				const existingBrand = await Brand.findOne({
+					where: { name: brandName }
+				});
+		
+				// Si la marca existe, usa su brand_id
+				// Si no existe, crea la marca y obtén su brand_id
+				const brand_id = existingBrand ? existingBrand.id : await Brand.create({ name: brandName }).then(newBrand => newBrand.id);
 	   	
 			const newProduct = await Product.create ({
 				name: req.body.name,
@@ -70,12 +74,10 @@ const productsController = {
 				status_id: req.body.ofertaOdestacado,
 				description_home: req.body.descriptionHome,
 				description: req.body.descriptionProduct,
-				brand_id: brands.id
+				brand_id: brand_id
 			})
-
-			const products = await Product.findAll();
-
-			res.render('products', { products });
+			
+			res.redirect('/')
 		}
 		catch(error) {
 			console.error('Error:', error);
@@ -84,67 +86,84 @@ const productsController = {
 	},
 
 	// Formulario para editar
-	edit: (req, res) => {
+	edit: async (req, res) => {
+		try { 
+		const productEdit = await Product.findByPk(req.params.id);
+		const statuses = await Status.findAll();
+		const categories = await Category.findAll();
 
-		//traigo el json
-		let products = JSON.parse (fs.readFileSync(productsFilePath, "utf-8"));
-
-		//busco el prod segun id
-		const productEdit = products.find(product => {
-			return product.id == req.params.id
-		})
-
-		res.render("form-edit-product", {productEdit});
+		res.render('form-edit-product', {productEdit, statuses, categories})
+		} catch (error) {
+			console.error('Error:', error);
+			res.status(500).send('Error interno del servidor');
+		}
 	},
 
 	// Actualizar la info
-	processEdit: (req, res) => {
+	processEdit: async (req, res) => {
+		try { 
+			const brandName = req.body.brand;
 
-		//traemos el json
-		const products = JSON.parse (fs.readFileSync(productsFilePath, "utf-8"));
+			const existingBrand = await Brand.findOne({
+				where: { name: brandName }
+			});
+	
+			const brand_id = existingBrand ? existingBrand.id : await Brand.create({ name: brandName }).then(newBrand => newBrand.id);
 
-		//buscamos el producto por id que queremos editar
-		const id= req.params.id;
+			//imagen
+			const newImage = req.file ? req.file.filename : Product.img
 
-		let productEdit= products.find(product => product.id == id);
+			updateProduct = await Product.update({
+				name: req.body.name,
+				price: req.body.price,
+				category_id: req.body.category,
+				status_id: req.body.ofertaOdestacado, 
+				description_home: req.body.descriptionHome,
+				description: req.body.descriptionProduct,
+				img: newImage,
+				brand_id: brand_id
+			}, {
+				where: {id: req.params.id}
+			}); 
+			
+			res.redirect('/')
 
-		//creamos el objeto literal q reemplaza al anterior
-		productEdit = {
-			id: productEdit.id,
-  			name: req.body.name,
-  			price:req.body.price,
- 			category: req.body.category,
-			descriptionProduct: req.body.descriptionProduct,
-			descriptionHome: req.body.descriptionHome,
-			ofertaOdestacado: req.body.ofertaOdestacado,
-			image: req.file != undefined ? req.file.filename : productEdit.image,
-		}
-		//buscamos la posicion del producto a reemplazar
-		let indice = products.findIndex(product =>{
-			return product.id == id
-		})
-		//Lo reemplazamos
-		products[indice] = productEdit;
-
-		//edito el json para q se guarde
-		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
-
-		res.redirect("/products");
-	},
+			} catch (error) {
+				console.error('Error:', error);
+				res.status(500).send('Error interno del servidor');
+				}
+				},
 
 	// Eliminar un producto de la DB
-	borrar: (req, res) => {
-		let products = JSON.parse (fs.readFileSync(productsFilePath, "utf-8"));
-		
-		//hacemos un nuevo array de products donde queden todos los productos que sean distintos al del params
-		
-		products = products.filter(product => {
-			return product.id != req.params.id
+	borrar: async (req, res) => {
+		try { 
+		await Product.destroy({
+			where: {
+				id: req.params.id
+			}
 		})
-
-		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
 		
-		res.redirect("/products");
+		res.redirect("/");
+		} catch (error) {
+			console.error('Error:', error);
+			res.status(500).send('Error interno del servidor');	
+		}
+	},
+
+	search: (req,res)=>{
+		let keyword= req.body.keyword
+		Product.findAll({
+			where: {
+				name: {[Op.like]: "%" + keyword + "%"}
+			}
+		})
+		.then(found =>{
+			return res.render("search",{found, keyword});
+		})
+		.catch (error => {
+			console.error('Error:', error);
+			res.status(500).send('Error interno del servidor');	
+		})
 	}
 };
 

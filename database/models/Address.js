@@ -8,11 +8,9 @@ module.exports = (sequelize, dataTypes) => {
         },
         address: {
             type: dataTypes.STRING,
-            allowNull: false
         },
         zip_code: {
             type: dataTypes.INTEGER,
-            allowNull: false
         },
         user_id: {
             type: dataTypes.INTEGER,
@@ -26,5 +24,11 @@ module.exports = (sequelize, dataTypes) => {
     };
 
     const Address = sequelize.define(alias, cols, config);
+    
+    Address.associate = function(models){
+        
+        Address.belongsTo(models.User, {as: "users", foreignKey: "user_id"})
+    }
+
     return Address;
 }

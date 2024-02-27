@@ -7,6 +7,13 @@
 
 body {
     background-image: linear-gradient(to right top, #abd0bf, #a7cdbc, #a3cab9, #9ec8b6, #9ac5b3, #94c1ae, #8ebdaa, #88b9a5, #7fb39e, #77ad96, #6ea78f, #66a188);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
+}
+
+.img-lider{
+   display: none;
 }
 
 .container {
@@ -37,11 +44,10 @@ body {
     border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
-.box-register {
+.box-login-register{
     position: absolute;
     width: 85%;
     left: 27px;
-    /* right: -350px; */
     transition: .5s ease-in-out;
 }
 
@@ -108,7 +114,6 @@ body {
     transition: .3s ease-in-out;
 }
 
-
 .remember {
     display: flex;
     font-size: 13px;
@@ -129,7 +134,6 @@ body {
     border: none;
     border-radius: 10px;
     background: #45846f;
-    color: #0f1f1b;
     color: #fff;
     box-shadow: 0px 4px 20px rgba(62, 9, 9, 0.144);
     cursor: pointer;
@@ -157,8 +161,8 @@ body {
 .switch {
     display: flex;
     position: absolute;
-    bottom: 20px;
-    left: 25px;
+    bottom: 50px;
+    left: 27px;
     width: 85%;
     height: 50px;
     background: rgba(255, 255, 255, 0.16);
@@ -181,12 +185,39 @@ body {
     z-index: 10;
 }
 
+.switch-register {
+    display: flex;
+    position: absolute;
+    bottom: 20px;
+    left: 27px;
+    width: 85%;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.16);
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+.switch-register a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 500;
+    color: #000;
+    text-decoration: none;
+    width: 50%;
+    height: 50px;
+    border-radius: 10px;
+    z-index: 10;
+}
+
 #btn {
     position: absolute;
     bottom: 0px;
-    left: 150px;
+    left: 0px;
     width: 145px;
     height: 50px;
+    background: rgb(106, 223, 206);
     background: linear-gradient(to right, #abd0bf, #92bdaa, #78a996, #5f9782, #45846f);
     border-radius: 10px;
     box-shadow: 2px 0px 12px rgba(0, 0, 0, 0.1);
@@ -223,11 +254,20 @@ i {
     opacity: 0;
 }
 
-/* ------ */
-.textImage{
-    margin: 0 0 10px 0;
+@media(min-width: 460px){
+    .img-lider{
+        display: block;
+        width: 10%;
+        position: absolute;
+    }
+    
 }
-
+@media(min-width: 700px){
+    .img-lider{
+        width: 10%;
+        position: absolute;
+        left: 50px;}
+}
 @media only screen and (max-width: 576px) {
     .box {
         margin: 0 5px;

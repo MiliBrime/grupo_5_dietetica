@@ -14,7 +14,7 @@ a {
 }
 
 .header {
-    background-color: #ABD0BF;
+    background-color: #c4ded2; /* abd0bf */
 }
 .container1 {
     display: flex;
@@ -23,8 +23,9 @@ a {
 }
 
 .logo>img {
-    height: 100px;
-    margin: 5px;
+    height: 120px;
+    top: 15px;
+    position: relative;
 }
 
 .ingresa-registrate-carro{
@@ -41,7 +42,7 @@ a {
 
 .search-product {
     position: relative;
-    margin: 30px 0;
+    margin: 30px 10px;
     width: 50%;
     border-bottom: 2px solid #000;
 }
@@ -76,8 +77,8 @@ input:valid~label {
 
 .container2 {
     display: flex;
-    grid-gap: 25px;
-    justify-content: space-around;
+/*     grid-gap: 25px;
+ */    justify-content: space-around;
     padding: 5px;
 }
 
@@ -105,32 +106,54 @@ input:valid~label {
     text-decoration: none;
     list-style: circle;
     display: flex;
-    grid-gap: 70px;
+    grid-gap: 45px;
     justify-content: center;
     cursor: pointer;
     color: #3c3c3c;
 }
 
-.verTodo{
-    display: flex;
-    justify-content: flex-start;
-    margin: 20px;
-    padding-bottom: 10px;
-    list-style: none;
-    cursor:pointer;
-}
-
-.todosLosProductos{
-    display: flex;
-}
-
-.fa-bars{
-    margin: 0 5px 0 0;
-}
 
 .ingresa-registrate-carro{
     display: none;
 }
+
+/* categories--------------- */
+
+  .dropbtn {
+    background-color: #c4ded2;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .show {
+    display: block;
+  }
+/* --------------- */
+
+
 
 footer {
     background-color: silver;
@@ -168,11 +191,22 @@ footer {
     flex:1;
 }
 
-@media (min-width: 769px){
+@media (min-width: 500px) {
+    .container2{
+        grid-gap: 25px;
+    }
+}
+
+@media (min-width: 880px){
     .ingresa-registrate-carro{
         display: flex;
     }
     .container3{
         display: flex;
     }  
+}
+@media (min-width: 900px){
+.list2{
+    grid-gap: 70px;
+}
 }

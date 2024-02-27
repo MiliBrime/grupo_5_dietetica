@@ -30,7 +30,7 @@ module.exports= (sequelize, dataTypes) => {
         },
         photo: {
             type: dataTypes.STRING
-        }
+        },
     };
     let config = {
         tableName: "users",
@@ -38,5 +38,19 @@ module.exports= (sequelize, dataTypes) => {
     };
 
     const User = sequelize.define(alias, cols, config)
+    
+    User.associate = function(models){
+        
+        User.hasMany(models.Address, {as: "addresses", foreignKey: "user_id"}),
+        
+        User.belongsToMany(models.Role,{
+            as: "roles",
+            through: "User_role",
+            foreignKey: "role_id",
+            otherKey: "user_id",
+            timestamps: false
+        })
+    }
+
     return User;
 }
