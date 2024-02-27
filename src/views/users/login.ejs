@@ -2,16 +2,17 @@
 <html lang="en">
 
 <head>
-    <%- include ("./partials/head.ejs" , { cssSheet: "login", cssSheet1:"", icons: "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"} ) %>
+    <%- include ("./partials/head.ejs" , { cssSheet: "login-register", cssSheet1:"", icons: "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"} ) %>
 </head>
 
 <body>
-    <div class="container">
+        <a href="/"><img class= "img-lider" src="/img/tvs.png" alt="logo"></a>
+        <div class="container">
         <div class="box">
             <div class="back-to-home">
-                <i class="fa-solid fa-x"></i>
+                <a href="/"><i class="fa-solid fa-x" aria-hidden="true"></i></a>
             </div>
-            <div class="box-login" id="login">
+            <div class="box-login-register" id="login">
                 <div class="top-header">
                     <h3>¡Hola!</h3>
                     <small>Es un gusto tenerte de nuevo</small>

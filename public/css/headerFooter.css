@@ -77,8 +77,8 @@ input:valid~label {
 
 .container2 {
     display: flex;
-    grid-gap: 25px;
-    justify-content: space-around;
+/*     grid-gap: 25px;
+ */    justify-content: space-around;
     padding: 5px;
 }
 
@@ -189,6 +189,12 @@ footer {
 
 .div-footer{
     flex:1;
+}
+
+@media (min-width: 500px) {
+    .container2{
+        grid-gap: 25px;
+    }
 }
 
 @media (min-width: 880px){

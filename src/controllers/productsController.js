@@ -4,11 +4,13 @@ const path = require('path');
 const express = require('express');
 const app= express();
 
+const { Op } = require('sequelize');
+
 app.use(express.static("public"));
 app.use(express.static("views"));
 
-const productsFilePath = path.join(__dirname, '../data/products.json');
-
+/* const productsFilePath = path.join(__dirname, '../data/products.json');
+ */
 const db = require('../../database/models');
 const {	Product, Status, Category, Brand } = db 
 
@@ -146,6 +148,22 @@ const productsController = {
 			console.error('Error:', error);
 			res.status(500).send('Error interno del servidor');	
 		}
+	},
+
+	search: (req,res)=>{
+		let keyword= req.body.keyword
+		Product.findAll({
+			where: {
+				name: {[Op.like]: "%" + keyword + "%"}
+			}
+		})
+		.then(found =>{
+			return res.render("search",{found, keyword});
+		})
+		.catch (error => {
+			console.error('Error:', error);
+			res.status(500).send('Error interno del servidor');	
+		})
 	}
 };
 

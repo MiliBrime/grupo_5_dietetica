@@ -6,8 +6,10 @@
             </div>
         </a>
             <div class="search-product">
-                <input type="text" name="last-name" id="last-name" required>
-                <label for="last-name">Buscar producto</label>
+                <form method= "post" action="/products/search">
+                <input type="text" name="keyword" id="search" required>
+                <label for="search">Buscar producto</label>
+                </form>
             </div>
 
             <% if (locals.isLogged) { %>
