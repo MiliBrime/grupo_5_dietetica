@@ -100,7 +100,7 @@ input:valid~label {
     display: none;
     justify-content: space-around;
     align-items: center;
-    padding: 15px;
+    margin-top:20px
 }
 .list2 {
     text-decoration: none;
@@ -123,9 +123,11 @@ input:valid~label {
     background-color: #c4ded2;
     color: white;
     padding: 12px;
-    font-size: 16px;
+    font-size: 18px;
     border: none;
     cursor: pointer;
+    position: relative;
+    left: 30px 
   }
   
   .dropdown-content {
@@ -151,6 +153,10 @@ input:valid~label {
   .show {
     display: block;
   }
+
+  .rotate {
+    transform: rotate(-90deg);
+}
 /* --------------- */
 
 

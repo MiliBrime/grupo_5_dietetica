@@ -3,6 +3,10 @@
     color: #F2AC57
 }
 
+.banner{
+    width: 100%;
+    padding: 5px;
+}
 .info-banner {
     display: flex;
     justify-content: space-evenly;
@@ -59,7 +63,6 @@
 }
 
 .sub-title2 {
-    margin-top: 20px;
     padding: 20px;
     font-size: 25px;
     font-weight: 500;
@@ -211,6 +214,7 @@ button {
 @media (min-width: 769px){
     .card-product{
         flex:45%;
+        max-width: 45%;
     }
     .card-info{
         display: block;
