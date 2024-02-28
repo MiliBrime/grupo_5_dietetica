@@ -15,8 +15,10 @@ function toggleDropdown() {
       let contenidoDropdown = document.getElementsByClassName("dropdown-content");
       for (let i = 0; i < contenidoDropdown.length; i++) {
         let openDropdown = contenidoDropdown[i];
-        openDropdown.classList.toggle("show")
-          arrowIcon.classList.toggle("rotate")
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove("show");
+          document.getElementById("arrowIcon").classList.toggle("rotate")
+        }          
         }
       }
     }
