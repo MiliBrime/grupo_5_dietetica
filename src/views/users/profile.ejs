@@ -31,8 +31,6 @@
                         <input class="input-photo" type="file" name="photo"
                             accept="image/jpeg, image/png, image/jpg">
                     </div>
-                    <p class="aclaracion">Tu foto se actualizará en unos minutos luego de guardar tus cambios</p>
-
                     <div class="contenido input-profile">
                         <label class= "label" for="first_name">Nombre</label>
                         <input type="text" name="first_name" placeholder="Nombre"
@@ -63,13 +61,13 @@
                 <div class="contenido input-profile">
                     <div class="form-control">
                         <label class= "label" for="address">Dirección</label>
-                        <input type="text" name="address" placeholder="Dirección" class="input input-alt" value="<%=address.address %>"/>
+                        <input type="text" name="address" placeholder="Dirección" class="input input-alt" value= "<%= address && address.address ? address.address : '' %>"/>
                     </div>
                 </div>
                 <div class="contenido input-profile">
                     <div class="form-control">
                         <label class= "label" for="zip_code">Código postal</label>
-                        <input type="number" name="zip_code" placeholder="Código postal" class="input input-alt" value="<%= address.zip_code%>"/>
+                        <input type="number" name="zip_code" placeholder="Código postal" class="input input-alt" value="<%= address && address.zip_code ? address.zip_code : ' '%>"/>
                     </div>
                 </div>
             </div>
