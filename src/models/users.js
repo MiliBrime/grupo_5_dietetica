@@ -34,7 +34,7 @@ const user={
             email: req.body.email,
             phone: req.body.phone,
             password: bcryptjs.hashSync(req.body.password, 10),
-            photo: req.file ? req.file.filename : "/img/users/default.jpg",
+            photo: req.file ? req.file.filename : "default.jpg",
         })
         .then(newUser => {
             return newUser;
@@ -81,6 +81,9 @@ const user={
                     user_id: userId,
                 })
             }
+
+            let updatedUser = await db.User.findByPk(userId);
+            res.render('profile', { user: updatedUser, address });
             
         } catch (error) {
             console.log(error);

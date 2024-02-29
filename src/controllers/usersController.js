@@ -18,8 +18,13 @@ let usersController={
                 let isThePasswordOk = bcryptjs.compareSync (req.body.password, userToLogin.password);
                 if (isThePasswordOk) {
                     delete userToLogin.password; //por seguridad
-                    req.session.userLogged = userToLogin;
-                    if(req.body.rememberUser) {
+                    /* if(userToLogin.email == "milibrime@hotmail.com"){
+                        req.session.admin= userToLogin.dataValues
+                        console.log("es admin")
+                    } else { */
+                    req.session.userLogged = userToLogin //.dataValues ? };
+                    
+                    if(req.body.rememberUser == "recordame") {
                         res.cookie("userEmail", req.body.email, {maxAge: 365 * 24 * 60 * 60 * 1000})
                     }
                     return res.redirect("/users/profile") 
@@ -86,8 +91,8 @@ let usersController={
     editProfile: async (req, res) => {
         try {
             await users.edit(req, res);
-            res.redirect("/users/profile");
-        } catch (error) {
+/*             res.redirect("/users/profile");
+ */        } catch (error) {
             res.status(500).send("Error al editar el perfil");
         }
     }
