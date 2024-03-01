@@ -13,7 +13,7 @@
     <main>
         <%- include("./partials/info-banner.ejs")%>
         <h2 class="sub-title2">Estás editando el producto: <%=productEdit.name%></h2>
-        <form action="/products/edit/<%=productEdit.id%>?_method=PUT" method="post" enctype="multipart/form-data">
+        <form class="form" action="/products/edit/<%=productEdit.id%>?_method=PUT" method="post" enctype="multipart/form-data">
             <div class="formCreate">
                 <div class="inputCreate">
                     <label for="name" class="form-label">Nombre:</label>
@@ -21,7 +21,8 @@
                 </div>
                 <div class="inputCreate">
                     <label for="brand" class="form-label">Marca:</label>
-                    <input type="text" id="brand" name="brand" placeholder="Ej: Star Nutrition" class="form-input">
+                    <% let productBrand = brands.find(brand => brand.id === productEdit.brand_id); %>
+                    <input type="text" id="brand" name="brand" placeholder="Ej: Star Nutrition" class="form-input" value="<%= productBrand ? productBrand.name : '' %>">
                 </div>
                 <div class="inputCreate">
                     <label for="price" class="form-label">Precio:</label>
@@ -30,28 +31,28 @@
                 <div class="inputCreate">
                     <label for="category" class="form-label">Categoría:</label>
                     <select name="category" id="category" class="form-input">
-                        <option value="">Elegí</option>
+                        <% let productCategory = productEdit.category_id.toString(); %>
                         <% categories.forEach(category => { %>
-                             <option value="<%= category.id %>">  <%= category.name %> </option>
+                             <option value="<%= category.id %>" <%= (productCategory === category.id.toString()) ? 'selected' : '' %>>  <%= category.name %> </option>
                         <% }); %>  
                     </select>
                 </div>
                 <div class="inputCreate">
                     <label for="ofertaOdestacado" class="form-label">Estado del producto:</label>
                     <select name="ofertaOdestacado" id="ofertaOdestacado" class="form-input">
-                        <option value="">Elegí</option>
+                        <% let productStatusId = productEdit.status_id.toString(); %>
                         <% statuses.forEach(status => { %>
-                             <option value="<%= status.id %>">  <%= status.name %> </option>
+                             <option value="<%= status.id %>"<%= (productStatusId === status.id.toString()) ? 'selected' : '' %>>  <%= status.name %> </option>
                         <% }); %>  
                     </select>
                 </div>
                 <div class="inputCreate">
                     <label for="descriptionHome" class="form-label">Descipción para el home:</label>
-                    <textarea name="descriptionHome" id="descriptionHome" class="form-input" placeholder="Descripción más corta" maxlenght= 122><%=productEdit.descriptionHome%></textarea>
+                    <textarea name="descriptionHome" id="descriptionHome" class="form-input" placeholder="Descripción más corta" maxlenght= 122><%=productEdit.description_home%></textarea>
                 </div>
                 <div class="inputCreate">
                     <label for="descriptionProduct" class="form-label">Descipción para el detalle:</label>
-                    <textarea name="descriptionProduct" id="descriptionProduct" class="form-input-texto" placeholder="Descripción completa"><%=productEdit.descriptionProduct%></textarea>
+                    <textarea name="descriptionProduct" id="descriptionProduct" class="form-input-texto" placeholder="Descripción completa"><%=productEdit.description? productEdit.description : ''%></textarea>
                 </div>
                 <div class="inputCreate">
                     <label for="image" class="form-label">Imagen:</label>

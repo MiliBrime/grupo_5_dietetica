@@ -91,8 +91,9 @@ const productsController = {
 		const productEdit = await Product.findByPk(req.params.id);
 		const statuses = await Status.findAll();
 		const categories = await Category.findAll();
+		const brands = await Brand.findAll();
 
-		res.render('form-edit-product', {productEdit, statuses, categories})
+		res.render('form-edit-product', {productEdit, statuses, categories, brands})
 		} catch (error) {
 			console.error('Error:', error);
 			res.status(500).send('Error interno del servidor');

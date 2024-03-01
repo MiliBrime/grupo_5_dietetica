@@ -8,6 +8,11 @@ i {
     font-size: 1em;
 }
 
+.banner{
+    width: 100%;
+    padding: 5px;
+}
+
 a {
     text-decoration: none;
     color: black;

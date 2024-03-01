@@ -3,10 +3,6 @@
     color: #F2AC57
 }
 
-.banner{
-    width: 100%;
-    padding: 5px;
-}
 .info-banner {
     display: flex;
     justify-content: space-evenly;
