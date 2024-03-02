@@ -63,12 +63,14 @@
                     </div>
                         
         </div>
+        <% if (locals.userIsAdmin) { %>
         <div class="editarBorrar">
             <a class="editarProducto" href="/products/edit/<%=singleProduct.id%>">EDITAR PRODUCTO</a>
             <form action="/products/borrar/<%=singleProduct.id%>?_method=DELETE" method="POST" style="display: inline-flex">
                 <button type="submit" class="action-button delete">ELIMINAR</button>
             </form>
-            </div>
+        </div>
+        <% } %>
 
         <div class="container-products">
             <h2 class="related-products">Productos relacionados</h2>

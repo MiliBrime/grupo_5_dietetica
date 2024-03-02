@@ -1,7 +1,7 @@
 authMiddleware.js
 
 function authMiddleware(req,res,next){
-  if (!req.session.userLogged) //no tengo a nadie en sesion
+  if ((!req.session.userLogged) && (!req.session.admin)) //no tengo a nadie en sesion
   {
     return res.redirect("/users/login")
   }
@@ -10,5 +10,3 @@ function authMiddleware(req,res,next){
 
 module.exports = authMiddleware;
 
-
- 

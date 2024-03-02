@@ -13,7 +13,9 @@
         <%- include("./partials/info-banner.ejs")%>
 
         <h1 class="sub-title2">Todos los productos:</h1>
-        <a class="crearProducto" href="/products/create">Crear un producto nuevo </a>
+        <% if (locals.userIsAdmin) { %>
+            <a class="crearProducto" href="/products/create">Crear un producto nuevo </a>
+        <% } %>
         <section class="products">
             <% products.forEach(product => { %>
             <div class="card-product">

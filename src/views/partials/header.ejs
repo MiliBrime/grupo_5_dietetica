@@ -33,7 +33,7 @@
                     </a> 
                 </div>
                 </div>
-                <% } else { %>
+                <% } else if ((!locals.isLogged) && (!locals.userIsAdmin)){ %>
                 <div class="container2">
                     <div class="iconosHeader">
                         <a href="/users/login">
@@ -55,7 +55,22 @@
                         </a> 
                     </div>
                     </div>
-                    <% } %>
+                    <% } else if (locals.userIsAdmin) { %>
+                        <div class="container2">
+                            <div class="iconosHeader">
+                                <a href="/products/create">
+                                    <i class="fa-solid fa-circle-plus"></i>
+                                    <p class="ingresa-registrate-carro">Crear producto</p>
+                                </a>
+                            </div>
+                            <div class="iconosHeader">
+                                <a href="/users/logout">
+                                    <i class="fa-solid fa-right-from-bracket"></i>
+                                    <p class="ingresa-registrate-carro">Cerrar sesión</p>
+                                </a>
+                            </div>
+                            </div>
+                            <% }%>
         </article>
         <article class="container2">
             <nav>

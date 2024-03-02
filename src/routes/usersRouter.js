@@ -26,7 +26,7 @@ const storage= multer.diskStorage({
 const upload= multer({storage:storage}); //especificarle a multer que deseamos usar la config anterior como disco de almacenamiento de archivos. 
 
 
-router.get("/login",  loginValidation,guestMiddleware, usersController.login);
+router.get("/login",  loginValidation, guestMiddleware, usersController.login);
 
 router.post("/login", loginValidation, usersController.processLogin);
 
@@ -36,7 +36,7 @@ router.get("/register", checkDuplicateEmail,guestMiddleware, registerValidation,
 
 router.post("/register", upload.single("photo"), checkDuplicateEmail,registerValidation,usersController.processRegister);
 
-router.get("/profile",profileValidation,authMiddleware, usersController.profile)
+router.get("/profile",profileValidation, authMiddleware, usersController.profile)
 
 router.post("/profile", profileValidation, upload.single("photo"), authMiddleware, usersController.editProfile)
 

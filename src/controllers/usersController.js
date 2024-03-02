@@ -4,8 +4,12 @@ const fs=require("fs");
 const path = require("path");
 const bcryptjs = require('bcryptjs')
 const users= require("../models/users");
-const user = require("../models/users");
 const db = require("../../database/models");
+/* const { use } = require("../routes/usersRouter");
+ */
+// Leer el archivo JSON de los administradores
+const adminsData = fs.readFileSync('src/data/admins.json');
+const admins = JSON.parse(adminsData).admins;
 
 let usersController={
     login:(req,res)=>{
@@ -18,17 +22,19 @@ let usersController={
                 let isThePasswordOk = bcryptjs.compareSync (req.body.password, userToLogin.password);
                 if (isThePasswordOk) {
                     delete userToLogin.password; //por seguridad
-                    /* if(userToLogin.email == "milibrime@hotmail.com"){
-                        req.session.admin= userToLogin.dataValues
-                        console.log("es admin")
-                    } else { */
-                    req.session.userLogged = userToLogin //.dataValues ? };
+                    
+                    if(admins.includes(userToLogin.email)){
+                            req.session.admin = userToLogin.dataValues;
+                            console.log("es admin ;)")  
+                    } else {
+                        req.session.userLogged = userToLogin; }
                     
                     if(req.body.rememberUser == "recordame") {
                         res.cookie("userEmail", req.body.email, {maxAge: 365 * 24 * 60 * 60 * 1000})
                     }
                     return res.redirect("/users/profile") 
                 }
+
                 return res.render("login", {
                     errors: {
                         password: {
@@ -52,7 +58,7 @@ let usersController={
 
     logout:(req,res)=>{
         res.clearCookie("userEmail");
-        req.session.destroy ();  //borra todo lo que esté en session
+        req.session.destroy (); //borra todo lo que esté en session
         res.redirect ("/"); 
     },
     
@@ -69,23 +75,51 @@ let usersController={
         } 
         else {
             const newUser = await users.processCreate(req, res);
-                req.session.userLogged = newUser;
+
+            //verificar si el mail está en la lista de admins
+            if (admins.includes(newUser.email)) {
+               //asignar el rol de admin
+               let adminRole = await db.Role.findOne({
+                where: {type: "admin"}
+               });
+               await db.User_role.create({
+                user_id: newUser.id,
+                role_id: adminRole.id
+               });
+               req.session.admin= newUser;
+               console.log("Usuario registrado como administrador ;)");
+            } else{
+                let userRole = await db.Role.findOne({
+                    where: {type: "user"}
+                   });
+                   await db.User_role.create({
+                    user_id: newUser.id,
+                    role_id: userRole.id
+                   });
+                   req.session.userLogged = newUser;
+                   console.log("Usuario registrado como normal ;)");
+            }
                 return res.redirect("/users/profile") 
-            } 
+            }
         } catch (error){
                 console.log('Error:', error);
                 return res.status(500).send('Error interno del servidor');
                 }
-        },
+        }, 
 
     profile: async (req,res)=>{
-        let user= req.session.userLogged;
+        let user = req.session.userLogged;
+        let admin = req.session.admin;
+        if (user) {
         let address= await db.Address.findOne({
             where: {
                 user_id: user.id
             }
         })
-        res.render("profile", {user, address});
+        res.render("profile", {user, address})
+    } if (admin){
+        res.redirect("/products")
+    }
     },
 
     editProfile: async (req, res) => {

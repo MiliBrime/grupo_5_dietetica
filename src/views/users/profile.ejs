@@ -18,7 +18,7 @@
                     <img src="/img/users/<%=user.photo%>" alt="Foto de perfil">
                 </div>
             </div>
-                      
+        <% if (locals.isLogged){ %>           
             <div class="misDatos">
                 <h3>¿Queres actualizar tus datos?</h3>
             </div>
@@ -78,6 +78,7 @@
                     </button>
                 </div>
         </form>
+        <% } %>
         </div>
 
 </body>
