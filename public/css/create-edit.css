@@ -74,6 +74,17 @@ body {
     border-style: none;
 }
 
+.preview {
+    max-width: 300px;
+    max-height: 300px;
+    border: 1px solid #ccc;
+}
+
+.previewText{
+    font-weight: bold;
+    margin: 25px 0 10px
+}
+
 @media (min-width: 769px){
     .card-product{
         flex:45%;
