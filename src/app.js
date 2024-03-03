@@ -41,7 +41,6 @@ app.use('/products', productsRouter);
 const usersRouter = require('./routes/usersRouter');
 app.use("/users", usersRouter);
 
-
 app.listen(3010, () => {
   console.log("servidor corriendo en http://localhost:3010");
 })

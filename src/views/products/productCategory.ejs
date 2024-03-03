@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include ("./partials/head.ejs" , { cssSheet: "home", cssSheet1:"headerFooter",icons: "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"} ) %>
+</head>
+
+<body>
+    <header>
+        <%- include("./partials/header.ejs")%>
+    </header>
+    <main>
+        <%- include("./partials/info-banner.ejs")%>
+
+        <% categories.forEach(category => { %>
+            <h1 class="sub-title2"> <%= category.name %> </h1>
+        
+        
+        <% if (locals.userIsAdmin) { %>
+            <a class="crearProducto" href="/products/create">Crear un producto nuevo </a>
+        <% } %>
+        <section class="products">
+            <% category.products.forEach(product => { %>
+            <div class="card-product">
+                <a href="/products/detail/<%=product.id%>">
+                    <img src= "img/products/<%=product.img%>" alt="imagen de producto"></a>
+                <div class="product-description">
+                    <h3 class="name-product"><%=product.name%></h3>
+                    <p class="description"><%=product.description_home%></p>
+                </div>
+                <div class="buttons">
+                    <button class="add-shipping-cart"><i class="fa-solid fa-cart-shopping"></i></button>
+                    <button class="buy">
+                        <p>Comprar</p>
+                        <p><strong><%=product.price%> USD</strong></p>
+                    </button>
+                </div>
+            </div>
+            <%}); %>
+            <% }) %>
+        </section>
+        <%- include('partials/footer.ejs') %>
+
+        </main>

@@ -40,6 +40,18 @@ const productsController = {
 	}
 	},
 
+	category: async (req, res) => {
+		try {
+			const categories = await Category.findByPk(req.params.id, {
+				include: [{association: 'products'}]
+			}); 
+			res.render('productCategory', {categories: [categories]})
+		} catch (error) {
+			console.error('Error:', error);
+			res.status(500).send('Error interno del servidor');
+		}
+	},
+
 	// Formulario para crear
 	create: async (req, res) => {
 		try { 

@@ -27,6 +27,9 @@ router.get('/', productsController.index);
 // Devolver un producto 
 router.get('/detail/:id/', productsController.detail); 
 
+// Devolver productos por categoría 
+router.get('/category/:id', productsController.category)
+
 // Crear un producto
 router.get('/create', productsController.create); 
 
