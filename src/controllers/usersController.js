@@ -82,22 +82,26 @@ let usersController={
                let adminRole = await db.Role.findOne({
                 where: {type: "admin"}
                });
+               if (adminRole) {
                await db.User_role.create({
                 user_id: newUser.id,
                 role_id: adminRole.id
-               });
+               });}
                req.session.admin= newUser;
-               console.log("Usuario registrado como administrador ;)");
+               console.log("Usuario registrado como administrador ;)"); 
+               
             } else{
                 let userRole = await db.Role.findOne({
                     where: {type: "user"}
                    });
+                   if (userRole){
                    await db.User_role.create({
                     user_id: newUser.id,
                     role_id: userRole.id
-                   });
+                   });}
                    req.session.userLogged = newUser;
                    console.log("Usuario registrado como normal ;)");
+                
             }
                 return res.redirect("/users/profile") 
             }

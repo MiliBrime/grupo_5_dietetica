@@ -9,15 +9,6 @@
   "image": "usuario1-foto.jpg"
  },
  {
-  "id": 2,
-  "firstName": "Milagros",
-  "lastName": "Brime",
-  "email": "mili@gmail.com",
-  "password": "duko1996",
-  "category": "Administrador",
-  "image": "usuario2-foto.jpg"
- },
- {
   "id": 3,
   "firstName": "Miguel Andrés",
   "lastName": "Valenzuela",
@@ -52,14 +43,6 @@
   "password": "blink182",
   "category": "Cliente",
   "image": "usuario6-foto.png"
- },
- {
-  "id": 9,
-  "name": "mili",
-  "lastName": "brime",
-  "email": "milibrime@hotmail.com",
-  "password": "$2a$10$zVo4.Av923uAL4ytFpHsiuumEv/Tx8JS271LGbRYzyLwdtvV4hrTK",
-  "image": "image - 1705933265202.jpg"
  },
  {
   "id": 10,
