@@ -19,14 +19,23 @@
                 <div class="inputCreate">
                     <label for="name" class="form-label">Nombre:</label>
                     <input type="text" id="name" name="name" placeholder="Ej: Mantequilla de maní" class="form-input">
+                    <% if (locals.mensajesDeError && mensajesDeError.name) { %>
+                        <div><%= mensajesDeError.name.msg %> </div> 
+                    <% } %>
                 </div>
                 <div class="inputCreate">
                     <label for="brand" class="form-label">Marca:</label>
                     <input type="text" id="brand" name="brand" placeholder="Ej: Star Nutrition" class="form-input">
+                    <% if (locals.mensajesDeError && mensajesDeError.brand) { %>
+                        <div><%= mensajesDeError.brand.msg %> </div> 
+                    <% } %>
                 </div>
                 <div class="inputCreate">
                     <label for="price" class="form-label">Precio:</label>
                     <input type="number" id="price" name="price" placeholder="Ej: 90" class="form-input">
+                    <% if (locals.mensajesDeError && mensajesDeError.price) { %>
+                        <div><%= mensajesDeError.price.msg %> </div> 
+                    <% } %>
                 </div>
                 <div class="inputCreate">
                     <label for="category" class="form-label">Categoría:</label>
@@ -36,6 +45,9 @@
                              <option value="<%= category.id %>">  <%= category.name %> </option>
                         <% }); %>  
                     </select>
+                    <% if (locals.mensajesDeError && mensajesDeError.category) { %>
+                        <div><%= mensajesDeError.category.msg %> </div> 
+                    <% } %>
                 </div>
                 <div class="inputCreate">
                     <label for="ofertaOdestacado" class="form-label">Estado del producto:</label>
@@ -45,18 +57,30 @@
                              <option value="<%= status.id %>">  <%= status.name %> </option>
                         <% }); %>  
                     </select>
+                    <% if (locals.mensajesDeError && mensajesDeError.ofertaOdestacado) { %>
+                        <div><%= mensajesDeError.ofertaOdestacado.msg %> </div> 
+                    <% } %>
                 </div>
                 <div class="inputCreate">
                     <label for="descriptionHome" class="form-label">Descipción para el home:</label>
                     <textarea name="descriptionHome" id="descriptionHome" class="form-input" placeholder="Descripción más corta" maxlenght= 122></textarea>
+                    <% if (locals.mensajesDeError && mensajesDeError.descriptionHome) { %>
+                        <div><%= mensajesDeError.descriptionHome.msg %> </div> 
+                    <% } %>
                 </div>
                 <div class="inputCreate">
                     <label for="descriptionProduct" class="form-label">Descipción para el detalle:</label>
                     <textarea name="descriptionProduct" id="descriptionProduct" class="form-input-texto" placeholder="Descripción completa"></textarea>
+                    <% if (locals.mensajesDeError && mensajesDeError.descriptionProduct) { %>
+                        <div><%= mensajesDeError.descriptionProduct.msg %> </div> 
+                    <% } %>
                 </div>
                 <div class="inputCreate">
                     <label for="image" class="form-label">Imagen:</label>
                     <input type="file" name="image" class="form-input" id="image" accept= ".jpg, .png" onchange="preview(event,'#imgPreview')"></input>
+                    <% if (locals.mensajesDeError && mensajesDeError.image) { %>
+                        <div><%= mensajesDeError.image.msg %> </div> 
+                    <% } %>
                 </div>
                 <p class="previewText">Previsualización:</p>
                 <img id="imgPreview" class="preview" alt="Previsualización">

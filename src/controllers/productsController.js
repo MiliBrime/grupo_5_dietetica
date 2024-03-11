@@ -4,6 +4,9 @@ const path = require('path');
 const express = require('express');
 const app= express();
 
+const {validationResult} = require ('express-validator'); 
+
+
 const { Op } = require('sequelize');
 
 app.use(express.static("public"));
@@ -55,8 +58,10 @@ const productsController = {
 	// Formulario para crear
 	create: async (req, res) => {
 		try { 
-			const statuses = await Status.findAll()
-			const categories = await Category.findAll()
+			const statuses = await Status.findAll();
+			const categories = await Category.findAll();
+			console.log(categories);
+
 			res.render("form-creacion-producto", {statuses, categories})
 		} catch (error) {
 			console.error('Error:', error);
@@ -67,16 +72,26 @@ const productsController = {
 	// guardar el producto con la info del usuario, y redirigir a alguna pagina para q el usuario sepa q salio todo ok
 	processCreate: async (req, res) => {
 		try {
-			   const brandName = req.body.brand;
 
-			    // Busca si la marca ya existe en la base de datos
-				const existingBrand = await Brand.findOne({
-					where: { name: brandName }
-				});
+			const statuses = await Status.findAll();
+        	const categories = await Category.findAll();
+			
+			const errores = validationResult(req);
+
+        	if (!errores.isEmpty()) {
+            return res.render('form-creacion-producto', { mensajesDeError: errores.mapped(), categories, statuses });
+        	}
+
+			 const brandName = req.body.brand;
+
+			// Busca si la marca ya existe en la base de datos
+			const existingBrand = await Brand.findOne({
+				where: { name: brandName }
+			});
 		
-				// Si la marca existe, usa su brand_id
-				// Si no existe, crea la marca y obtén su brand_id
-				const brand_id = existingBrand ? existingBrand.id : await Brand.create({ name: brandName }).then(newBrand => newBrand.id);
+			// Si la marca existe, usa su brand_id
+			// Si no existe, crea la marca y obtén su brand_id
+			const brand_id = existingBrand ? existingBrand.id : await Brand.create({ name: brandName }).then(newBrand => newBrand.id);
 	   	
 			const newProduct = await Product.create ({
 				name: req.body.name,

@@ -8,6 +8,8 @@ const router = express.Router();
 // requires del controlador
 const productsController = require('../controllers/productsController');
 
+const productValidation = require("../middlewares/validateProduct");
+
 const storage= multer.diskStorage({
     destination: function (req,file,cb){
         
@@ -33,7 +35,7 @@ router.get('/category/:id', productsController.category)
 // Crear un producto
 router.get('/create', productsController.create); 
 
-router.post("/create", upload.single("image"), productsController.processCreate); 
+router.post("/create", upload.single("image"), productValidation, productsController.processCreate); 
 
 // Editar un producto 
 router.get('/edit/:id', productsController.edit); 
