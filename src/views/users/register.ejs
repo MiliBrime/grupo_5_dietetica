@@ -49,7 +49,7 @@
                     </div>
                     <div class="input-field">
                         <input type="text" class="input-box" id="phone" name="phone" placeholder="Teléfono" value= "<%= locals.old ? old.phone : "" %>">
-                        <% if (locals.mensajesDeError && mensajesDeError.lastName) { %> 
+                        <% if (locals.mensajesDeError && mensajesDeError.phone) { %> 
                             <%= mensajesDeError.phone.msg%> <% } %>
                     </div>
                     <div class="input-field">
