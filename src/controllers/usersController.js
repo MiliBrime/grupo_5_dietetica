@@ -71,6 +71,10 @@ let usersController={
         const errores= validationResult(req);
         const old= req.body;
         if (!errores.isEmpty()) {
+            if (req.file) {
+                const imagePath = path.join(__dirname, '../../public/img/users', req.file.filename);
+                fs.unlinkSync(imagePath);
+            }
             return res.render("register", { mensajesDeError: errores.mapped(), old });
         } 
         else {

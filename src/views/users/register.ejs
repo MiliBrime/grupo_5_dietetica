@@ -33,11 +33,13 @@
                         id="first_name" name="first_name"  placeholder="Nombre" value= "<%= locals.old ? old.first_name : "" %>">
                         <% if (locals.mensajesDeError && mensajesDeError.first_name) { %> 
                             <%= mensajesDeError.first_name.msg%> <% } %>
+                        <div class="error-message" id="error-first_name"></div>
                     </div>
                     <div class="input-field">
                         <input type="text" class="input-box" id="last_name" name="last_name" placeholder="Apellido" value= "<%= locals.old ? old.last_name : "" %>">
                         <% if (locals.mensajesDeError && mensajesDeError.last_name) { %> 
                             <%= mensajesDeError.last_name.msg%> <% } %>
+                        <div class="error-message" id="error-last_name"></div>
                     </div>
                     <div class="input-field">
                         <input type="text" class="input-box" id="email" name="email" placeholder="Correo electrónico" value= "<%= locals.old ? old.email : "" %>">
@@ -46,16 +48,20 @@
                         <% if (locals.errorMessage) { %>
                             <p class="error-message"><%= locals.errorMessage %></p>
                               <% } %>
+                        <div class="error-message" id="error-email"></div>
+
                     </div>
                     <div class="input-field">
                         <input type="text" class="input-box" id="phone" name="phone" placeholder="Teléfono" value= "<%= locals.old ? old.phone : "" %>">
                         <% if (locals.mensajesDeError && mensajesDeError.phone) { %> 
                             <%= mensajesDeError.phone.msg%> <% } %>
+                        <div class="error-message" id="error-phone"></div>
                     </div>
                     <div class="input-field">
                         <input type="password" class="input-box" id="password" name="password" placeholder="Contraseña">
                         <% if (locals.mensajesDeError && mensajesDeError.password) { %> 
                             <%= mensajesDeError.password.msg%> <% } %>
+                        <div class="error-message" id="error-password"></div>
                         <div class="eye-area">
                             <div class="eye-box" onclick="myRegPassword()">
                                 <i class="fa-regular fa-eye" id="eye-2"></i>
@@ -69,7 +75,7 @@
                         <% if (locals.mensajesDeError && mensajesDeError.photo) { %>
                             <%= mensajesDeError.photo.msg %> 
                         <% } %>
-
+                        <div class="error-message" id="error-photo"></div>
                     </div>
 
                     <div class="input-field">
@@ -124,6 +130,7 @@
     </script>
         </div>
     </div>
+    <script src="/js/registerValidation.js" type="text/javascript"></script>
 </body>
 
 </html>

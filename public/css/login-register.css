@@ -254,6 +254,10 @@ i {
     opacity: 0;
 }
 
+.error-message{
+    color:#F23E16;
+    font-size:15px
+}
 @media(min-width: 460px){
     .img-lider{
         display: block;

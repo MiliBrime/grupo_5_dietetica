@@ -34,11 +34,13 @@
                         <input type="text" class="input-box" id="logEmail" name="email" placeholder="Correo electrónico" value= "<%= locals.old ? old.email : "" %>">
                             <% if(locals.errors && errors.email) { %>
                             <div> <%= errors.email.msg %> </div> <% } %>
+                        <div class="error-message" id="error-email"></div>
                     </div>
                     <div class="input-field">
                         <input type="password" class="input-box" id="logPassword" name="password" placeholder="Contraseña">
                         <% if(locals.errors && errors.password) { %>
                             <div> <%= errors.password.msg %> </div> <% } %>
+                        <div class="error-message" id="error-password"></div>
                         <div class="eye-area">
                             <div class="eye-box" onclick="myLogPassword()">
                                 <i class="fa-regular fa-eye" id="eye"></i>
@@ -102,71 +104,7 @@
             }
         }
     </script>
-    <!-- <main>
-        <section class="header">
-            <form action="/" method="post">
-                <div>
-                    <button type="button" class="inicio-cuenta-ingresar">
-                        <a href="#inciar-Sesion">Iniciar Sesión</a>
-                    </button>
-                    <button type="button" class="inicio-cuenta-ingresar">
-                        <a href="/register">Crear una Cuenta</a>
-                    </button>
-                </div>
-            </form>
-        </section>
-
-        <section class="header2">
-            <div class="redes-sociales">
-                <button type="button" class="facebook">
-                    <a href="#"><i class="bi bi-facebook"></i><span>Continuar con Facebook</span></a>
-                </button>
-            </div>
-
-            <div class="redes-sociales">
-                <button type="button" class="google">
-                    <a href="#"><i class="bi bi-google"></i> <span>Continuar con Google</span></a>
-                </button>
-            </div>
-
-            <div class="redes-sociales">
-                <button type="button" class="apple">
-                    <a href="#"><i class="bi bi-apple"></i> <span>Continuar con Apple</span></a>
-                </button>
-            </div>
-        </section>
-<hr>
-        <section>
-            <form action="/" method="post">
-                <div class="formulario">
-                    <input type="email" id="email" name="email" placeholder="Correo electrónico o teléfono"
-                        class="input">
-                </div>
-
-                <div class="formulario">
-                    <input type="password" name="password" placeholder="Contraseña" class="input">
-                </div>
-            </form>
-        </section>
-
-        <section>
-            <div>
-                <button type="button" class="input2"><a href="#">Ingresar</a></button>
-            </div>
-
-            <div class="contraseña">
-                <a href="#">Olvidé mi Contraseña</a>
-            </div>
-        </section>
-        <footer>
-            <p>
-                <small>
-                    Al ingresar acepta nuestras <Strong>Politicas de privacidad</Strong>
-                </small>
-            </p>
-        </footer>
-        
-    </main> -->
+    <script src="/js/loginValidation.js" type="text/javascript"></script>
 </body>
 
 </html>
