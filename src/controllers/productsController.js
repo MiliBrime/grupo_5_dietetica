@@ -80,6 +80,11 @@ const productsController = {
 			const old = req.body;
 
         	if (!errores.isEmpty()) {
+				if (req.file) {
+					// Elimina la imagen del sistema de archivos
+					const imagePath = path.join(__dirname, '../../public/img/products', req.file.filename);
+					fs.unlinkSync(imagePath); 
+				}
             return res.render('form-creacion-producto', { mensajesDeError: errores.mapped(), categories, statuses, old });
         	}
 
