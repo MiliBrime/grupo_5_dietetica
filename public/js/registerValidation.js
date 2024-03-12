@@ -67,7 +67,7 @@ window.addEventListener("load", function() {
         }
     }
     // Función para validar el campo de contraseña
-    function validarContraseña() {
+    function validarContrasenia() {
         let password = document.getElementById("password").value.trim();
         if (password == "") {
             errores.push("Contraseña vacía");
@@ -85,11 +85,18 @@ window.addEventListener("load", function() {
         let fileInput = document.getElementById("photo");
         let errorMessage = document.getElementById("error-photo");
         let acceptedExtensions = [".jpg", ".png", ".gif", ".jpeg"];
-        let fileExtension = fileInput.files[0].name.substring(fileInput.files[0].name.lastIndexOf(".")).toLowerCase();
-        if (!acceptedExtensions.includes(fileExtension)) {
-            errores.push("Extensión de archivo no válida");
-            errorMessage.innerText = `Las extensiones de archivo permitidas son ${acceptedExtensions.join(", ")}`;
+    
+        // Verificar si se ha seleccionado un archivo
+        if (fileInput.files.length > 0) {
+            let fileExtension = fileInput.files[0].name.substring(fileInput.files[0].name.lastIndexOf(".")).toLowerCase();
+            if (!acceptedExtensions.includes(fileExtension)) {
+                errores.push("Extensión de archivo no válida");
+                errorMessage.innerText = `Las extensiones de archivo permitidas son ${acceptedExtensions.join(", ")}`;
+            } else {
+                errorMessage.innerText = "";
+            }
         } else {
+            // Limpiar el mensaje de error si no se ha seleccionado ningún archivo
             errorMessage.innerText = "";
         }
     }
@@ -99,25 +106,24 @@ window.addEventListener("load", function() {
     document.getElementById("last_name").addEventListener("input", validarApellido);
     document.getElementById("email").addEventListener("input", validarEmail);
     document.getElementById("phone").addEventListener("input", validarTelefono);
-    document.getElementById("password").addEventListener("input", validarContraseña);
+    document.getElementById("password").addEventListener("input", validarContrasenia);
     document.getElementById("photo").addEventListener("change", validarFoto);
-
 
     formulario.addEventListener("submit", function(e) {
         errores = [];
-
-        // Validación del campo de nombre al enviar el formulario
+    
+        // Validación de los campos al enviar el formulario
         validarNombre();
         validarApellido();
         validarEmail();
         validarTelefono();
-        validarContraseña();
+        validarContrasenia();
         validarFoto();
-
-        // Mostrar errores si los hay
+    
+        // Evitar que el formulario se envíe si hay errores
         if (errores.length > 0) {
             e.preventDefault();
-
+    
             for (let i = 0; i < errores.length; i++) {
                 console.log(errores[i]);
             }

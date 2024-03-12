@@ -24,7 +24,7 @@ window.addEventListener("load", function() {
             }       
     }
 
-    function validarContraseña() {
+    function validarContrasenia() {
         let password = document.getElementById("logPassword").value.trim();
         if (password == "") {
             errores.push("Contraseña vacía");
@@ -37,12 +37,14 @@ window.addEventListener("load", function() {
     // Escuchar el evento 'input' en el campo de email
     document.getElementById("logEmail").addEventListener("input", validarEmail);
     // Escuchar el evento 'input' en el campo de contraseña
-    document.getElementById("logPassword").addEventListener("input", validarContraseña);
+    document.getElementById("logPassword").addEventListener("input", validarContrasenia);
 
     formulario.addEventListener("submit", function(e) {
         errores = [];
+
         validarEmail();
-        validarContraseña();
+        validarContrasenia();
+        
         // Mostrar errores si los hay
         if (errores.length > 0) {
             e.preventDefault();
