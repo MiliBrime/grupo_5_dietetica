@@ -98,6 +98,9 @@ body {
     .card-info-enviosGratis{
         width: 20%;
     }
+    textarea {
+        resize: none;
+    }
 }
 @media (min-width: 1000px) {
     .card-product{

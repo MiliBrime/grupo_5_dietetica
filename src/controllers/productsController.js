@@ -77,9 +77,10 @@ const productsController = {
         	const categories = await Category.findAll();
 			
 			const errores = validationResult(req);
+			const old = req.body;
 
         	if (!errores.isEmpty()) {
-            return res.render('form-creacion-producto', { mensajesDeError: errores.mapped(), categories, statuses });
+            return res.render('form-creacion-producto', { mensajesDeError: errores.mapped(), categories, statuses, old });
         	}
 
 			 const brandName = req.body.brand;
