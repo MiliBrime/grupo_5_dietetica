@@ -8,6 +8,14 @@ i {
     font-size: 1em;
 }
 
+#icono{
+    transition:all 0.5s;
+}
+
+#icono:hover{
+    color:#F23E16
+}
+
 .banner{
     width: 100%;
     padding: 5px;

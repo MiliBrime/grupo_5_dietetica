@@ -15,19 +15,19 @@
             <% if (locals.isLogged) { %>
             <div class="container2">
                 <div class="iconosHeader">
-                    <a href="/users/profile">
+                    <a id="icono" href="/users/profile">
                         <i class="fa-solid fa-user"></i>
                         <p class="ingresa-registrate-carro">Mi perfil</p>
                     </a>
                 </div>
                 <div class="iconosHeader">
-                    <a href="/users/logout">
+                    <a id="icono" href="/users/logout">
                         <i class="fa-solid fa-right-from-bracket"></i>
                         <p class="ingresa-registrate-carro">Cerrar sesión</p>
                     </a>
                 </div>
                 <div class="iconosHeader">
-                    <a href="/carrito">
+                    <a id="icono" href="/carrito">
                         <i class="fa-solid fa-cart-shopping"></i>
                         <p class="ingresa-registrate-carro">Carrito</p>
                     </a> 
@@ -36,19 +36,19 @@
                 <% } else if ((!locals.isLogged) && (!locals.userIsAdmin)){ %>
                 <div class="container2">
                     <div class="iconosHeader">
-                        <a href="/users/login">
+                        <a id="icono" href="/users/login">
                             <i class="fa-solid fa-right-to-bracket"></i>
-                            <p class="ingresa-registrate-carro">Ingresa</p>
+                            <p  class="ingresa-registrate-carro">Ingresa</p>
                         </a>
                     </div>
                     <div class="iconosHeader">
-                        <a href="/users/register">
+                        <a id="icono" href="/users/register">
                             <i class="fa-solid fa-user-plus"></i>
                             <p class="ingresa-registrate-carro">Registrate</p>
                         </a>
                     </div>
                     <div class="iconosHeader">
-                        <a href="/carrito">
+                        <a id="icono" href="/carrito">
                             <i class="fa-solid fa-cart-shopping"></i>
                             <p class="ingresa-registrate-carro">Carrito</p>
         
@@ -58,13 +58,13 @@
                     <% } else if (locals.userIsAdmin) { %>
                         <div class="container2">
                             <div class="iconosHeader">
-                                <a href="/products/create">
+                                <a id="icono" href="/products/create">
                                     <i class="fa-solid fa-circle-plus"></i>
                                     <p class="ingresa-registrate-carro">Crear producto</p>
                                 </a>
                             </div>
                             <div class="iconosHeader">
-                                <a href="/users/logout">
+                                <a id="icono" href="/users/logout">
                                     <i class="fa-solid fa-right-from-bracket"></i>
                                     <p class="ingresa-registrate-carro">Cerrar sesión</p>
                                 </a>

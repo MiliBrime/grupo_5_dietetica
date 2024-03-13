@@ -1,4 +1,4 @@
-console.log("conectado!")
+console.log("conectado banner!")
 window.addEventListener("load", function() {
     const sliderBox = document.querySelector('.slider-box ul');
     const prevBtn = document.querySelector('.prev');
