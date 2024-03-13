@@ -36,8 +36,9 @@ body {
     flex-direction: row;
     position: relative;
     padding: 50px 20px 30px 20px;
-    height: 1000px;
+    height: 950px;
     width: 350px;
+    overflow: auto;
     border-radius: 30px;
     background-color: #66a18b;
     backdrop-filter: blur(15px);
