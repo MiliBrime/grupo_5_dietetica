@@ -171,7 +171,11 @@
 }
 .product-description {
     width: 100%;
-    border-top: solid #f0f5f0
+    border-top: solid #f0f5f0;
+
+    height: 100px; /* Altura fija para el contenedor */
+    overflow: hidden; /* Sacar esto cuando se ponga menos descripcion en el home */
+    position: relative;
 }
 
 .product-description h3 {
@@ -179,6 +183,9 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     padding-bottom: 5px;
     margin-top: 15px;
+    white-space: nowrap; 
+    overflow: hidden; /* Sacar esto cuando se ponga menos descripcion en el home */
+    text-overflow: ellipsis; 
 }
 
 button {
@@ -290,13 +297,13 @@ button {
     .slider-controls{
         top:48%
     }
+    .card-product:hover{
+        box-shadow: -3px 3px 8px #a4c8b7, 3px -3px 8px #b2d8c7;
+    }
 }
 @media (min-width: 1000px) {
     .card-product{
         flex:20%;
-    }
-    .card-product:hover{
-        box-shadow: -3px 3px 8px #a4c8b7, 3px -3px 8px #b2d8c7;
     }
     
 }
