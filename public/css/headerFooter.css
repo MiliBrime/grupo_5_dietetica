@@ -137,6 +137,7 @@ input:valid~label {
     .categories{
         display: flex;
         justify-content: space-between;
+        padding:10px;
     }
     .whatsapp-button{
         font-size: 30px;
@@ -197,7 +198,18 @@ input:valid~label {
 }
 /* --------------- */
 
-
+.iconoFooter-ig{
+    font-size: 30px;
+    color: #FD1D1D;
+}
+.iconoFooter-fb{
+    font-size: 30px;
+    color: #1877F2;
+}
+.iconoFooter-wsp{
+    font-size: 30px;
+    color: #25D366;
+}
 
 footer {
     background-color: silver;
