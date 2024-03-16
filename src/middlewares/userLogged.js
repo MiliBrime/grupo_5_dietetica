@@ -1,4 +1,6 @@
 const path= require('path');
+const fs = require('fs'); // Agregar esta línea para importar el módulo fs
+
 const users = require(path.join(__dirname, "../models/users")); 
 
 async function  userLoggedMiddleware(req,res,next){ 
@@ -18,9 +20,19 @@ async function  userLoggedMiddleware(req,res,next){
         res.locals.userLogged= req.session.userLogged //lo paso a la variable local
     }
 
-    if(cookieUser) { 
-        res.locals.isLogged = true; //pero aca falta res.locals.userIsAdmin. el problema es cuando entra un admin, no se cambia el header
-        cookieUser = req.session.userLogged;
+    if (cookieUser) {
+        res.locals.isLogged = true;
+        res.locals.userLogged = cookieUser;
+        
+        // Aquí podrías verificar si el usuario de la cookie es un administrador
+        // Por ejemplo, si tu lista de administradores se almacena en un archivo admins.json
+        // Puedes hacer algo como esto:
+        const adminsData = fs.readFileSync('src/data/admins.json');
+        const admins = JSON.parse(adminsData).admins;
+        
+        if (admins.includes(cookieUser.email)) {
+            res.locals.userIsAdmin = true;
+        }
     }
     next();
 }
