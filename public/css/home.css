@@ -53,15 +53,34 @@
 .slider-controls .prev,
 .slider-controls .next {
     cursor: pointer;
-    background-color: rgba(255, 255, 255, 0.5);
+    /* background-color: rgba(255, 255, 255, 0.5); */
     padding: 5px;
+    display: flex;
+    align-items: center;
 }
 
 .slider-controls .prev:hover,
+.slider-controls .next:hover,
+.slider-controls .prev:hover + .next .fa-backward,
+.slider-controls .next:hover + .prev .fa-forward {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+/* .slider-controls .prev:hover,
 .slider-controls .next:hover {
     background-color: rgba(255, 255, 255, 0.8);
 }
-
+ */
+ .fa-backward,
+ .fa-forward {
+     opacity: 0;
+     transition: all 0.1s;
+ }
+ 
+ .prev:hover .fa-backward,
+ .next:hover .fa-forward {
+     display: block;
+     opacity: 0.6;
+ }
 
 /* .info-banner {
     display: flex;
@@ -287,7 +306,8 @@ button {
     }
     .slider-controls .prev,
     .slider-controls .next {
-    padding: 10px;
+        width: 30px;
+        height: 100px;
 }
     .slider-controls {
         font-size: 15px;

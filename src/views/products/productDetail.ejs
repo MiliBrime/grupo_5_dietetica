@@ -72,16 +72,20 @@
         </div>
         <% } %>
 
-        <div class="container-products">
-            <h2 class="related-products">Productos relacionados</h2>
-                <div class="products">
-                    <img src="/img/products/producto1-proteina.jpeg" alt="Proteina ENA">
-                    <img src="/img/products/producto1-proteina.jpeg" alt="Proteina ENA">
-                    <img src="/img/products/producto1-proteina.jpeg" alt="Proteina ENA">
-                    <img src="/img/products/producto1-proteina.jpeg" alt="Proteina ENA">
-                    <img src="/img/products/producto1-proteina.jpeg" alt="Proteina ENA">
-                </div>
-        </div>
+        <h2 class="related-products-text">Productos relacionados</h2>
+            <!-- recorrer todos los productos, si coinciden las categorias, ponerlos acá -->
+            <div class="all-related-products">
+            <% for (let i = 0; i < allProducts.length; i++) { %>
+                <% if ((allProducts[i].category_id == singleProduct.category_id)&&(allProducts[i].name != singleProduct.name)){ %>
+                    <a class="related-singleProduct" href="/products/detail/<%=allProducts[i].id%>">
+                        <img src="/img/products/<%=allProducts[i].img%>" alt="imagen de producto">
+                        <div class="related-product-description">
+                            <h3 class="related-product-name"><%=allProducts[i].name%></h3>
+                            <p class="related-product-description"><%=allProducts[i].description_home%></p>
+                        </div></a>
+                        <% } %>
+                        <% } %>
+                    </div>
     </main>
     <%- include('partials/footer.ejs') %>
 </body>

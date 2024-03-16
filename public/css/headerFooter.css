@@ -93,7 +93,7 @@ input:valid~label {
 .container2 {
     display: flex;
 /*     grid-gap: 25px;
- */    justify-content: space-around;
+ */ justify-content: space-around;
     padding: 5px;
 }
 

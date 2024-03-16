@@ -1,4 +1,40 @@
 /* ---------------------------------------------------------- */
+.related-products-text{
+    margin: 0 10px;
+}
+
+.all-related-products{
+    display: flex;
+}
+.all-related-products img{
+        width: auto;
+        border-radius: 15px;
+        height: auto;
+        max-width: 280px;
+        max-height: 180px;
+}
+
+.related-singleProduct{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        flex:100%;
+        padding: 15px;
+        grid-gap: 15px;
+        border-radius: 10px;
+        margin: 0 20px 45px 20px;
+        border: solid #e6eae6;
+        width: 50%;
+        margin: 30px 10px
+}
+
+.related-product-description{
+        padding-bottom: 5px;
+        margin-top: 15px;
+        white-space: nowrap; 
+        overflow: hidden; /* Sacar esto cuando se ponga menos descripcion en el home */
+        text-overflow: ellipsis; 
+}
 
 .container {
     margin: auto;
@@ -210,13 +246,17 @@
     color:#3c3c3c
 }
 /* ------------------------------------------------ */
-
+@media(min-width:768px){
+    .related-singleProduct{
+        max-width: 30%;
+    }
+}
 @media (min-width: 1000px){
 
 /* main {
     background-color: #ebebeb;
 } */
-  
+
 .container {
     display: flex;
     align-items: center;

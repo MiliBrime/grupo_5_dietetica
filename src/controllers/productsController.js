@@ -35,8 +35,9 @@ const productsController = {
 	// Detalle de un producto
 	detail: async (req, res) => {
 		try {
+			const allProducts = await Product.findAll();
 			const singleProduct = await Product.findByPk(req.params.id);
-			res.render('productDetail', {singleProduct})
+			res.render('productDetail', {singleProduct,allProducts})
 	} catch (error) {
 		console.error('Error:', error);
 		res.status(500).send('Error interno del servidor');
