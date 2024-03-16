@@ -12,7 +12,7 @@
                 </form>
             </div>
 
-            <% if (locals.isLogged) { %>
+            <% if (locals.isLogged && !locals.userIsAdmin) { %>
             <div class="container2">
                 <div class="iconosHeader">
                     <a id="icono" href="/users/profile">
