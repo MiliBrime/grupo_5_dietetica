@@ -152,7 +152,7 @@
 
 .products {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
     padding: 1px;
     margin-top: 20px;
@@ -296,7 +296,7 @@ button {
 @media (min-width: 769px){
     .card-product{
         flex:45%;
-        max-width: 45%;
+        max-width: 20%;
     }
     .card-info{
         display: block;
