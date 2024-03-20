@@ -8,14 +8,14 @@
 <body>
         <a href="/"><img class= "img-lider" src="/img/tvs.png" alt="logo"></a>
         <div class="container">
-        <div class="box">
+        <div class="box-login">
             <div class="back-to-home">
                 <a href="/"><i class="fa-solid fa-x" aria-hidden="true"></i></a>
             </div>
-            <div class="box-login-register" id="login">
+            <div class="box-inputs" id="login">
                 <div class="top-header">
                     <h3>¡Hola!</h3>
-                    <small>Es un gusto tenerte de nuevo</small>
+                    <small>Es un gusto tenerte de nuevo.</small>
                 </div>
                 <div class="buttons-icons">
                     <button type="button" class="buttonfb">
@@ -33,13 +33,13 @@
                     <div class="input-field">
                         <input type="text" class="input-box" id="logEmail" name="email" placeholder="Correo electrónico" value= "<%= locals.old ? old.email : "" %>">
                             <% if(locals.errors && errors.email) { %>
-                            <div> <%= errors.email.msg %> </div> <% } %>
+                            <div> <%=errors.email.msg%></div> <% } %>
                         <div class="error-message" id="error-email"></div>
                     </div>
                     <div class="input-field">
                         <input type="password" class="input-box" id="logPassword" name="password" placeholder="Contraseña">
                         <% if(locals.errors && errors.password) { %>
-                            <div> <%= errors.password.msg %> </div> <% } %>
+                            <div> <%=errors.password.msg%> </div> <% } %>
                         <div class="error-message" id="error-password"></div>
                         <div class="eye-area">
                             <div class="eye-box" onclick="myLogPassword()">
@@ -60,7 +60,7 @@
                     </div>
                 </form>
             </div>
-            <div class="switch">
+            <div class="switch-login">
                 <a href="/users/login" class="login active" onclick="login()">Iniciar Sesión</a>
                 <a href="/users/register" class="register" onclick="register()">Registrarse</a>
                 <div class="btn-active" id="btn"></div>

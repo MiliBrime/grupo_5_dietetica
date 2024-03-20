@@ -31,12 +31,27 @@ body {
     font-size: 24px;
 }
 
-.box {
+.box-login {
     display: flex;
+    justify-content: center;
     flex-direction: row;
     position: relative;
     padding: 50px 20px 30px 20px;
-    height: 950px;
+    height: 600px;
+    width: 350px;
+    overflow: auto;
+    border-radius: 30px;
+    background-color: #66a18b;
+    backdrop-filter: blur(15px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+.box {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    position: relative;
+    padding: 50px 20px 30px 20px;
+    height: 800px;
     width: 350px;
     overflow: auto;
     border-radius: 30px;
@@ -45,7 +60,8 @@ body {
     border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
-.box-login-register{
+
+.box-inputs{
     position: absolute;
     width: 85%;
     left: 27px;
@@ -64,7 +80,7 @@ body {
 }
 
 .buttons-icons {
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -140,6 +156,7 @@ body {
     cursor: pointer;
     transition: .4s;
     font-weight: bold;
+    margin-top: 10px 
 }
 
 .input-submit:hover {
@@ -159,7 +176,8 @@ body {
     color: #000;
 }
 
-.switch {
+
+.switch-login {
     display: flex;
     position: absolute;
     bottom: 50px;
@@ -172,7 +190,7 @@ body {
     overflow: hidden;
 }
 
-.switch a {
+.switch-login a {
     display: flex;
     justify-content: center;
     align-items: center;
