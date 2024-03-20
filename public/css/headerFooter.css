@@ -30,6 +30,8 @@ a {
     background-image: linear-gradient(to bottom right, #b7dfcc, #9abbac);
     box-shadow: 5px 5px 10px #a6cab9, -8px -8px 16px #b0d6c5;
     /* background-color: #c4ded2; /* abd0bf */ 
+    position: relative;
+    z-index: 2;
 }
 .container1 {
     display: flex;
@@ -212,7 +214,7 @@ input:valid~label {
 }
 
 footer {
-    background-color: silver;
+    background-color: #A9B5AC;
     padding: 10px;
 }
 
