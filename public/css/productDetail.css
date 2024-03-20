@@ -1,4 +1,7 @@
 /* ---------------------------------------------------------- */
+main{
+    background-image: linear-gradient(to top right, #ABD0BF, #E6F1EC)
+}
 .related-products-text{
     margin: 0 10px;
 }
