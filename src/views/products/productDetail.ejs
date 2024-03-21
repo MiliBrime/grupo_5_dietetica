@@ -48,11 +48,11 @@
                     <div class="payment">
                         <p class="medios-pago">Medios de pago:</p>
                             <div class="tarjetas">
-                                <img src="/img/mastercard.jpg" alt="mastercard-debito">
+                                <img src="/img/mastercard.png" alt="mastercard-debito">
                                 <img src="/img/visa-debito.png" alt="visa-debito">
                                 <img src="/img/maestro.png" alt="maestro">
                                 <img src="/img/cabal.png" alt="cabal">
-                                <img src="/img/mercado-pago.jpg" alt="mercado-pago">
+                                <img src="/img/mercado-pago.png" alt="mercado-pago">
                             </div>
                     </div>
                 </div>
@@ -79,7 +79,7 @@
                 <% if ((allProducts[i].category_id == singleProduct.category_id)&&(allProducts[i].name != singleProduct.name)){ %>
                     <a class="related-singleProduct" href="/products/detail/<%=allProducts[i].id%>">
                         <img src="/img/products/<%=allProducts[i].img%>" alt="imagen de producto">
-                        <div class="related-product-description">
+                        <div class="related-product">
                             <h3 class="related-product-name"><%=allProducts[i].name%></h3>
                             <p class="related-product-description"><%=allProducts[i].description_home%></p>
                         </div></a>

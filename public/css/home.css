@@ -165,7 +165,7 @@ main{
 
 .card-product {
     flex: 1 0 auto; 
-    max-width: 350px; 
+    max-width: 300px; 
     padding: 15px;
     margin: 20px; 
     border: solid #e6eae6;
@@ -212,6 +212,10 @@ main{
     align-items: center;
     flex-direction: column; 
     gap: 20px;
+}
+
+.add-shipping-cart{
+    margin-top: 10px;
 }
 
 .add-shipping-cart,

@@ -36,6 +36,12 @@ main{
     border-radius: 15px;
 }
 
+.related-product{
+    border-top: solid 1px #f0f5f0;
+}
+.related-product-name{
+    padding-top:10px;
+}
 .related-product-description {
     margin:10px 0 0;
 }
