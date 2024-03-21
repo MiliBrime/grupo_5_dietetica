@@ -6,39 +6,58 @@ main{
     margin: 0 10px;
 }
 
-.all-related-products{
+.all-related-products {
     display: flex;
-}
-.all-related-products img{
-        width: auto;
-        border-radius: 15px;
-        height: auto;
-        max-width: 280px;
-        max-height: 180px;
+    flex-wrap: wrap;
+    justify-content: left; /* Centrar las cartas horizontalmente */
+    gap: 20px; /* Espaciado entre las cartas */
+    margin: 30px 40px 0px 20px; /* Margen exterior para evitar que estén demasiado pegadas al footer y al borde izquierdo */
 }
 
-.related-singleProduct{
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        flex:100%;
-        padding: 15px;
-        grid-gap: 15px;
-        border-radius: 10px;
-        margin: 0 20px 45px 20px;
-        border: solid #e6eae6;
-        width: 50%;
-        margin: 30px 10px
+.related-singleProduct {
+    flex: 1 0 auto;
+    max-width: 350px;
+    padding: 15px;
+    border: solid #e6eae6;
+    border-radius: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
 }
 
-.related-product-description{
-        padding-bottom: 5px;
-        margin-top: 15px;
-        white-space: nowrap; 
-        overflow: hidden; /* Sacar esto cuando se ponga menos descripcion en el home */
-        text-overflow: ellipsis; 
+.related-singleProduct img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 220px;
+    border-radius: 15px;
 }
 
+.related-singleProduct .related-product-description {
+    padding-top: 15px;
+    padding-left: 15px;
+    height: 100px;
+    overflow: hidden;
+    text-align: left;
+    margin-top: 10px; /* Margen superior para separar el texto del borde superior */
+}
+
+.related-singleProduct .related-product-description h3 {
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-bottom: 5px;
+    margin-top: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.related-singleProduct:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 .container {
     margin: auto;
     padding: 20px;
@@ -181,10 +200,10 @@ main{
     margin-right: 5px;
 }
 
-.related-products {
+/* .related-products {
     padding: 10px;
     text-align: center;
-}
+} */
 
 /* .container-products {
     max-width: 82%;
@@ -250,9 +269,9 @@ main{
 }
 /* ------------------------------------------------ */
 @media(min-width:768px){
-    .related-singleProduct{
+/*     .related-singleProduct{
         max-width: 30%;
-    }
+    } */
 }
 @media (min-width: 1000px){
 
@@ -396,12 +415,12 @@ main{
     width: 58px;
 }
 
-.related-products {
+/* .related-products {
     margin-top: 10px;
     padding: 20px;
     margin-left: 7%;
     text-align: left;
-}
+} */
 
 .products {
     gap: 1%; 

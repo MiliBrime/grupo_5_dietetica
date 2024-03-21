@@ -113,6 +113,14 @@ body {
     font-weight: bolder;
 }
 
+.inputCreate textarea#descriptionProduct {
+    height: 150px; /* Ajusta esta altura según tus preferencias */
+}
+
+.inputCreate textarea#descriptionHome {
+    height: 100px; /* Ajusta esta altura según tus preferencias */
+}
+
 .inputCreate{
     margin-top: 25px;
     display: flex;
