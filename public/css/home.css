@@ -143,14 +143,13 @@ main{
 }
 
 .sub-title2 {
-    padding: 20px;
+    margin: 35px 0 8px 30px;
     font-size: 25px;
     font-weight: 500;
 }
 
 .sub-title {
-    margin-top: 20px;
-    padding: 20px;
+    margin: 25px 0 8px 30px;
     font-size: 25px;
     font-weight: 500;
 }
@@ -159,8 +158,8 @@ main{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    padding: 20px; 
-    margin-top: 20px;
+    padding: 5px; 
+    margin-top: 5px;
 }
 
 .card-product {
