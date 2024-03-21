@@ -36,20 +36,24 @@ main{
     border-radius: 15px;
 }
 
+.related-product-description {
+    margin:10px 0 0;
+}
+
 .related-singleProduct .related-product-description {
-    padding-top: 15px;
-    padding-left: 15px;
-    height: 100px;
+    /* padding-top: 15px;
+    padding-left: 15px; 
+    height: 100px;*/
     overflow: hidden;
     text-align: left;
-    margin-top: 10px; 
+    /* margin-top: 10px;  */
 }
 
 .related-singleProduct .related-product-description h3 {
     font-weight: bold;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    padding-bottom: 5px;
-    margin-top: 0;
+    /* padding-bottom: 5px; */
+    margin-top: 10px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;

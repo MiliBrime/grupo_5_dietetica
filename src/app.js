@@ -41,6 +41,9 @@ app.use('/products', productsRouter);
 const usersRouter = require('./routes/usersRouter');
 app.use("/users", usersRouter);
 
+const apiRouter = require('./routes/usersAPIRouter');
+app.use("/api", apiRouter);
+
 app.listen(3010, () => {
   console.log("servidor corriendo en http://localhost:3010");
 })

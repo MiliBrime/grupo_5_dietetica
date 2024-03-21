@@ -49,7 +49,7 @@ main{
     width: 100%;
     display: flex;
     justify-content: space-between;
-    z-index: 999;
+    z-index: 0;
     font-size: 10px;
 }
 

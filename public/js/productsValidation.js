@@ -30,7 +30,7 @@ window.addEventListener("load",function(){
         }
     }
     // Función para validar la descripcion
-    function validarDescripcion() {
+    function validarDescripcionDetalle() {
         let descripcion = document.getElementById("descriptionProduct").value.trim();
         if (descripcion == "") {
             errores.push("Descripción vacía");
@@ -43,6 +43,20 @@ window.addEventListener("load",function(){
             document.getElementById("error-descripcion").innerText = "";
         }
     }
+    function validarDescripcionHome() {
+        let descripcion = document.getElementById("descriptionHome").value.trim();
+        if (descripcion == "") {
+            errores.push("Descripción vacía");
+            document.getElementById("error-descriptionHome").innerText = "Ingresa la descripción del producto"}
+            else if(descripcion.length > 94){
+                errores.push("Descripción mayor a 94 caracteres");
+                document.getElementById("error-descriptionHome").innerText = "Esta descripción debe tener como máximo 94 caracteres";
+            }
+        else {
+            document.getElementById("error-descriptionHome").innerText = "";
+        }
+    }
+
 
     // Función para validar la foto
     function validarFoto() {
@@ -68,13 +82,13 @@ window.addEventListener("load",function(){
     }
 
     document.getElementById("name").addEventListener("input", validarNombre);
-    document.getElementById("descriptionProduct").addEventListener("input", validarDescripcion);
+    document.getElementById("descriptionProduct").addEventListener("input", validarDescripcionDetalle);
+    document.getElementById("descriptionHome").addEventListener("input", validarDescripcionHome);
     document.getElementById("image").addEventListener("input", validarFoto);
     document.getElementById("brand").addEventListener("input", function(){estaVacio("brand")});
     document.getElementById("price").addEventListener("input", function(){estaVacio("price")});
     document.getElementById("category").addEventListener("input", function(){estaVacio("category")});
     document.getElementById("ofertaOdestacado").addEventListener("input", function(){estaVacio("ofertaOdestacado")});
-    document.getElementById("descriptionHome").addEventListener("input", function(){estaVacio("descriptionHome")});
 
     formulario.addEventListener("submit", function(e) {
         errores = [];
@@ -82,12 +96,12 @@ window.addEventListener("load",function(){
         // Validación de los campos al enviar el formulario
         validarNombre();
         validarDescripcion();
+        validarDescripcionHome();
         validarFoto();
         estaVacio("brand");
         estaVacio("price");
         estaVacio("category");
         estaVacio("ofertaOdestacado");
-        estaVacio("descriptionHome");
     
         // Evitar que el formulario se envíe si hay errores
         if (errores.length > 0) {
