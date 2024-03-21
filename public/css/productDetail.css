@@ -9,9 +9,9 @@ main{
 .all-related-products {
     display: flex;
     flex-wrap: wrap;
-    justify-content: left; /* Centrar las cartas horizontalmente */
-    gap: 20px; /* Espaciado entre las cartas */
-    margin: 30px 40px 0px 20px; /* Margen exterior para evitar que estén demasiado pegadas al footer y al borde izquierdo */
+    justify-content: left; 
+    gap: 20px; 
+    margin: 30px 40px 0px 20px; 
 }
 
 .related-singleProduct {
@@ -42,7 +42,7 @@ main{
     height: 100px;
     overflow: hidden;
     text-align: left;
-    margin-top: 10px; /* Margen superior para separar el texto del borde superior */
+    margin-top: 10px; 
 }
 
 .related-singleProduct .related-product-description h3 {

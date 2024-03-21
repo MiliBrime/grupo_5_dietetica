@@ -159,22 +159,21 @@ main{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    padding: 20px; /* Ajustar el espaciado alrededor del contenedor de productos */
+    padding: 20px; 
     margin-top: 20px;
 }
 
 .card-product {
-    flex: 1 0 auto; /* Permitir que las cartas se ajusten al contenido */
-    max-width: 350px; /* Ancho máximo para las cartas */
+    flex: 1 0 auto; 
+    max-width: 350px; 
     padding: 15px;
-    margin: 20px; /* Ajustar el espaciado entre las cartas */
+    margin: 20px; 
     border: solid #e6eae6;
     border-radius: 10px;
-    box-sizing: border-box; /* Ajustar el box-sizing para incluir el padding y el border en el ancho */
-    display: flex;
+    box-sizing: border-box; 
     flex-direction: column;
-    justify-content: space-between; /* Espaciado entre los componentes */
-    align-items: center; /* Centrar los elementos horizontalmente */
+    justify-content: space-between; 
+    align-items: center; 
 }
 
 .card-product img {
@@ -183,25 +182,25 @@ main{
     max-width: 100%; 
     max-height: 220px; 
     border-radius: 15px;
-    display: block; /* Para evitar espacios en blanco debajo de la imagen */
-    margin: 0 auto; /* Centrar horizontalmente */
+    display: block; 
+    margin: 0 auto;
 }
 
 .product-description {
     margin-top: 10px;
     border-top: solid #f0f5f0;
-    padding-top: 15px; /* Ajustar el padding superior */
-    padding-left: 15px; /* Ajustar el padding izquierdo */
-    height: 100px; /* Aumentar la altura de la descripción */
+    padding-top: 15px; 
+    padding-left: 15px; 
+    height: 100px; 
     overflow: hidden;
-    text-align: left; /* Alinear el texto a la izquierda */
+    text-align: left; 
 }
 
 .product-description h3 {
     font-weight: bold;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     padding-bottom: 5px;
-    margin-top: 0; /* Eliminar el margen superior para la descripción */
+    margin-top: 0; 
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -209,24 +208,24 @@ main{
 
 .buttons {
     display: flex;
-    justify-content: center; /* Centrar los botones */
+    justify-content: center; 
     align-items: center;
-    flex-direction: column; /* Alinear los botones verticalmente */
-    gap: 20px; /* Aumentar el espacio entre los botones */
+    flex-direction: column; 
+    gap: 20px;
 }
 
 .add-shipping-cart,
 .buy {
-    width: 120px; /* Ajustar el ancho de los botones */
-    height: 40px; /* Ajustar la altura de los botones */
-    border-radius: 20px; /* Ajustar el radio de borde de los botones */
+    width: 120px; 
+    height: 40px; 
+    border-radius: 20px; 
     background-color: #ABD0BF;
     border: none;
-    font-size: 14px; /* Reducir el tamaño de la fuente */
+    font-size: 14px; 
 }
 
 .add-shipping-cart i {
-    font-size: 20px; /* Reducir el tamaño del ícono */
+    font-size: 20px; 
 }
 
 .add-shipping-cart:hover,

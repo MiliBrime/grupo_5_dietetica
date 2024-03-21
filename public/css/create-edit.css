@@ -114,11 +114,11 @@ body {
 }
 
 .inputCreate textarea#descriptionProduct {
-    height: 150px; /* Ajusta esta altura según tus preferencias */
+    height: 150px;
 }
 
 .inputCreate textarea#descriptionHome {
-    height: 100px; /* Ajusta esta altura según tus preferencias */
+    height: 100px;
 }
 
 .inputCreate{
