@@ -2,6 +2,14 @@
 main{
     background-image: linear-gradient(to top right, #ABD0BF, #E6F1EC)
 }
+
+.unidadDiv , .totalDiv{
+    display: flex;
+}
+.unidadText , .unidad , .totalText , .total{
+    padding-right: 5px;
+}
+
 .related-products-text{
     margin: 0 10px;
 }

@@ -20,12 +20,12 @@
                     <div class="product-description">
                         <h2 class="name-product"><%=singleProduct.name%></h2>
                         <p class="description"><%=singleProduct.description%> </p>
-                        <p class="price"><%=singleProduct.price%> USD</p>
+                        <p class="price" data-price="<%=singleProduct.price%>"><%=singleProduct.price%> USD</p>
                         
                         <div class="cantidad">
-                            <button class="restador">-</button>
-                            <p class="cant">1</p>
-                            <button class="sumador">+</i></button>
+                            <button id="restador" class="restador">-</button>
+                            <p id= "cantidad" class="cant">0</p>
+                            <button id="sumador" class="sumador">+</i></button>
                         </div>
                             <div class="social-media-1">
                                 <p>COMPARTIR</p>
@@ -40,7 +40,16 @@
                     <div class="buy-description">
                         <p class="envio">Envío a todo el país</p>
                         <p>Stock disponible</p>
-                        <p class="total">Total: <%=singleProduct.price%> USD</p>
+                        <div class="unidadDiv">
+                            <p class="unidadText">Precio por unidad:</p>
+                            <p class="unidad" id="unidad"><%=singleProduct.price%></p> 
+                            <p>USD</p>
+                        </div>
+                        <div class="totalDiv">
+                            <p class="totalText">Total:</p>                  
+                            <p class="total" id="total"><%=singleProduct.price%></p>
+                            <p>USD</p>
+                        </div>
                         <a href="#"><button class="comprar">Comprar ahora</button></a>
                         <a href="#"><button class="carrito">Añadir al carrito</button></a>
                     </div>      
@@ -88,5 +97,6 @@
                     </div>
     </main>
     <%- include('partials/footer.ejs') %>
+    <script src="/js/restador-sumador.js" ></script>
 </body>
 </html>
