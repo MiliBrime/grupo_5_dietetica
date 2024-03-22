@@ -145,8 +145,15 @@ const productsController = {
 	
 			const brand_id = existingBrand ? existingBrand.id : await Brand.create({ name: brandName }).then(newBrand => newBrand.id);
 
+			const productToUpdate = await Product.findByPk(req.params.id);
+			// Eliminar la imagen anterior del sistema de archivos si existe y se subio una nueva imagen
+			if (req.file && productToUpdate.img) {
+				const previousImagePath = path.join(__dirname, '../../public/img/products', productToUpdate.img);
+				fs.unlinkSync(previousImagePath);
+			}
+
 			//imagen
-			const newImage = req.file ? req.file.filename : Product.img
+			const newImage = req.file ? req.file.filename : productToUpdate.img
 
 			updateProduct = await Product.update({
 				name: req.body.name,

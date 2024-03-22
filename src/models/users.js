@@ -50,6 +50,14 @@ const user={
 
     edit: async function(req, res) {
         let userId =  req.session.userLogged.id;
+
+        const userToUpdate = await db.User.findByPk(userId);
+        // Eliminar la imagen anterior del sistema de archivos si existe y se subio una nueva imagen
+        if (req.file && userToUpdate.photo && userToUpdate.photo != "default.jpg"){
+            const previousImagePath = path.join(__dirname, "../../public/img/users", userToUpdate.photo);
+            fs.unlinkSync(previousImagePath);
+        }
+
         try {
             await db.User.update({
                 first_name: req.body.first_name,
