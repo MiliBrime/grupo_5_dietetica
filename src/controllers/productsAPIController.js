@@ -7,22 +7,24 @@ module.exports = {
             const products = await db.Product.findAll({
                 include: ['category']
             });
+
+            console.log(products)
             
             const countByCategory = {};
-            
-           /*  products.forEach(product => { 
-                console.log(product);
-                product.category.forEach(category => {
-                    if(!countByCategory[category.name]) {
-                        countByCategory[category.name] = 1 
-                    } else {
-                        countByCategory[category.name]++
-                    }
-                    })
-                }) */
+
+            products.forEach(product => {
+                const categoryName = product.category.name;
+                if (!countByCategory[categoryName]) {
+                    countByCategory[categoryName] = 1;
+                } else {
+                    countByCategory[categoryName]++;
+                }
+            });
+
+                
             return res.json({
                 count: products.length,
-                /* countByCategory: countByCategory, */
+                countByCategory: countByCategory,
                 data: products.map(product => ({
                     id: product.id,
                     name: product.name,
@@ -57,9 +59,9 @@ module.exports = {
                 img: `/img/products/${products.img}`
             })
     }
-    catch(error) {
-        console.error(error);
-        res.status(500).json({ error: 'Error interno del servidor' });
+            catch(error) {
+                console.error(error);
+                res.status(500).json({ error: 'Error interno del servidor' });
     }
 } 
 }
