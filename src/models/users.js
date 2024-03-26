@@ -53,9 +53,13 @@ const user={
 
         const userToUpdate = await db.User.findByPk(userId);
         // Eliminar la imagen anterior del sistema de archivos si existe y se subio una nueva imagen
-        if (req.file && userToUpdate.photo && userToUpdate.photo != "default.jpg"){
+        if (req.file && userToUpdate.photo && userToUpdate.photo != "default.jpg") {
             const previousImagePath = path.join(__dirname, "../../public/img/users", userToUpdate.photo);
-            fs.unlinkSync(previousImagePath);
+            if (fs.existsSync(previousImagePath)) {
+                fs.unlinkSync(previousImagePath);
+            } else {
+                console.warn("El archivo a eliminar no existe:", previousImagePath);
+            }
         }
 
         try {
@@ -91,6 +95,7 @@ const user={
             }
 
             let updatedUser = await db.User.findByPk(userId);
+            req.session.userLogged = updatedUser.dataValues;
             res.render('profile', { user: updatedUser, address });
             
         } catch (error) {

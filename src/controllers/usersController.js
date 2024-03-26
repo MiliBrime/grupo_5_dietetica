@@ -25,22 +25,14 @@ let usersController={
 
                     if(req.body.rememberUser == "recordame") {
                         res.cookie("recordame", userToLogin.dataValues, {maxAge: 365 * 24 * 60 * 60 * 1000}) 
-                        /* if(admins.includes(userToLogin.email)) {
-                            res.cookie("isAdmin", true, {maxAge: 365 * 24 * 60 * 60 * 1000});
-                        }   */ //hacer otra cookie para guardar el admin?
                     }
                     if(admins.includes(userToLogin.email)){
                             req.session.admin = userToLogin.dataValues;
                             console.log("es admin ;)")  
-                    }
-
-                    /* else if(admins.includes(userToLogin.email) && (cookieUser)){
-                        //si es admin y tocó recordar, en sesion tiene que quedar el usuario de la cookie, que en realidad es el userToLogin
-                    } */
-                    
+                    }                    
                     else {
-                        req.session.userLogged = userToLogin.dataValues; }
-                    
+                        req.session.userLogged = userToLogin.dataValues; 
+                    }
                     return res.redirect("/users/profile") 
                 }
 
@@ -67,7 +59,6 @@ let usersController={
 
     logout:(req,res)=>{
         res.clearCookie("recordame");
-        res.clearCookie("isAdmin");
         req.session.destroy (); //borra todo lo que esté en session
         res.redirect ("/"); 
     },
@@ -143,12 +134,11 @@ let usersController={
     editProfile: async (req, res) => {
         try {
             await users.edit(req, res);
-/*             res.redirect("/users/profile");
- */        } catch (error) {
-            res.status(500).send("Error al editar el perfil");
+        } catch (error) {
+            console.error(error); // Registra el error completo en la consola
+            return res.status(500).send("Error al editar el perfil: " + error.message); // Devuelve un mensaje de error más detallado
         }
     }
-
 }
 
 

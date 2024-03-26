@@ -93,7 +93,7 @@ body{
 .precio{
     position: relative;
     top: 25px;
-    right: 30px;
+    right: 25px;
 }
 
 .enviosTexto{
@@ -163,6 +163,7 @@ body{
     margin-top: 8px;
     color: #3c3c3c;
     text-decoration: underline;
+    margin-bottom: 50px;
 }
 
 .extra{
