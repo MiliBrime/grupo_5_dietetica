@@ -138,6 +138,39 @@ let usersController={
             console.error(error); // Registra el error completo en la consola
             return res.status(500).send("Error al editar el perfil: " + error.message); // Devuelve un mensaje de error más detallado
         }
+    },
+
+    list: async (req, res) => {
+		try { 
+            const usersList = await db.User.findAll({ include: [{ model: db.Address, as: 'addresses' }] });
+            res.render("usersList", {usersList});
+		
+	} catch (error) {
+		console.error('Error:', error);
+		res.status(500).send('Error interno del servidor');
+	}
+	},
+
+    editFromAdmin: async(req,res)=>{
+        try{
+            let userId = req.params.id;
+            const userToUpdate = await db.User.findByPk(userId);
+            const userAddress = await db.Address.findOne({ where: { user_id: userId } });
+            res.render("usersEdit", { user: userToUpdate, address: userAddress });
+        }catch(error){
+            console.log('Error:', error);
+        }
+    },
+
+    updateFromAdmin:async (req,res)=>{
+        try {
+            await users.updateFromAdmin(req, res);
+
+
+        } catch (error) {
+            console.log(error);
+            res.render("error", { message: "Error al actualizar usuario" });
+        }
     }
 }
 

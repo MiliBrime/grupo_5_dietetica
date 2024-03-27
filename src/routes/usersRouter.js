@@ -10,6 +10,7 @@ const profileValidation = require("../middlewares/validateProfile");
 const checkDuplicateEmail = require("../middlewares/checkDuplicateEmail");
 const guestMiddleware = require("../middlewares/guest");
 const authMiddleware = require("../middlewares/auth");
+const adminMiddleware = require("../middlewares/admin");
 
 let usersController=require("../controllers/usersController");
 
@@ -40,6 +41,10 @@ router.get("/profile",profileValidation, authMiddleware, usersController.profile
 
 router.post("/profile", profileValidation, upload.single("photo"), authMiddleware, usersController.editProfile)
 
+router.get("/list", /* adminMiddleware, */ usersController.list);
+
+router.get("/edit/:id", /* adminMiddleware, */ usersController.editFromAdmin);
+router.put("/edit/:id", /* adminMiddleware, */ usersController.updateFromAdmin);
 
 module.exports=router;
 

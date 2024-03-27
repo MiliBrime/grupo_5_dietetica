@@ -61,7 +61,6 @@ const user={
                 console.warn("El archivo a eliminar no existe:", previousImagePath);
             }
         }
-
         try {
             await db.User.update({
                 first_name: req.body.first_name,
@@ -102,7 +101,64 @@ const user={
             console.log(error);
             res.json(error)    
         }
-    }
+    },
+
+    updateFromAdmin:async function(req, res) {
+        try {
+        let userId =  req.params.id;
+        const userToUpdate = await db.User.findByPk(userId);
+
+        let photo = req.file && req.file.filename ? req.file.filename : userToUpdate.photo;
+
+        // Eliminar la imagen anterior del sistema de archivos si existe y se subio una nueva imagen
+        if (req.file && userToUpdate.photo && userToUpdate.photo != "default.jpg") {
+            const previousImagePath = path.join(__dirname, "../../public/img/users", userToUpdate.photo);
+            if (fs.existsSync(previousImagePath)) {
+                fs.unlinkSync(previousImagePath);
+            } else {
+                console.warn("El archivo a eliminar no existe:", previousImagePath);
+            }
+        }
+            await db.User.update({
+                first_name: req.body.first_name,
+                last_name: req.body.last_name,
+                email: req.body.email,
+                phone: req.body.phone,
+                photo: photo
+            }, {
+                where: {
+                    id: userId,
+                }
+            });
+
+            //actualizar la direccion del usuario
+            let address= await db.Address.findOne({
+                where:{
+                    user_id: userId 
+                }
+            });
+            if (address){
+                await address.update({
+                    address: req.body.address ? req.body.address : address.address,
+                    zip_code: req.body.zip_code ? req.body.zip_code : address.zip_code,
+                })
+            } else{
+                await db.Address.create({
+                    address: req.body.address ? req.body.address : '',
+                    zip_code: req.body.zip_code ? req.body.zip_code : '',
+                    user_id: userId,
+                })
+            }
+
+            let updatedUser = await db.User.findByPk(userId);
+            console.log(updatedUser.dataValues);
+            
+            res.render('usersEdit', { user: updatedUser, address });
+
+        } catch (error) {
+            console.log(error);   
+        }
+    },
 }
 
 module.exports = user;

@@ -13,17 +13,16 @@
         <div class="box-profile">
             
             <div class="name-img">
-                <h2>¡Hola <%=user.first_name%>! </h2>
+                <div class="admin">
+                <h2>Ingresaste como ADMIN. </h2>
+                <h2>Estás modificando la información de: <%=user.first_name%></h2>
+                </div>
                 <div class="photo-profile">
                     <img src="/img/users/<%=user.photo%>" alt="Foto de perfil">
                 </div>
             </div>
-        <% if (locals.isLogged){ %>           
-            <div class="misDatos">
-                <h3>¿Queres actualizar tus datos?</h3>
-            </div>
 
-            <form class="formProfile" method="POST" enctype="multipart/form-data" action="/users/profile">
+            <form class="formProfile" method="POST" enctype="multipart/form-data" action="/users/edit/<%=user.id%>?_method=PUT">
                 <div class="datos">
                 <div class="div1">
                     <div class="input-file">
@@ -78,7 +77,6 @@
                     </button>
                 </div>
         </form>
-        <% } %>
         </div>
 
 </body>
