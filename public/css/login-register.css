@@ -38,7 +38,7 @@ body {
     position: relative;
     padding: 50px 20px 30px 20px;
     height: 600px;
-    width: 350px;
+    width: 370px;
     overflow: auto;
     border-radius: 30px;
     background-color: #66a18b;
@@ -52,7 +52,7 @@ body {
     position: relative;
     padding: 50px 20px 30px 20px;
     height: 800px;
-    width: 350px;
+    width: 430px;
     overflow: auto;
     border-radius: 30px;
     background-color: #66a18b;
@@ -177,20 +177,22 @@ body {
 }
 
 
-.switch-login {
+.switch-login, .switch-register {
     display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
-    bottom: 50px;
+    bottom: 20px; /* Ajustar la posición vertical */
     left: 27px;
-    width: 85%;
-    height: 50px;
+    width: 80%;
+    height: 50px; /* Altura fija para ambos contenedores */
     background: rgba(255, 255, 255, 0.16);
     border-radius: 10px;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
 }
 
-.switch-login a {
+.switch-login a, .switch-register a {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -199,37 +201,10 @@ body {
     color: #000;
     text-decoration: none;
     width: 50%;
-    height: 50px;
+    height: 100%; /* Ajustar la altura para que se ajuste al contenedor padre */
     border-radius: 10px;
     z-index: 10;
 }
-
-.switch-register {
-    display: flex;
-    position: absolute;
-    bottom: 20px;
-    left: 27px;
-    width: 85%;
-    height: 50px;
-    background: rgba(255, 255, 255, 0.16);
-    border-radius: 10px;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-}
-.switch-register a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 14px;
-    font-weight: 500;
-    color: #000;
-    text-decoration: none;
-    width: 50%;
-    height: 50px;
-    border-radius: 10px;
-    z-index: 10;
-}
-
 #btn {
     position: absolute;
     bottom: 0px;
@@ -274,8 +249,10 @@ i {
 }
 
 .error-message{
-    color:#F23E16;
-    font-size:15px
+    color:#990000;
+    font-size:15px; 
+    margin-top: 5px;
+    width: 310px;
 }
 @media(min-width: 460px){
     .img-lider{
