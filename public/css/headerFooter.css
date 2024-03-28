@@ -95,6 +95,7 @@ input:valid~label {
     color: #000;
     font-weight: bold;
     text-indent: 5px; 
+    margin-top: 5px;
 }
 
 .container2 {
