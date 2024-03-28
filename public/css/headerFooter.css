@@ -8,6 +8,10 @@ i {
     font-size: 1em;
 }
 
+.list2 li{
+    list-style: none;
+}
+
 #icono{
     transition:all 0.5s;
 }
@@ -139,7 +143,6 @@ input:valid~label {
     .categories{
         display: flex;
         justify-content: space-between;
-        padding:10px;
     }
     .whatsapp-button{
         font-size: 30px;
@@ -262,9 +265,4 @@ footer {
     .container3{
         display: flex;
     }  
-}
-@media (min-width: 900px){
-.list2{
-    grid-gap: 70px;
-}
 }

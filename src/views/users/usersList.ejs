@@ -8,6 +8,7 @@
         <%- include("./partials/header.ejs")%>
     </header>
     <main>
+        <div class="table-wrapper">
     <table>
         <thead>
             <tr>
@@ -66,12 +67,16 @@
                     <a href="/users/edit/<%=usersList[index].id%>"> <i class="fa-solid fa-pen-to-square"></i></a>
                 </td>
                 <td>
-                    <i class="fa-solid fa-trash"></i>
+                    <form action="/users/delete/<%=usersList[index].id%>?_method=DELETE" method="POST" style="display: inline-flex">
+                        <button type="submit" class="delete"><i class="fa-solid fa-trash"></i></button>
+                    </form>
+                    
                 </td>
             </tr>
             <%}%>
         </tbody>
         </table>
+        </div>
     </main>
     <%- include('partials/footer.ejs') %>
 </body>

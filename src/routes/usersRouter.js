@@ -44,7 +44,9 @@ router.post("/profile", profileValidation, upload.single("photo"), authMiddlewar
 router.get("/list", /* adminMiddleware, */ usersController.list);
 
 router.get("/edit/:id", /* adminMiddleware, */ usersController.editFromAdmin);
-router.put("/edit/:id", /* adminMiddleware, */ usersController.updateFromAdmin);
+router.put("/edit/:id", /* adminMiddleware, */ upload.single("photo"), usersController.updateFromAdmin);
+
+router.delete("/delete/:id", usersController.delete);
 
 module.exports=router;
 

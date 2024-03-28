@@ -108,8 +108,6 @@ const user={
         let userId =  req.params.id;
         const userToUpdate = await db.User.findByPk(userId);
 
-        let photo = req.file && req.file.filename ? req.file.filename : userToUpdate.photo;
-
         // Eliminar la imagen anterior del sistema de archivos si existe y se subio una nueva imagen
         if (req.file && userToUpdate.photo && userToUpdate.photo != "default.jpg") {
             const previousImagePath = path.join(__dirname, "../../public/img/users", userToUpdate.photo);
@@ -124,10 +122,10 @@ const user={
                 last_name: req.body.last_name,
                 email: req.body.email,
                 phone: req.body.phone,
-                photo: photo
+                photo: req.file && req.file.filename ? req.file.filename : userToUpdate.photo
             }, {
                 where: {
-                    id: userId,
+                    id: req.params.id,
                 }
             });
 

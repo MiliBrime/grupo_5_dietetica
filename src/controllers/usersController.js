@@ -165,13 +165,41 @@ let usersController={
     updateFromAdmin:async (req,res)=>{
         try {
             await users.updateFromAdmin(req, res);
-
-
         } catch (error) {
             console.log(error);
             res.render("error", { message: "Error al actualizar usuario" });
         }
-    }
+    }, 
+
+    delete: async (req, res) => {
+		try { 
+            // Buscar y eliminar todas las direcciones asociadas al usuario
+            await db.Address.destroy({
+                where: {
+                    user_id: req.params.id
+                }
+            });
+
+            // Buscar y eliminar todas las relaciones de usuario en la tabla user_role
+            await db.User_role.destroy({
+                where: {
+                    user_id: req.params.id
+                }
+            });
+
+            // Luego eliminar al usuario
+            await db.User.destroy({
+                where: {
+                    id: req.params.id
+                }
+            });
+            res.redirect("/users/list");
+
+        } catch (error) {
+            console.error('Error:', error);
+            res.status(500).send('Error interno del servidor');    
+        }
+	},
 }
 
 
