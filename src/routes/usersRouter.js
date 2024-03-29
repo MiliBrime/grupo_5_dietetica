@@ -48,6 +48,9 @@ router.put("/edit/:id", /* adminMiddleware, */ upload.single("photo"), usersCont
 
 router.delete("/delete/:id", usersController.delete);
 
+router.get("/search", usersController.list);
+router.post("/search", usersController.search);
+
 module.exports=router;
 
 

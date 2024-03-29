@@ -9,7 +9,9 @@ main{
 .unidadText , .unidad , .totalText , .total{
     padding-right: 5px;
 }
-
+.totalDiv{
+    font-weight: 830;
+}
 .related-products-text{
     margin: 0 10px;
 }

@@ -5,6 +5,9 @@ const path = require("path");
 const bcryptjs = require('bcryptjs')
 const users= require("../models/users");
 const db = require("../../database/models");
+
+const { Op } = require('sequelize');
+
 /* const { use } = require("../routes/usersRouter");
  */
 // Leer el archivo JSON de los administradores
@@ -200,6 +203,22 @@ let usersController={
             res.status(500).send('Error interno del servidor');    
         }
 	},
+
+    search:async(req,res)=>{
+        try{
+        let keyword= req.body.keyword
+        let usersFound = await db.User.findAll({
+			where: {
+				last_name: {[Op.like]: "%" + keyword + "%"}
+			}
+		})
+        return res.render("searchUser",{usersFound, keyword});
+		}
+		catch (error){
+			console.error('Error:', error);
+			res.status(500).send('Error interno del servidor');	
+		}
+    }
 }
 
 

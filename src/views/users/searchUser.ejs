@@ -15,6 +15,8 @@
             </form>
         </div>
         <div class="table-wrapper">
+            <% if (usersFound && usersFound.length > 0){ %>
+            <% usersFound.forEach(user => { %>
     <table>
         <thead>
             <tr>
@@ -31,57 +33,59 @@
             </tr>
         </thead>
         <tbody>
-            <% for (let index = 0; index < usersList.length; index++) { %>
         <tr>
                 <td>
-                    <img class="image" src= "/img/users/<%=usersList[index].photo %>">
+                    <img class="image" src= "/img/users/<%=user.photo %>">
                 </td>
                 <td>
-                    <%= usersList[index].first_name %>
+                    <%= user.first_name %>
                 </td>
                 <td>
-                    <%= usersList[index].last_name %>
+                    <%= user.last_name %>
                 </td>
                 <td>
-                    <%= usersList[index].last_name %>
+                    <%= user.last_name %>
                 </td>
                 <td>
-                    <%= usersList[index].phone %>
+                    <%= user.phone %>
                 </td>
                 <td>
-                    <%= usersList[index].email %>
+                    <%= user.email %>
                 </td>
                 <td>
-                    <% if (usersList[index].addresses && usersList[index].addresses.length > 0) { %>
-                        <% for (let i = 0; i < usersList[index].addresses.length; i++) { %>
-                            <%= usersList[index].addresses[i].address %>
+                    <% if (user.addresses && user.addresses.length > 0) { %>
+                        <% for (let i = 0; i < user.addresses.length; i++) { %>
+                            <%= user.addresses[i].address %>
                         <% } %>
                     <% } else { %>
                         <p>Sin dirección</p>
                     <% } %>
                 </td>
                 <td>
-                    <% if (usersList[index].addresses && usersList[index].addresses.length > 0) { %>
-                        <% for (let i = 0; i < usersList[index].addresses.length; i++) { %>
-                            <%= usersList[index].addresses[i].zip_code %>
+                    <% if (user.addresses && user.addresses.length > 0) { %>
+                        <% for (let i = 0; i < user.addresses.length; i++) { %>
+                            <%= user.addresses[i].zip_code %>
                         <% } %>
                     <% } else { %>
                         <p>Sin CP</p>
                     <% } %>
                 </td>
                 <td>
-                    <a href="/users/edit/<%=usersList[index].id%>"> <i class="fa-solid fa-pen-to-square"></i></a>
+                    <a href="/users/edit/<%=user.id%>"> <i class="fa-solid fa-pen-to-square"></i></a>
                 </td>
                 <td>
-                    <form action="/users/delete/<%=usersList[index].id%>?_method=DELETE" method="POST" style="display: inline-flex">
+                    <form action="/users/delete/<%=user.id%>?_method=DELETE" method="POST" style="display: inline-flex">
                         <button type="submit" class="delete"><i class="fa-solid fa-trash"></i></button>
                     </form>
                     
                 </td>
             </tr>
-            <%}%>
         </tbody>
         </table>
+        <%}); %>
+        <% } else { %>
+            <h2 class="sub-title2">Lo sentimos, no encontramos al usuario. <a class= "aca" href="/users/list">Volver a la lista</a></a></h2>
+            <% } %>
         </div>
     </main>
     <%- include('partials/footer.ejs') %>
