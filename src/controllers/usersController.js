@@ -145,7 +145,7 @@ let usersController={
 
     list: async (req, res) => {
 		try { 
-            const usersList = await db.User.findAll({ include: [{ model: db.Address, as: 'addresses' }] });
+            const usersList = await db.User.findAll({ include: [{ model: db.Address, as: 'addresses' },   { model: db.Role, as: 'roles' }] });
             res.render("usersList", {usersList});
 		
 	} catch (error) {

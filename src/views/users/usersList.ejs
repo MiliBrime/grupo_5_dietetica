@@ -43,7 +43,9 @@
                     <%= usersList[index].last_name %>
                 </td>
                 <td>
-                    <%= usersList[index].last_name %>
+                    <% usersList[index].roles.forEach(role => { %>
+                        <%= role.type %>
+                    <% }) %>
                 </td>
                 <td>
                     <%= usersList[index].phone %>

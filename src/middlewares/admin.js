@@ -1,6 +1,6 @@
 
 function adminMiddleware(req,res,next){
-  if (!req.session.admin) //no es admin 
+  if (!res.locals.userIsAdmin) //no es admin 
   {
     return res.redirect("/")
   }

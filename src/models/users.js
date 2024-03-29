@@ -128,7 +128,7 @@ const user={
                     id: req.params.id,
                 }
             });
-
+            
             //actualizar la direccion del usuario
             let address= await db.Address.findOne({
                 where:{

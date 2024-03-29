@@ -41,12 +41,12 @@ router.get("/profile",profileValidation, authMiddleware, usersController.profile
 
 router.post("/profile", profileValidation, upload.single("photo"), authMiddleware, usersController.editProfile)
 
-router.get("/list", /* adminMiddleware, */ usersController.list);
+router.get("/list", adminMiddleware, usersController.list);
 
-router.get("/edit/:id", /* adminMiddleware, */ usersController.editFromAdmin);
-router.put("/edit/:id", /* adminMiddleware, */ upload.single("photo"), usersController.updateFromAdmin);
+router.get("/edit/:id", adminMiddleware, usersController.editFromAdmin);
+router.put("/edit/:id", adminMiddleware, upload.single("photo"), usersController.updateFromAdmin);
 
-router.delete("/delete/:id", usersController.delete);
+router.delete("/delete/:id", adminMiddleware, usersController.delete);
 
 router.get("/search", usersController.list);
 router.post("/search", usersController.search);
