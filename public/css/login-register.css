@@ -12,8 +12,13 @@ body {
     background-position: center; 
 }
 
-.img-lider{
-   display: none;
+.img-lider {
+    display: none;
+}
+
+.textImage {
+    margin-top: 50px;
+    margin-bottom: 10px;
 }
 
 .container {
@@ -23,7 +28,7 @@ body {
     min-height: 100vh;
 }
 
-.back-to-home{
+.back-to-home {
     position: absolute;
     left: 300px;
     top: 30px;
@@ -38,21 +43,22 @@ body {
     position: relative;
     padding: 50px 20px 30px 20px;
     height: 600px;
-    width: 370px;
+    width: 400px;
     overflow: auto;
     border-radius: 30px;
     background-color: #66a18b;
     backdrop-filter: blur(15px);
     border: 2px solid rgba(255, 255, 255, 0.2);
 }
+
 .box {
     display: flex;
     justify-content: center;
     flex-direction: row;
     position: relative;
-    padding: 50px 20px 30px 20px;
-    height: 800px;
-    width: 430px;
+    padding: 36px 20px 30px 20px;
+    height: 750px;
+    width: 400px;
     overflow: auto;
     border-radius: 30px;
     background-color: #66a18b;
@@ -60,13 +66,32 @@ body {
     border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
+.input-field-name {
+    margin-top: 10px;
+    position: relative;
+}
+.input-field {
+    margin-top: 30px; /* Espacio entre los campos de entrada */
+    position: relative;
+}
 
-.box-inputs{
-    position: absolute;
-    width: 85%;
+/* .box-inputs {
+    position: relative; 
+    width: 310px;
     left: 27px;
     transition: .5s ease-in-out;
-}
+} */
+
+.error-message {
+    color: #990000;
+    font-size: 15px;
+    margin-top: 3px; 
+    width: 310px;
+    position: absolute; 
+    
+    left: 0px;
+/*     text-align: center;
+ */}
 
 .top-header {
     text-align: center;
@@ -85,7 +110,7 @@ body {
     align-items: center;
     width: 100%;
     flex-direction: column;
-    margin-bottom: 15px
+    margin-bottom: 15px;
 }
 
 .buttons-icons button {
@@ -105,10 +130,6 @@ body {
     padding: 10px 0 0 0;
 }
 
-.input-field {
-    margin: 12px 0;
-    position: relative;
-}
 
 .input-box {
     width: 100%;
@@ -156,7 +177,7 @@ body {
     cursor: pointer;
     transition: .4s;
     font-weight: bold;
-    margin-top: 10px 
+    margin-top: 10px;
 }
 
 .input-submit:hover {
@@ -176,23 +197,32 @@ body {
     color: #000;
 }
 
+.login2 {
+    text-align: center;
+    margin-top: 10px;
+}
+.login-active {
+    text-decoration: none;
+    color: #030303
+}
 
-.switch-login, .switch-register {
+/* .switch-login,
+.switch-register {
     display: flex;
-    justify-content: center;
+    justify-content: center; 
     align-items: center;
     position: absolute;
-    bottom: 20px; /* Ajustar la posición vertical */
-    left: 27px;
-    width: 80%;
-    height: 50px; /* Altura fija para ambos contenedores */
+    bottom: 20px; 
+    left: calc(50% - 150px); 
+    width: 300px; 
+    height: 50px; 
     background: rgba(255, 255, 255, 0.16);
     border-radius: 10px;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
 }
 
-.switch-login a, .switch-register a {
+.switch-login a {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -200,11 +230,26 @@ body {
     font-weight: 500;
     color: #000;
     text-decoration: none;
-    width: 50%;
-    height: 100%; /* Ajustar la altura para que se ajuste al contenedor padre */
+    width: 160px; 
+    height: 100%;
     border-radius: 10px;
     z-index: 10;
 }
+
+.switch-register a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 500;
+    color: #000;
+    text-decoration: none;
+    width: 140px; 
+    height: 100%;
+    border-radius: 10px;
+    z-index: 10;
+}
+
 #btn {
     position: absolute;
     bottom: 0px;
@@ -216,7 +261,7 @@ body {
     border-radius: 10px;
     box-shadow: 2px 0px 12px rgba(0, 0, 0, 0.1);
     transition: .5s ease-in-out;
-}
+} */
 
 .eye-area {
     position: absolute;
@@ -229,7 +274,6 @@ body {
     align-items: center;
     justify-content: center;
     position: relative;
-
 }
 
 i {
@@ -248,26 +292,24 @@ i {
     opacity: 0;
 }
 
-.error-message{
-    color:#990000;
-    font-size:15px; 
-    margin-top: 5px;
-    width: 310px;
-}
-@media(min-width: 460px){
-    .img-lider{
+
+
+@media(min-width: 460px) {
+    .img-lider {
         display: block;
         width: 10%;
         position: absolute;
     }
-    
 }
-@media(min-width: 700px){
-    .img-lider{
+
+@media(min-width: 700px) {
+    .img-lider {
         width: 10%;
         position: absolute;
-        left: 50px;}
+        left: 50px;
+    }
 }
+
 @media only screen and (max-width: 576px) {
     .box {
         margin: 0 5px;

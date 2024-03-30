@@ -28,7 +28,7 @@
                 </div>
                 <hr>
                 <form class="input-group" method="POST" action="/users/register" enctype="multipart/form-data">  
-                    <div class="input-field">
+                    <div class="input-field-name">
                         <input type="text" class="input-box"
                         id="first_name" name="first_name"  placeholder="Nombre" value= "<%= locals.old ? old.first_name : "" %>">
                         <% if (locals.mensajesDeError && mensajesDeError.first_name) { %> 
@@ -82,12 +82,16 @@
                         <input type="submit" class="input-submit" value="Registrate" >
                     </div>
                 </form>
+                <div class="login2">
+                    <a href="/users/login" class="login-active">Ya tenés una cuenta? Iniciar sesión</a>
+                </div>
             </div>
-            <div class="switch-register">
+                
+          <!--   <div class="switch-register">
                 <a href="/users/login" class="login active" onclick="login()">Iniciar Sesión</a>
                 <a href="/users/register" class="register" onclick="register()">Registrarse</a>
                 <div class="btn-active" id="btn"></div>
-            </div>
+            </div> -->
         </div>
     </div>
    <!--  <script>

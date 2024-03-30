@@ -28,7 +28,7 @@ const validation=[
             let fileExtension = path.extname(file.originalname); //saco la extension del archivo
             if (!acceptedExtensions.includes(fileExtension))
             { //si no es la extension q queremos
-                throw new Error(`Las extensiones de archivo permitidas son ${acceptedExtensions.join(" y ")}`);
+                throw new Error('Extensiones permitidas: jpg, jpeg y png.');
             }}
         return true //indicamos q la validacion tuvo exito
         }),
