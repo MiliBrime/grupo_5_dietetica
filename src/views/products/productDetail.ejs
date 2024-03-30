@@ -13,6 +13,14 @@
 
     <main>
         <div class="container">
+            <% if (locals.userIsAdmin) { %>
+                <div class="editarBorrar">
+                    <a class="editarProducto" href="/products/edit/<%=singleProduct.id%>">EDITAR PRODUCTO</a>
+                    <form action="/products/borrar/<%=singleProduct.id%>?_method=DELETE" method="POST" style="display: inline-flex">
+                        <button type="submit" class="action-button delete">ELIMINAR</button>
+                    </form>
+                </div>
+                <% } %>
             <div class="card-product">
                 <div class="product-image">
                     <img src="/img/products/<%=singleProduct.img%>" alt="imagen del producto">
@@ -72,14 +80,14 @@
                     </div>
                         
         </div>
-        <% if (locals.userIsAdmin) { %>
+       <!--  <% if (locals.userIsAdmin) { %>
         <div class="editarBorrar">
             <a class="editarProducto" href="/products/edit/<%=singleProduct.id%>">EDITAR PRODUCTO</a>
             <form action="/products/borrar/<%=singleProduct.id%>?_method=DELETE" method="POST" style="display: inline-flex">
                 <button type="submit" class="action-button delete">ELIMINAR</button>
             </form>
         </div>
-        <% } %>
+        <% } %> -->
 
         <h2 class="related-products-text">Productos relacionados</h2>
             <!-- recorrer todos los productos, si coinciden las categorias, ponerlos acá -->

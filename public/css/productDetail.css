@@ -259,7 +259,6 @@ main{
     border: 1px solid #000;
     padding: 10px;
     text-decoration: none;
-    max-width: 30%;
     justify-content: center;
     transition-property: background-color;
     transition-duration: 0.5s;
@@ -271,13 +270,15 @@ main{
 .borrarProducto:hover{
     background-color: #ABD0BF;
 }
-
 .editarBorrar{
+    position: static
+}
+/* .editarBorrar{
     display: flex;
     justify-content: center;
-}
+} */
 .delete {
-    margin: 0 0 0 20px;
+    margin-top:20px;
     padding: 10px;
 }
 
@@ -299,6 +300,16 @@ main{
 /* main {
     background-color: #ebebeb;
 } */
+
+.editarBorrar{
+    display: flex;
+    position: absolute;
+    right: 400px;
+    top: 500px;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
 
 .container {
     display: flex;
@@ -464,4 +475,15 @@ main{
     display: flex;
 }  
 
+}
+@media (min-width: 1120px){
+    .editarBorrar{
+        display: flex;
+        position: absolute;
+        right: 550px;
+        top: 500px;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+    }
 }

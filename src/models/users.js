@@ -135,23 +135,25 @@ const user={
                     user_id: userId 
                 }
             });
-            if (address){
+
+            if (address) {
                 await address.update({
-                    address: req.body.address ? req.body.address : address.address,
-                    zip_code: req.body.zip_code ? req.body.zip_code : address.zip_code,
-                })
-            } else{
+                    address: (req.body.address && req.body.address.trim() !== "") ? req.body.address : (address.address ? address.address : "Sin dirección"),
+                    zip_code: (req.body.zip_code && req.body.zip_code.trim() !== "") ? req.body.zip_code : (address.zip_code ? address.zip_code : "Sin CP"),
+                });
+            } else {
                 await db.Address.create({
-                    address: req.body.address ? req.body.address : '',
-                    zip_code: req.body.zip_code ? req.body.zip_code : '',
+                    address: (req.body.address && req.body.address.trim() !== "") ? req.body.address : "Sin dirección",
+                    zip_code: (req.body.zip_code && req.body.zip_code.trim() !== "") ? req.body.zip_code : "Sin CP",
                     user_id: userId,
-                })
+                });
             }
 
             let updatedUser = await db.User.findByPk(userId);
             console.log(updatedUser.dataValues);
             
-            res.render('usersEdit', { user: updatedUser, address });
+            /* res.render('usersEdit', { user: updatedUser, address }); */
+            res.redirect("/users/list")
 
         } catch (error) {
             console.log(error);   
