@@ -90,19 +90,24 @@
         <% } %> -->
 
         <h2 class="related-products-text">Productos relacionados</h2>
-            <!-- recorrer todos los productos, si coinciden las categorias, ponerlos acá -->
-            <div class="all-related-products">
+        <div class="all-related-products">
+            <% let productosRelacionados = false; %>
             <% for (let i = 0; i < allProducts.length; i++) { %>
-                <% if ((allProducts[i].category_id == singleProduct.category_id)&&(allProducts[i].name != singleProduct.name)){ %>
+                <% if ((allProducts[i].category_id == singleProduct.category_id) && (allProducts[i].name != singleProduct.name)) { %>
+                    <% productosRelacionados = true; %>
                     <a class="related-singleProduct" href="/products/detail/<%=allProducts[i].id%>">
                         <img src="/img/products/<%=allProducts[i].img%>" alt="imagen de producto">
                         <div class="related-product">
                             <h3 class="related-product-name"><%=allProducts[i].name%></h3>
                             <p class="related-product-description"><%=allProducts[i].description_home%></p>
-                        </div></a>
-                        <% } %>
-                        <% } %>
-                    </div>
+                        </div>
+                    </a>
+                <% } %>
+            <% } %>
+            <% if (!productosRelacionados) { %>
+                <p class="no-related-products">Oops! No se encontraron productos relacionados.</p>
+            <% } %>
+        </div>
     </main>
     <%- include('partials/footer.ejs') %>
     <script src="/js/restador-sumador.js" ></script>
