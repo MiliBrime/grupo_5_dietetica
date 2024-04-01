@@ -13,7 +13,8 @@ main{
     font-weight: 830;
 }
 .related-products-text{
-    margin: 0 10px;
+    margin-left: 30px;
+    margin-top: 50px;
 }
 
 .no-related-products {
@@ -24,23 +25,21 @@ main{
 .all-related-products {
     display: flex;
     flex-wrap: wrap;
-    justify-content: left; 
+    justify-content: center; 
     gap: 20px; 
-    margin: 30px 40px 0px 20px; 
+    margin: 30px 40px 0px 30px; 
 }
 
 .related-singleProduct {
     flex: 1 0 auto;
-    max-width: 350px;
+    max-width: 300px;
     padding: 15px;
     border: solid #e6eae6;
     border-radius: 10px;
     box-sizing: border-box;
-    display: flex;
     flex-direction: column;
     align-items: center;
     text-decoration: none;
-    color: inherit;
     margin-bottom: 25px;
 }
 
@@ -50,6 +49,9 @@ main{
     max-width: 100%;
     max-height: 220px;
     border-radius: 15px;
+    display: block; 
+    margin: 0 auto;
+    padding: 10px;
 }
 
 .related-product{
@@ -93,6 +95,7 @@ main{
 
 .product-image {
     margin-bottom: 10px; 
+    
 }
 
 .product-image img {
@@ -346,11 +349,17 @@ main{
 
 .product-image img {
 /*     max-height: 440px;
- */    padding: 15px;
+ */    padding: 0px;
     max-width: 100%;
     display: flex;
     /* max-height: 350px; */
     /* margin: auto; */
+    margin-right: 5px;
+   /*  border-bottom: 4px solid #6e6e6e; 
+    border-right: 4px solid #6e6e6e; 
+     border-top: 1px solid  #959595; 
+    border-left: 1px solid  #959595;  
+    border-radius: 10px;   */
 }
 
 .name-product {
@@ -480,6 +489,14 @@ main{
     display: flex;
 }  
 
+.all-related-products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left; 
+    gap: 20px; 
+    margin: 30px 40px 0px 30px; 
+}
+
 }
 @media (min-width: 1120px){
     .editarBorrar{
@@ -491,4 +508,5 @@ main{
         align-content: center;
         align-items: center;
     }
+    
 }

@@ -16,11 +16,14 @@
             <% if (locals.userIsAdmin) { %>
                 <div class="editarBorrar">
                     <a class="editarProducto" href="/products/edit/<%=singleProduct.id%>">EDITAR PRODUCTO</a>
-                    <form action="/products/borrar/<%=singleProduct.id%>?_method=DELETE" method="POST" style="display: inline-flex">
-                        <button type="submit" class="action-button delete">ELIMINAR</button>
+                    <form id="deleteForm" action="/products/borrar/<%=singleProduct.id%>?_method=DELETE" method="POST" style="display: inline-flex">
+                        <button type="button" class="action-button delete" onclick="confirmDelete()">ELIMINAR</button>
                     </form>
                 </div>
-                <% } %>
+            <% } %>
+            
+            <script src="/js/confirmDelete.js"></script>
+
             <div class="card-product">
                 <div class="product-image">
                     <img src="/img/products/<%=singleProduct.img%>" alt="imagen del producto">
