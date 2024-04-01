@@ -6,9 +6,13 @@ window.addEventListener("load", function() {
     let precioTotalElemento = document.getElementById("total");
     let precioUnitario = parseFloat(precioUnitarioElemento.textContent);
 
+    cantidad.innerText = "1";
+
+    actualizarPrecioTotal(1);
+
     restador.addEventListener("click", function() {
         let valorActual = parseInt(cantidad.textContent);
-        if (valorActual > 0) {
+        if (valorActual > 1) {
             valorActual--;
             cantidad.innerText = valorActual;
             actualizarPrecioTotal(valorActual);
@@ -24,6 +28,6 @@ window.addEventListener("load", function() {
 
     function actualizarPrecioTotal(cantidad){
         let total = cantidad * precioUnitario;
-        precioTotalElemento.innerText= total.toFixed(2) ;
+        precioTotalElemento.innerText = total.toFixed(2);
     }
 });
