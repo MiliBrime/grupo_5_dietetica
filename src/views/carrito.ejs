@@ -11,35 +11,26 @@
         <a href="/" class="fa-solid fa-xmark"></a>
         <div class="titulo"><h1>Carrito de compras</h1></div>
     </div>
+    <div id="cart-container"></div>
     <div class="producto">
-        <img src="/img/sinFondo.png" alt="producto" class="imagen-prod">
-        <div class="descripcion">
-            <p class="nombre">Nombre del producto</p>
-            <p class="descripcionProd">descripción del producto</p>
-            <div class="cantidad">
-                <button id="restador"class="sumador">-</button>
-                <p id="cantidad"class="cant">0</p>
-                <button id="sumador" class="restador">+</i></button>
-                </div>
-        </div>
-        <div class="trash">
-            <i class="fa-regular fa-trash-can"></i>
-        </div>
-        <p class="precio">$</p>
-        <p id="unidad"class="precio">35</p>
+        <!-- <div class="cantidad">
+            <button id="restador"class="sumador">-</button>
+            <p id="cantidad"class="cant">0</p>
+            <button id="sumador" class="restador">+</i></button>
+        </div> -->
     </div>
+    <!-- <div class="trash">
+        <i class="fa-regular fa-trash-can"></i>
+    </div>
+    <p class="precio">$</p>
+    <p id="unidad"class="precio">35</p> -->
     <div class="enviosTexto">
-        <i class="fa-solid fa-truck-fast"></i>
-        <p>Medios de envío</p>
+        <i class="fa-solid fa-location-dot"></i>
+        <p>¿Dónde puedo retirar mi pedido?</p>
     </div>
-    <div class="enviosBotones">
-        <form>
-            <input class="postal" type="text" placeholder="CÓDIGO POSTAL">
-        </form>
-        <button type="submit" class="calcular">CALCULAR</button>
-    </div>
-    <div class="link">
-        <a href="#">No sé mi código postal</a>
+    <div class="direcciones">
+        <p>Perón 1775, San Miguel, Buenos Aires</p>
+        <p>Rodriguez Peña 1266, San Miguel, Buenos Aires</p>
     </div>
 
     <div class="total">
@@ -75,4 +66,5 @@
     <%- include('partials/footer.ejs') %>
     </body>
     <script src="/js/restador-sumador.js" ></script>
+    <script src="/js/carrito.js"></script>
 </html>
