@@ -263,6 +263,16 @@ main{
     color:#3c3c3c
 }
 
+.notFound{
+    display: flex;
+    margin-bottom: 80px;
+}
+
+.notFound img{
+    width: 100px;
+    height: 100px;
+}
+
 /* ---------- */
 @media (min-width:500px) {
     .slider-controls {

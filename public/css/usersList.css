@@ -83,3 +83,12 @@ input:valid~label {
 .sub-title2{
     padding:50px
 }
+
+.notFound{
+    display: flex;
+}
+
+.notFound img{
+    width: 100px;
+    height: 100px;
+}

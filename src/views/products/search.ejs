@@ -33,9 +33,14 @@
             </div>
             <%}); %>
             <% } else { %>
-                <h2 class="sub-title2">Lo sentimos, no encontramos lo que buscas. Podes buscar otra palabra o ver todos nuestros productos <a class= "aca" href="/products">acá</a></h2>
+                <div class="notFound">
+                <h2 class="sub-title2">Lo sentimos, no encontramos lo que buscas. Podes intentar con otra palabra o explorar todos nuestros productos <a class= "aca" href="/products">acá</a></h2>
+                <img src="/img/noEncontrado.png" alt="not found">
+                </div>
                 <% } %>
         </section>
         <%- include('partials/footer.ejs') %>
 
         </main>
+
+

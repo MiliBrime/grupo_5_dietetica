@@ -84,7 +84,10 @@
         </table>
         <%}); %>
         <% } else { %>
-            <h2 class="sub-title2">Lo sentimos, no encontramos al usuario. <a class= "aca" href="/users/list">Volver a la lista</a></a></h2>
+            <div class="notFound">
+                <h2 class="sub-title2">No se encontró al usuario. <a class= "aca" href="/users/list">Volver a la lista</a></a></h2>
+                <img src="/img/noEncontrado.png" alt="not found">
+            </div>
             <% } %>
         </div>
     </main>
