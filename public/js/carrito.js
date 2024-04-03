@@ -68,6 +68,8 @@ document.addEventListener('DOMContentLoaded', function() {
             price: price,
         };
 
+        console.log("Imagen del producto:", name);
+
         // Obtener el carrito del Local Storage y agregar el nuevo producto
         const savedCart = JSON.parse(localStorage.getItem('cart')) || [];
         cart = savedCart;
@@ -96,8 +98,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Agregar el producto al carrito
                 addToCart(name, price, img);
 
-                // mostrar otra cosa
-                alert('Producto agregado al carrito');
+                button.innerHTML = '<i class="fas fa-check"></i>'
+                
             });
         });
 

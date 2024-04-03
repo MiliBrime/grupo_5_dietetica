@@ -190,7 +190,7 @@ main{
     margin-bottom: 30px;
 } 
 
-.comprar, .carrito {
+.comprar, .add-shipping-cart {
     width: 230px;
     height: 40px;
     border: none;
@@ -205,7 +205,7 @@ main{
     background-color:#4CAF50;
 }
 
-.carrito {
+.add-shipping-cart {
     background-color: #2196F3
 }
 
@@ -439,7 +439,7 @@ main{
     margin-bottom: 0px;
 }
 
-.comprar, .carrito {
+.comprar, .add-shipping-cart {
     width: 200px;
     height: 35px;
 }
@@ -480,7 +480,7 @@ main{
     background-color: #388E3C; 
   }
 
-  .carrito:hover {
+  .add-shipping-cart:hover {
     background-color: #1976D2;
   }
 

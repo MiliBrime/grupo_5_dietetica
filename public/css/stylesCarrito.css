@@ -252,9 +252,9 @@ a {
     color: black;
 }
 
-
-
-
+#cart-container{
+    width: 50%;
+}
 
 .item{
     margin: 0 0 10px 0;
@@ -276,6 +276,7 @@ a {
 .cart-name{
     margin: 20px;
     font-weight: bold;
+    flex:1;
 }
 
 .cart-price{

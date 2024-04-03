@@ -29,7 +29,7 @@
                     <p class="description"><%=product.description_home%></p>
                 </div>
                 <div class="buttons">
-                    <button class="add-shipping-cart"><i class="fa-solid fa-cart-shopping"></i></button>
+                    <button class="add-shipping-cart"data-name="<%=product.name%>" data-price="<%=product.price%>" data-img="/img/products/<%=product.img%>"><i class="fa-solid fa-cart-shopping"></i></button> 
                     <button class="buy">
                         <p>Comprar</p>
                         <p><strong><%=product.price%> USD</strong></p>
@@ -40,5 +40,5 @@
             <% }) %>
         </section>
         <%- include('partials/footer.ejs') %>
-
+        <script src="/js/carrito.js"></script>
         </main>

@@ -62,7 +62,8 @@
                             <p>USD</p>
                         </div>
                         <a href="#"><button class="comprar">Comprar ahora</button></a>
-                        <a href="#"><button class="carrito">Añadir al carrito</button></a>
+                        <button class="add-shipping-cart"data-name="<%=singleProduct.name%>" data-price="<%=singleProduct.price%>" data-img="/img/products/<%=singleProduct.img%>">Añadir al carrito</button>
+                        
                     </div>      
                 </div>
                     <div class="payment">
@@ -114,5 +115,6 @@
     </main>
     <%- include('partials/footer.ejs') %>
     <script src="/js/restador-sumador.js" ></script>
+    <script src="/js/carrito.js"></script>
 </body>
 </html>
