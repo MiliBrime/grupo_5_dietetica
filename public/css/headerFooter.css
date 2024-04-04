@@ -4,23 +4,24 @@
     font-family: sans-serif;
     box-sizing: border-box;
 }
+
 i {
     font-size: 1em;
 }
 
-.list2 li{
+.list2 li {
     list-style: none;
 }
 
-#icono{
-    transition:all 0.5s;
+#icono {
+    transition: all 0.5s;
 }
 
-#icono:hover{
-    color:#F23E16
+#icono:hover {
+    color: #F23E16;
 }
 
-.banner{
+.banner {
     width: 100%;
     padding: 5px;
 }
@@ -33,23 +34,23 @@ a {
 .header {
     background-image: linear-gradient(to bottom right, #b7dfcc, #9abbac);
     box-shadow: 5px 5px 10px #a6cab9, -8px -8px 16px #b0d6c5;
-    /* background-color: #c4ded2; /* abd0bf */ 
     position: relative;
     z-index: 2;
 }
+
 .container1 {
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
-.logo>img {
+.logo > img {
     height: 120px;
     top: 15px;
     position: relative;
 }
 
-.ingresa-registrate-carro{
+.ingresa-registrate-carro {
     display: none;
 }
 
@@ -57,7 +58,7 @@ a {
     cursor: pointer;
 }
 
-.iconosHeader{
+.iconosHeader {
     padding-right: 10px;
 }
 
@@ -94,14 +95,13 @@ input:valid~label {
     font-size: 0.99rem;
     color: #000;
     font-weight: bold;
-    text-indent: 5px; 
+    text-indent: 5px;
     margin-top: 5px;
 }
 
 .container2 {
     display: flex;
-/*     grid-gap: 25px;
- */ justify-content: space-around;
+    justify-content: space-around;
     padding: 5px;
 }
 
@@ -109,13 +109,13 @@ input:valid~label {
     display: flex;
     grid-gap: 50px;
     list-style: none;
-
 }
 
-.list1Transition:hover{
+.list1Transition:hover {
     text-decoration: underline;
 }
-.list1Transition{
+
+.list1Transition {
     transition-property: all;
 }
 
@@ -123,8 +123,9 @@ input:valid~label {
     display: none;
     justify-content: space-around;
     align-items: center;
-    margin-top:20px
+    margin-top: 20px;
 }
+
 .list2 {
     text-decoration: none;
     list-style: circle;
@@ -135,8 +136,7 @@ input:valid~label {
     color: #3c3c3c;
 }
 
-
-.ingresa-registrate-carro{
+.ingresa-registrate-carro {
     display: none;
 }
 
@@ -184,15 +184,15 @@ input:valid~label {
 .dropdown-content {
     display: none;
     position: absolute;
-    top: calc(100% - 10px); 
+    top: calc(100% - 10px);
     background-color: #f9f9f9;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1000;
 }
 
-.dropbtn:hover + .dropdown-content,
-.dropbtn:focus + .dropdown-content,
+.dropbtn:hover+.dropdown-content,
+.dropbtn:focus+.dropdown-content,
 .dropdown-content:hover {
     display: block;
 }
@@ -211,17 +211,20 @@ input:valid~label {
 .rotate {
     transform: rotate(-90deg);
 }
+
 /* --------------- */
 
-.iconoFooter-ig{
+.iconoFooter-ig {
     font-size: 30px;
     color: #FD1D1D;
 }
-.iconoFooter-fb{
+
+.iconoFooter-fb {
     font-size: 30px;
     color: #1877F2;
 }
-.iconoFooter-wsp{
+
+.iconoFooter-wsp {
     font-size: 30px;
     color: #25D366;
 }
@@ -233,22 +236,44 @@ footer {
 
 .footer {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.footer .div-footer {
+    flex: 1;
+    margin: 12px;
     text-align: center;
 }
 
-.footer ul{
-    list-style: none;
-    cursor: pointer;
-}
-
 .footer h3 {
-    padding: 5px;
+    margin-bottom: 10px;
+    font-size: 1.1em;
 }
 
-.help-list {
-    padding: 2px;
+.footer ul {
+    list-style: none;
+    padding: 0;
 }
+
+.footer ul li {
+    margin-bottom: 8px;
+    font-size: 1.1em;
+}
+
+.logos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.iconoFooter-ig,
+.iconoFooter-fb {
+    font-size: 35px;
+}
+
 .social-media {
     display: flex;
     justify-content: space-around;
@@ -258,26 +283,42 @@ footer {
     cursor: pointer;
 }
 
-.div-footer{
-    flex:1;
+.social-media-icons a {
+    margin: 0 10px;
+}
+
+.footer-brand {
+    text-align: left;
+    margin: 20px 0 2px 4px; 
+    clear: both; 
+}
+
+.footer-brand .copyright-text {
+    font-size: 0.8em; 
 }
 
 @media (min-width: 500px) {
-    .container2{
+    .container2 {
         grid-gap: 25px;
     }
+    .footer-brand .copyright-text {
+        font-size: 0.9em; 
+    }
+    .footer-brand {
+        margin: 30px 0 2px 10px; 
 }
 
-@media (min-width: 880px){
-    .ingresa-registrate-carro{
+@media (min-width: 880px) {
+    .ingresa-registrate-carro {
         display: flex;
     }
-    .container3{
+
+    .container3 {
         display: flex;
-    }  
+    }
+
+    .footer {
+        flex-wrap: nowrap;
+    }
 }
-
-
-
-
-
+}
