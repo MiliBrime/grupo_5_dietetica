@@ -18,13 +18,13 @@
             <div class="input-field">
                 <input type="text" class="input-box-login" id="logEmail" name="email" placeholder="Correo electrónico" value= "<%= locals.old ? old.email : "" %>">
                     <% if(locals.errors && errors.email) { %>
-                    <div> <%=errors.email.msg%></div> <% } %>
+                    <div class="error-back"> <%=errors.email.msg%></div> <% } %>
                 <div class="error-message" id="error-email"></div>
             </div>
             <div class="input-field">
                 <input type="password" class="input-box-login" id="logPassword" name="password" placeholder="Contraseña">
                 <% if(locals.errors && errors.password) { %>
-                    <div> <%=errors.password.msg%> </div> <% } %>
+                    <div class="error-back-data"> <%=errors.password.msg%> </div> <% } %>
                 <div class="error-message" id="error-password"></div>
                 <div class="eye-area">
                     <div class="eye-box" onclick="myLogPassword()">

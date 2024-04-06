@@ -4,6 +4,26 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
+.error-back{
+    color: #990000;
+    font-size: 14px;
+    margin-top: 3px;
+    /* width: 310px; */
+    position: absolute;
+    left: 0px;
+    bottom: 55px;
+}
+
+.error-back-data{
+    color: #990000;
+    font-size: 14px;
+    margin-top: 3px;
+    /* width: 310px; */
+    position: absolute;
+    left: 0px;
+    bottom: 150px;
+
+}
 
 body {
     background-image: linear-gradient(to right top, #abd0bf, #a7cdbc, #a3cab9, #9ec8b6, #9ac5b3, #94c1ae, #8ebdaa, #88b9a5, #7fb39e, #77ad96, #6ea78f, #66a188);
@@ -88,7 +108,8 @@ body {
 
 .top-header-login {
     text-align: center;
-    margin: 30px 0;
+    margin: 30px 0 60px 0;
+
 }
 
 .top-header-login h3 {
