@@ -13,12 +13,13 @@ window.addEventListener("load", function() {
             currentIndex = totalSlides - 1;
         } else if (index >= totalSlides) {
             currentIndex = 0;
+            sliderBox.style.transition = 'none';
         } else {
             currentIndex = index;
+            sliderBox.style.transition = ''; 
         }
         const offset = -currentIndex * 100;
         sliderBox.style.marginLeft = offset + '%';
-        // Programar la siguiente transición automáticamente después de un intervalo
         timeoutID = setTimeout(nextSlide, slideInterval);
     }
     
@@ -47,4 +48,5 @@ window.addEventListener("load", function() {
     });
 
     startSlideInterval(); // Inicia el cambio automático de imágenes
+    
 });
