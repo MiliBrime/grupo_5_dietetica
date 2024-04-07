@@ -1,7 +1,7 @@
 console.log("conectadooooooooo login");
 
 window.addEventListener("load", function() {
-    let formulario = document.querySelector(".input-group");
+    let formulario = document.querySelector(".input-group-login");
     let errores = [];
 
     function validarEmail() {
