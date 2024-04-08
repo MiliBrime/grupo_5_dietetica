@@ -203,36 +203,36 @@ body {
 
 .input-submit,
 .input-submit-login {
-    width: 200px; /* Reducir el ancho del botón */
-    height: 45px; /* Reducir la altura del botón */
-    font-size: 14px; /* Ajustar el tamaño de la fuente */
-    background-color: #45846f; /* Establecer el color de fondo verde oscuro */
-    border: none; /* Eliminar el borde del botón */
-    border-radius: 5px; /* Agregar bordes redondeados */
-    transition: background-color 0.4s, color 0.4s; /* Agregar transición de color de fondo y texto */
+    width: 200px; 
+    height: 45px; 
+    font-size: 14px; 
+    background-color: #45846f; 
+    border: none; 
+    border-radius: 5px; 
+    transition: background-color 0.4s, color 0.4s; 
     margin-bottom: 5px;
 }
 
 .input-submit:hover,
 .input-submit-login:hover {
-    background-color: #6da28e; /* Cambiar a un verde ligeramente más claro al pasar el mouse */
-    color: #fff; /* Cambiar el color del texto a blanco al pasar el mouse */
+    background-color: #6da28e; 
+    color: #fff; 
 }
 
 .input-submit-login {
-    width: 200px; /* Reducir el ancho del botón */
-    height: 45px; /* Reducir la altura del botón */
-    font-size: 14px; /* Ajustar el tamaño de la fuente */
-    background-color: #45846f; /* Establecer el color de fondo verde oscuro */
-    border: none; /* Eliminar el borde del botón */
-    border-radius: 5px; /* Agregar bordes redondeados */
-    transition: background-color 0.4s, color 0.4s; /* Agregar transición de color de fondo y texto */
+    width: 200px; 
+    height: 45px; 
+    font-size: 14px; 
+    background-color: #45846f; 
+    border: none; 
+    border-radius: 5px; 
+    transition: background-color 0.4s, color 0.4s; 
     margin-bottom: 5px;
 }
 
 .input-submit-login:hover {
-    background-color: #6da28e; /* Cambiar a un verde ligeramente más claro al pasar el mouse */
-    color: #fff; /* Cambiar el color del texto a blanco al pasar el mouse */
+    background-color: #6da28e; 
+    color: #fff; 
 
 }
 
