@@ -201,46 +201,39 @@ body {
     width: 14px;
 }
 
-.input-submit {
-    width: 50%;
-    height: 50px;
-    font-size: 15px;
-    font-weight: 500;
-    border: none;
-    border-radius: 10px;
-    background: #45846f;
-    color: #fff;
-    box-shadow: 0px 4px 20px rgba(62, 9, 9, 0.144);
-    cursor: pointer;
-    transition: .4s;
-    font-weight: bold;
-    margin: 10px 0 30px 0
+.input-submit,
+.input-submit-login {
+    width: 200px; /* Reducir el ancho del botón */
+    height: 45px; /* Reducir la altura del botón */
+    font-size: 14px; /* Ajustar el tamaño de la fuente */
+    background-color: #45846f; /* Establecer el color de fondo verde oscuro */
+    border: none; /* Eliminar el borde del botón */
+    border-radius: 5px; /* Agregar bordes redondeados */
+    transition: background-color 0.4s, color 0.4s; /* Agregar transición de color de fondo y texto */
+    margin-bottom: 5px;
 }
 
-.input-submit:hover {
-    background: #94c1af;
-    color: #0f1f1b;
+.input-submit:hover,
+.input-submit-login:hover {
+    background-color: #6da28e; /* Cambiar a un verde ligeramente más claro al pasar el mouse */
+    color: #fff; /* Cambiar el color del texto a blanco al pasar el mouse */
 }
 
 .input-submit-login {
-    width: 50%;
-    height: 50px;
-    font-size: 15px;
-    font-weight: 500;
-    border: none;
-    border-radius: 10px;
-    background: #45846f;
-    color: #fff;
-    box-shadow: 0px 4px 20px rgba(62, 9, 9, 0.144);
-    cursor: pointer;
-    transition: .4s;
-    font-weight: bold;
-    margin: 10px 0 30px 0
+    width: 200px; /* Reducir el ancho del botón */
+    height: 45px; /* Reducir la altura del botón */
+    font-size: 14px; /* Ajustar el tamaño de la fuente */
+    background-color: #45846f; /* Establecer el color de fondo verde oscuro */
+    border: none; /* Eliminar el borde del botón */
+    border-radius: 5px; /* Agregar bordes redondeados */
+    transition: background-color 0.4s, color 0.4s; /* Agregar transición de color de fondo y texto */
+    margin-bottom: 5px;
 }
 
 .input-submit-login:hover {
-    background: #94c1af;
-    color: #0f1f1b;
+    background-color: #6da28e; /* Cambiar a un verde ligeramente más claro al pasar el mouse */
+    color: #fff; /* Cambiar el color del texto a blanco al pasar el mouse */
+
 }
 
 .forgot {
@@ -264,7 +257,7 @@ body {
     text-decoration: none;
     color: #030303;
     transition: all;
-    transition-duration: 0.5s;
+    transition-duration: 0.3s;
 }
 
 .login-active:hover{
@@ -313,10 +306,10 @@ body {
         margin: 0 30px 37px 30px;
     }
     .input-submit{
-        width: 30%;
+        width: 300px;
     }
     .input-submit-login{
-        width: 30%;
+        width: 300px;
     }
 }
 
