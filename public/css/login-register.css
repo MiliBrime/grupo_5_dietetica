@@ -95,6 +95,15 @@ body {
     left: 0px;
 }
 
+.error-message-back-register{
+    color: #990000;
+    font-size: 14px;
+    margin-top: 42px; 
+    width: 310px;
+    position: absolute; 
+    left: 182px;
+}
+
 .top-header {
     text-align: center;
     margin-top: 30px;
