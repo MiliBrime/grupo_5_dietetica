@@ -25,10 +25,14 @@ body {
 }
 
 .logo > img {
-    height: 120px;
-    top: 15px;
+    height: 72px;
+
+    top: 27px;
     position: relative;
+    /* margin-left: 19px; */
 }
+
+
 
 .container {
     text-align: center;
@@ -40,7 +44,7 @@ body {
     display: flex;
     justify-content: flex-start; /* Cambiado de 'space-around' a 'flex-start' */
     align-items: center;
-    margin-left: 90px;
+    margin-left: 60px;
 }
 
 h1 {
@@ -58,4 +62,14 @@ a {
     color: #333;
     text-decoration: none;
     font-weight: bold;
+}
+
+
+@media (min-width: 820px){
+    
+    .container1 { 
+    margin-left: 86px;
+
+    }
+
 }

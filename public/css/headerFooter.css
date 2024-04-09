@@ -5,6 +5,11 @@
     box-sizing: border-box;
 }
 
+.cart-counter {
+    display: block;
+    text-align: center;
+}
+
 i {
     font-size: 1em;
 }
@@ -14,7 +19,7 @@ i {
 }
 
 #icono {
-    transition: all 0.3s;
+    transition: all 0.5s;
 }
 
 #icono:hover {
@@ -302,7 +307,7 @@ footer {
 
 @media (min-width: 500px) {
     .container2 {
-        grid-gap: 25px;
+        grid-gap: 22px;
     }
     .footer-brand .copyright-text {
         font-size: 0.9em; 
@@ -315,6 +320,9 @@ footer {
         height: 72px;
     }
 
+    .cart-counter {
+        display: inline-block;
+    }
 
 
 @media (min-width: 880px) {
