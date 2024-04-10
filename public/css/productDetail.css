@@ -171,6 +171,13 @@ main{
 
 .insta {
     margin-right: 8px;
+    filter: brightness(70%)
+
+}
+
+.wpp {
+    filter: brightness(95%)
+
 }
 
 .envio {
@@ -256,6 +263,7 @@ main{
 
 .social-media-2 {
     border-bottom: 1px solid #ccc;
+    font-weight: 550;
 }
 
 .iconosHeader{
@@ -400,6 +408,8 @@ main{
 
 .social-media-1 {
     display: block;
+    font-weight: 550;
+
 }
 
 .social-media-2 {

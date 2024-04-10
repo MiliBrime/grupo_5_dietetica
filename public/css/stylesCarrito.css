@@ -164,8 +164,8 @@ body{
 }
 
 .botonCompra:hover{
-    height: 45px;
-    width: 70%;
+    height: 40px;
+   /*  width: 70%; */
     background-color: #ABD0BF;
 }
 

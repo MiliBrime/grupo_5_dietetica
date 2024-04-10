@@ -106,7 +106,7 @@ body {
 
 .top-header {
     text-align: center;
-    margin-top: 30px;
+    margin-top: 40px;
 }
 
 .top-header h3 {
@@ -117,7 +117,7 @@ body {
 
 .top-header-login {
     text-align: center;
-    margin: 30px 0 60px 0;
+    margin: 40px 0 50px 0;
 
 }
 
@@ -250,8 +250,8 @@ body {
     text-align: center;
     font-size: 13px;
     font-weight: 500;
-    margin-bottom: 40px;
-}
+/*     margin-bottom: 20px;
+ */}
 
 .forgot a {
     text-decoration: none;
