@@ -40,6 +40,25 @@
     <div class="verMas">
         <a class= "verMas" href="/">Ver mas productos</a>
     </div>
+    <h1 class="sub-title-carrito">No dejes pasar estas ofertas:</h1>
+    <section class="products">
+        <% productosOfertas.forEach((product,index) => { %>
+        <div class="card-product-carrito <%= index >= 1 ? 'extra-products' : '' %>">
+            <a class="card-product1" href="/products/detail/<%=product.id%>">
+                <img src="img/products/<%=product.img%>" alt="imagen de producto">
+            <div class="product-description">
+                <h3 class="name-product"><%=product.name%></h3>
+                <p class="description"><%=product.description_home%></p>
+            </div></a>
+            <div class="buttons">
+                <button class="add-shipping-cart"data-name="<%=product.name%>" data-price="<%=product.price%>" data-img="/img/products/<%=product.img%>"><i class="fa-solid fa-cart-shopping"></i></button>
+                <button class="buy">
+                    <p><strong><%=product.price%> USD</strong></p>
+                </button>
+            </div>
+        </div>
+        <%}); %>
+    </section>
     </main>
     <%- include('partials/footer.ejs') %>
     </body>

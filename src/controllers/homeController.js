@@ -31,8 +31,6 @@ let indexController={
                     as: 'status',
                 }] */
             });
-            console.log('Productos Destacados:', productosDestacados);
-            console.log('Productos Ofertas:', productosOfertas);
             res.render('home', {productosDestacados, productosOfertas})
         } catch (error) {
             console.error('Error:', error);
@@ -40,9 +38,17 @@ let indexController={
         }
 
     },
-    carrito: (req,res)=>{
-        res.render("carrito");
+    carrito: async (req,res)=>{
+        try { 
+            const productosOfertas = await Product.findAll({
+                where: {status_id: 1}})
+            res.render('carrito', {productosOfertas})
+        } catch (error) {
+            console.error('Error:', error);
+            res.status(500).send('Error interno del servidor');
+        }
     }
+    
 };
 
 module.exports=indexController;

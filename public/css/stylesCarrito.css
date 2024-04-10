@@ -295,6 +295,99 @@ a {
 .cart-price{
     margin-right: 50px;
 }
+
+.sub-title {
+    margin: 25px 0 8px 30px;
+    font-size: 25px;
+    font-weight: 550;
+
+}
+.products {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 5px; 
+    margin-top: 5px;
+}
+
+.card-product-carrito {
+    flex: 1 0 auto; 
+    max-width: 200px;
+    padding: 10px;
+    margin: 10px;
+    border: solid #e6eae6;
+    border-radius: 10px;
+    box-sizing: border-box; 
+    flex-direction: column;
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.card-product-carrito img {
+    width: auto;
+    max-width: 80%;
+    height: 180px;
+    border-radius: 15px;
+    display: block;
+    margin: 0 auto;
+}
+
+.product-description {
+    margin-top: 10px;
+    border-top: solid #f0f5f0;
+    padding-top: 15px; 
+    padding-left: 15px; 
+    height: 100px; 
+    overflow: hidden;
+    text-align: left; 
+}
+
+.product-description h3 {
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-bottom: 5px;
+    margin-top: 0; 
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.buttons {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    flex-direction: column; 
+    gap: 20px;
+}
+.add-shipping-cart{
+    margin-top: 10px;
+}
+
+.add-shipping-cart,
+.buy {
+    width: 120px; 
+    height: 40px; 
+    border-radius: 20px; 
+    background-color: #ABD0BF;
+    border: none;
+    font-size: 14px; 
+}
+
+.add-shipping-cart i {
+    font-size: 20px; 
+}
+
+.add-shipping-cart:hover,
+.buy:hover {
+    background: #ABD0BF;
+    box-shadow: inset -18px 18px 36px #91b1a2,
+        inset 18px -18px 36px #c5efdc;
+    border: none;
+}
+.sub-title-carrito{
+    font-size: 20px;
+    margin-left: 30px;
+}
+
 /* ---------- */
 
 @media (min-width: 769px){
@@ -302,11 +395,23 @@ a {
     .ingresa-registrate-carro{
         display: flex;
     }
+    .card-product-carrito:hover{
+        box-shadow: -3px 3px 8px #a4c8b7, 3px -3px 8px #b2d8c7;
+    }
+    
    
+}
+@media (max-width: 650px) {
+    .extra-products {
+        display: none;
+    }
 }
 @media (min-width: 1000px) {
     
     .container3{
         display: flex;
     }  
+    .card-product-carrito{
+        flex:20%;
+    }
 }
