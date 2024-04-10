@@ -84,19 +84,20 @@ const user={
                 await address.update({
                     address: req.body.address ? req.body.address : address.address,
                     zip_code: req.body.zip_code ? req.body.zip_code : address.zip_code,
+                    user_id: userId
                 })
             } else{
                 await db.Address.create({
-                    address: req.body.address ? req.body.address : '',
-                    zip_code: req.body.zip_code ? req.body.zip_code : '',
+                    address: req.body.address ? req.body.address : 'Sin dirección',
+                    zip_code: req.body.zip_code ? req.body.zip_code : 'Sin CP',
                     user_id: userId,
                 })
             }
 
             let updatedUser = await db.User.findByPk(userId);
             req.session.userLogged = updatedUser.dataValues;
-            res.render('profile', { user: updatedUser, address });
-            
+/*             res.render('profile', { user: updatedUser, address });
+ */            res.redirect("/users/profile")
         } catch (error) {
             console.log(error);
             res.json(error)    

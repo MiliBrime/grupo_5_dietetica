@@ -12,7 +12,7 @@
     <main>
         <%- include("./partials/info-banner.ejs")%>
 
-        <h1 class="sub-title2">Resultado de tu búsqueda: <%=keyword%></h1>
+        <h1 class="sub-title-resultado">Resultado de tu búsqueda: <%=keyword%></h1>
         <section class="products">
             <% if (found && found.length > 0){ %>
             <% found.forEach(product => { %>
@@ -33,9 +33,10 @@
             <%}); %>
             <% } else { %>
                 <div class="notFound">
-                <h2 class="sub-title2">Lo sentimos, no encontramos lo que buscas. Podes intentar con otra palabra o explorar todos nuestros productos <a class= "aca" href="/products">acá</a></h2>
-                <img src="/img/noEncontrado.png" alt="not found">
-                </div>
+                <h2 class="sub-title2">Lo sentimos, no encontramos lo que buscas. </h2>
+            <img src="/img/noEncontrado.png" alt="not found">
+        </div>
+        <h2 class="sub-title4">Podes intentar con otra palabra o explorar todos nuestros productos <a class= "aca" href="/products">acá</a></h2>
                 <% } %>
         </section>
         <%- include('partials/footer.ejs') %>

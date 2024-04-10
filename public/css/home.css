@@ -143,9 +143,20 @@ main{
 }
 
 .sub-title2 {
-    margin: 35px 0 8px 30px;
     font-size: 25px;
     font-weight: 500;
+}
+
+.sub-title4{
+    margin: 0 0 30px 0;
+    font-weight: 600;
+}
+
+.sub-title-resultado{
+    margin-left: 20px;
+    font-size: 25px;
+    font-weight: 500;
+
 }
 
 .sub-title {
@@ -265,7 +276,8 @@ main{
 
 .notFound{
     display: flex;
-    margin-bottom: 80px;
+    align-items: center;
+    margin-bottom: 30px;
 }
 
 .notFound img{
