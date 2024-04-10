@@ -32,12 +32,15 @@
             </div>
             <%}); %>
             <% } else { %>
+                <div class="not-found">
                 <div class="notFound">
                 <h2 class="sub-title2">Lo sentimos, no encontramos lo que buscas. </h2>
             <img src="/img/noEncontrado.png" alt="not found">
         </div>
         <h2 class="sub-title4">Podes intentar con otra palabra o explorar todos nuestros productos <a class= "aca" href="/products">acá</a></h2>
+                 </div>
                 <% } %>
+            
         </section>
         <%- include('partials/footer.ejs') %>
         <script src="/js/carrito.js"></script>
