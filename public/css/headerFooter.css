@@ -26,9 +26,15 @@ i {
     color: #F23E16;
 }
 
+/* .full-banner {
+    display: none
+} */
+
 .banner {
     width: 100%;
     padding: 5px;
+    display: none
+
 }
 
 a {
@@ -38,8 +44,8 @@ a {
 
 .header {
     background-image: linear-gradient(to bottom right, #b7dfcc, #9abbac);
-    box-shadow: 5px 5px 10px #a6cab9, -8px -8px 16px #b0d6c5;
-    position: relative;
+/*     box-shadow: 5px 5px 10px #a6cab9, -8px -8px 16px #b0d6c5;
+ */    position: relative;
     z-index: 2;
 }
 
@@ -305,6 +311,10 @@ footer {
     font-size: 0.8em; 
 }
 
+/* .header {
+    margin-bottom: -20px; 
+} */
+
 @media (min-width: 500px) {
     .container2 {
         grid-gap: 22px;
@@ -323,6 +333,12 @@ footer {
     .cart-counter {
         display: inline-block;
     }
+    
+    .banner {
+        display: inline-block;
+
+    }
+    
 
 
 @media (min-width: 880px) {

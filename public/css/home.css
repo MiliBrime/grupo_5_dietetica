@@ -1,5 +1,7 @@
 main{
-    background-image: linear-gradient(to top right, #ABD0BF, #E6F1EC)
+    background-image: linear-gradient(to top right, #ABD0BF, #E6F1EC);
+    margin-top: -5px; /* Ajusta este valor según sea necesario */
+
 }
 .aca{
     text-decoration: underline;

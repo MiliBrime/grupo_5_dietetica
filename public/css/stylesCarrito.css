@@ -154,19 +154,20 @@ body{
     margin-top: 40px;
 }
 .botonCompra{
-    width: 30%;
-    height: 35px;
+    width: 280px;
+    height: 40px;
     border-color:#ABD0BF;
     border-style: solid;
     background-color: #dcebe4;
     transition-property: all;
-    transition-duration: 0.5s;
+    transition-duration: 0.3s;
+
 }
 
 .botonCompra:hover{
-    height: 40px;
    /*  width: 70%; */
     background-color: #ABD0BF;
+
 }
 
 .verMas{
