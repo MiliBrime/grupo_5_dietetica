@@ -16,7 +16,7 @@
         </div>
         <div class="table-wrapper">
             <% if (usersFound && usersFound.length > 0){ %>
-            <% usersFound.forEach(user => { %>
+            <% usersFound.forEach((user,index) => { %>
     <table>
         <thead>
             <tr>
@@ -44,7 +44,9 @@
                     <%= user.last_name %>
                 </td>
                 <td>
-                    <%= user.last_name %>
+                    <% user.roles.forEach(role => { %>
+                        <%= role.type %>
+                    <% }) %>
                 </td>
                 <td>
                     <%= user.phone %>

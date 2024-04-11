@@ -208,6 +208,7 @@ let usersController={
         try{
         let keyword= req.body.keyword
         let usersFound = await db.User.findAll({
+            include: [{ model: db.Address, as: 'addresses' },   { model: db.Role, as: 'roles' }],
 			where: {
 				last_name: {[Op.like]: "%" + keyword + "%"}
 			}
