@@ -18,7 +18,7 @@
             <div class="formCreate">
                 <div class="inputCreate">
                     <label for="name" class="form-label">Nombre:</label>
-                    <input type="text" id="name" name="name" placeholder="Ej: Mantequilla de maní" class="form-input" value= "<%= locals.old ? old.name : "" %>">
+                    <input type="text" id="name" name="name" placeholder="Ej: Pasta de maní" class="form-input" value= "<%= locals.old ? old.name : "" %>">
                     <% if (locals.mensajesDeError && mensajesDeError.name) { %>
                         <div><%= mensajesDeError.name.msg %> </div> 
                     <% } %>
@@ -26,7 +26,7 @@
                 </div>
                 <div class="inputCreate">
                     <label for="brand" class="form-label">Marca:</label>
-                    <input type="text" id="brand" name="brand" placeholder="Ej: Star Nutrition" class="form-input" class="form-input" value= "<%= locals.old ? old.brand : "" %>">
+                    <input type="text" id="brand" name="brand" placeholder="Ej: Nutrasem" class="form-input" class="form-input" value= "<%= locals.old ? old.brand : "" %>">
                     <% if (locals.mensajesDeError && mensajesDeError.brand) { %>
                         <div><%= mensajesDeError.brand.msg %> </div> 
                     <% } %>
